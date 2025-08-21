@@ -1,0 +1,9 @@
+sdk-version: 2.10.2
+sandbox-options: 
+- --wall-clock-time
+name: message
+source: daml
+version: 0.0.1
+dependencies: 
+- daml-prim
+- daml-stdlib

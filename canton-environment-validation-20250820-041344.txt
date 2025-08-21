@@ -1,0 +1,51 @@
+Canton Environment Validation Report
+Generated: Wed Aug 20 04:13:44 AM UTC 2025
+Configuration: config/canton-single-participant.conf
+Working Directory: /root/canton-prod/canton-open-source-2.10.2
+
+System Information:
+- OS: Linux 6.8.0-60-generic
+- Architecture: x86_64
+- Hostname: ubuntu-16gb-hel1-1
+- User: root
+
+Java Environment:
+openjdk version "21.0.8" 2025-07-15
+OpenJDK Runtime Environment (build 21.0.8+9-Ubuntu-0ubuntu124.04.1)
+OpenJDK 64-Bit Server VM (build 21.0.8+9-Ubuntu-0ubuntu124.04.1, mixed mode, sharing)
+
+Environment Variables:
+- JAVA_HOME: /usr/lib/jvm/java-21-openjdk-amd64
+- JAVA_OPTS: Not set
+- POSTGRES_HOST: Not set
+- POSTGRES_USER: Not set
+- POSTGRES_PASSWORD: Not set
+
+Validation Results:
+==================
+
+ERRORS (0):
+
+WARNINGS (6):
+- JVM options: Not configured (JAVA_OPTS recommended for production)
+- Configuration: Non-PostgreSQL storage configured
+- Database: POSTGRES_PASSWORD not set (may be in config file)
+- Database: Cannot test connectivity (psql not available or no password set)
+- Certificates: Some certificate issues found (run verify-certificates.sh for details)
+- Found 5 warning(s)
+
+INFO (14):
+- Canton Environment Validation
+- ==============================
+- Configuration: config/canton-single-participant.conf
+- Working directory: /root/canton-prod/canton-open-source-2.10.2
+- Validating system requirements...
+- Validating Java environment...
+- Validating system dependencies...
+- Validating Canton installation...
+- Validating network connectivity...
+- Validating database setup...
+- Validating certificates...
+- Validation Summary
+- ==================
+- Generating validation report...

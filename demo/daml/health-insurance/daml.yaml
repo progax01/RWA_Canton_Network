@@ -1,0 +1,10 @@
+sdk-version: 2.10.2
+name: health-insurance
+source: HealthInsurance.daml
+init-script: HealthInsurance:setup
+version: 2.10.2
+dependencies: 
+- daml-prim
+- daml-stdlib
+- daml-script
+- ../../scala-2.13/resource_managed/main/bank.dar

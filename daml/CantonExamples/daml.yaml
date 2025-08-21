@@ -1,0 +1,10 @@
+sdk-version: 2.10.2
+build-options: 
+- --target=1.14
+name: CantonExamples
+source: .
+version: 2.10.2
+dependencies: 
+- daml-prim
+- daml-stdlib
+- daml-script

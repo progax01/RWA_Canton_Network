@@ -1,0 +1,69 @@
+Error: Unknown argument 'canton.logging.level=INFO'
+Canton v2.10.2
+Usage: canton [daemon|run|generate] [options] <args>...
+
+  -h, --help               Print usage
+  --version                Print versions
+  -c, --config <file1>,<file2>,...
+                           Set configuration file(s).
+                                                      If several configuration files assign values to the same key,
+                                                      the last value is taken.
+  -C, --config key-value's <key1>=<value1>,<key2>=<value2>
+                           Set configuration key value pairs directly.
+                                                      Can be useful for providing simple short config info.
+  --bootstrap <file>       Set a script to run on startup
+  --no-tty                 Do not use a tty
+  --manual-start           Don't automatically start the nodes
+  --auto-connect-local     Automatically connect all local participants to all local domains
+  -D<property>=<value>     Set a JVM property value
+
+Logging Options:
+  -v, --verbose            Canton logger level -> DEBUG
+  --debug                  Console/stdout level -> INFO, root logger -> DEBUG
+  --log-truncate           Truncate log file on startup.
+  --log-level-root <LEVEL>
+                           Log-level of the root logger
+  --log-level-canton <LEVEL>
+                           Log-level of the Canton logger
+  --log-level-stdout <LEVEL>
+                           Log-level of stdout
+  --log-file-appender rolling(default)|flat|off
+                           Type of log file appender
+  --log-file-name <value>  Name and location of log-file, default is log/canton.log
+  --kms-log-file-name <value>
+                           Name and location of KMS log-file, default is log/canton_kms.log
+  --log-file-rolling-history <value>
+                           Number of history files to keep when using rolling log file appender.
+  --kms-log-file-rolling-history <value>
+                           Number of history KMS files to keep when using rolling log file appender.
+  --log-file-rolling-pattern <value>
+                           Log file suffix pattern of rolling file appender. Default is 'yyyy-MM-dd'.
+  --kms-log-file-rolling-pattern <value>
+                           KMS log file suffix pattern of rolling file appender. Default is 'yyyy-MM-dd'.
+  --log-encoder <value>    Log encoder: plain|json
+  --log-immediate-flush true(default)|false
+                           Determines whether to immediately flush log output to the log file.
+                           Enable to avoid an incomplete log file in case of a crash.
+                           Disable to reduce the load on the disk caused by logging.
+  --kms-log-immediate-flush true(default)|false
+                           Determines whether to immediately flush KMS log output to the KMS log file.
+                           Enable to avoid an incomplete log file in case of a crash.
+                           Disable to reduce the load on the disk caused by logging.
+  --log-profile <value>    Preconfigured logging profiles: (container)
+  --log-last-errors <value>
+                           Capture events for logging.last_errors command
+
+Use the JAVA_OPTS environment variable to set JVM parameters.
+
+Command: daemon
+Start all nodes automatically and run them without having a console (REPL).
+Nodes can be controlled through the admin API.
+
+Command: run <file>
+Run a console script.
+Stop all nodes when the script has terminated.
+  <file>                   the script to run
+
+Command: generate <type>
+Generate configurations
+  <type>                   generation target (remote-config)
