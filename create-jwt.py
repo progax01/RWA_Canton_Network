@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import lib.session
 import json
 import base64
 import hmac

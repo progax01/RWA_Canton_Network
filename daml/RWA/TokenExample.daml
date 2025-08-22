@@ -1,0 +1,188 @@
+module TokenExample where
+
+-- Token contract representing a holding of a specific asset (Gold or Silver) for one owner  
+template Token
+  with
+    issuer : Party        -- Admin/Bank (token issuer)
+    owner  : Party        -- Token holder (current owner)
+    name   : Text         -- Descriptive name (e.g. "Gold Token")
+    symbol : Text         -- Token symbol (e.g. "GLD" or "SLV")
+    amount : Int          -- Token amount (must be > 0)
+  where
+    signatory issuer
+    observer  owner
+    ensure    amount > 0
+    key (issuer, owner, symbol) : (Party, Party, Text)        -- Unique key per (issuer, owner, asset)
+    maintainer key._1
+
+-- AssetRegistry: one per token type, allows admin to mint tokens and users to transfer or redeem them  
+template AssetRegistry
+  with
+    admin  : Party        -- The issuer/admin (e.g. Bank)
+    name   : Text         -- Token name (descriptive)
+    symbol : Text         -- Token symbol (identifier for the asset type)
+  where
+    signatory admin
+
+    -- **Admin-only Mint**: Issue new tokens of this type to a user  
+    nonconsuming choice Mint : ContractId Token
+      with
+        to     : Party    -- Recipient of the new tokens  
+        amount : Int      -- Amount of tokens to mint  
+      controller admin
+      do
+        assertMsg "amount must be > 0" (amount > 0)
+        mOld <- lookupByKey @Token (admin, to, symbol)
+        case mOld of
+          Some oldCid -> do
+            -- If the recipient already has this token, archive the old contract and mint cumulative amount  
+            oldTok <- fetch oldCid
+            archive oldCid
+            create Token with
+              issuer = admin
+              owner  = to
+              name   = name
+              symbol = symbol
+              amount = oldTok.amount + amount
+          None ->
+            -- Otherwise, create a new Token contract for this user and asset  
+            create Token with
+              issuer = admin
+              owner  = to
+              name   = name
+              symbol = symbol
+              amount = amount
+
+    -- **User-initiated Transfer**: Transfer tokens from `sender` to `recipient`  
+    nonconsuming choice Transfer : [ContractId Token]
+      with
+        sender    : Party  -- Current token owner (source)  
+        recipient : Party  -- Target token owner (destination)  
+        amount    : Int    -- Amount to transfer  
+      controller sender
+      do
+        assertMsg "amount must be > 0" (amount > 0)
+        -- Fetch the sender's token contract (must exist)  
+        (senderCid, senderTok) <- fetchByKey @Token (admin, sender, symbol)
+        assertMsg "insufficient balance" (senderTok.amount >= amount)
+        archive senderCid
+        let remaining = senderTok.amount - amount
+        -- If sender has leftover tokens after transfer, recreate a Token for the remainder  
+        mSenderNew <- if remaining > 0 then 
+                        do sc <- create Token with
+                                   issuer = admin
+                                   owner  = sender
+                                   name   = name
+                                   symbol = symbol
+                                   amount = remaining
+                           pure (Some sc)
+                      else pure None
+        -- Add the amount to recipient's token (merge with existing holding if present)  
+        mRec <- lookupByKey @Token (admin, recipient, symbol)
+        recCid <- case mRec of
+                    Some rc -> do
+                      recTok <- fetch rc
+                      archive rc
+                      create Token with
+                        issuer = admin
+                        owner  = recipient
+                        name   = name
+                        symbol = symbol
+                        amount = recTok.amount + amount
+                    None ->
+                      create Token with
+                        issuer = admin
+                        owner  = recipient
+                        name   = name
+                        symbol = symbol
+                        amount = amount
+        -- Return the contracts created by this transfer (for sender and recipient)  
+        case mSenderNew of
+          Some sc -> pure [sc, recCid]
+          None    -> pure [recCid]
+
+    -- **User Redemption Request**: User (token holder) requests to redeem some of their tokens  
+    nonconsuming choice RequestRedemption : ContractId RedeemRequest
+      with
+        redeemer : Party  -- The user requesting redemption (token owner)  
+        amount   : Int    -- Amount of tokens to redeem  
+      controller redeemer
+      do
+        assertMsg "amount must be > 0" (amount > 0)
+        -- Ensure no existing pending redemption for this user & asset  
+        mReq <- lookupByKey @RedeemRequest (admin, redeemer, symbol)
+        case mReq of
+          Some _ -> abort "redemption already requested"
+          None -> return ()
+        -- Fetch the user's Token to be redeemed (must exist and have sufficient balance)  
+        (tokCid, tok) <- fetchByKey @Token (admin, redeemer, symbol)
+        assertMsg "insufficient balance to redeem" (tok.amount >= amount)
+        archive tokCid
+        let remaining = tok.amount - amount
+        -- Lock the requested amount: archive user's token and create a pending redemption request  
+        if remaining > 0 then do
+          _ <- create Token with
+                 issuer = admin
+                 owner  = redeemer
+                 name   = name
+                 symbol = symbol
+                 amount = remaining 
+          return ()  -- reissue leftover tokens back to user (if any remain)
+        else
+          return ()
+        create RedeemRequest with
+          admin  = admin
+          owner  = redeemer
+          name   = name
+          symbol = symbol
+          amount = amount
+
+-- **Redemption Request** contract: Created when a user initiates a redemption. 
+-- Only the Admin can approve or cancel the request.  
+template RedeemRequest
+  with
+    admin  : Party   -- Admin/issuer of the token  
+    owner  : Party   -- User who requested redemption  
+    name   : Text    -- Token name  
+    symbol : Text    -- Token symbol  
+    amount : Int     -- Amount of tokens being redeemed  
+  where
+    signatory admin
+    observer  owner
+    ensure    amount > 0
+    key (admin, owner, symbol) : (Party, Party, Text)
+    maintainer key._1
+
+    -- **Accept Redemption** (Admin-only): Burn the tokens by finalizing the redemption  
+    choice Accept : ()
+      controller admin
+      do
+        -- On accept, the tokens are considered redeemed (burned), as they were locked and removed during request  
+        return ()
+
+    -- **Cancel Redemption** (Admin-only): Reject the redemption and return tokens to the user  
+    choice Cancel : ()
+      controller admin
+      do
+        -- If the user currently has a Token of this type (e.g. from partial leftover), merge the redeemed amount back 
+        mTok <- lookupByKey @Token (admin, owner, symbol)
+        case mTok of
+          Some tokCid -> do
+            tok <- fetch tokCid
+            archive tokCid
+            _ <- create Token with
+                   issuer = admin
+                   owner  = owner
+                   name   = name
+                   symbol = symbol
+                   amount = tok.amount + amount    -- add back the redeemed amount to existing balance
+            return ()
+          None ->
+            do 
+              _ <- create Token with
+                     issuer = admin
+                     owner  = owner
+                     name   = name
+                     symbol = symbol
+                     amount = amount               -- re-create the token contract with the returned amount
+              return ()

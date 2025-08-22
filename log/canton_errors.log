@@ -1352,3 +1352,5 @@ Caused by: org.postgresql.util.PSQLException: FATAL: password authentication fai
 )
 2025-08-20 09:23:00,383 [main] INFO  c.d.c.e.CommunityEnvironment tid:606abae80d633990c3a6c081947ba5a4 - Automatically starting all instances
 2025-08-20 09:23:02,128 [main] ERROR c.d.c.e.CommunityEnvironment tid:606abae80d633990c3a6c081947ba5a4 - Failed to start mydomain: Failed to bind to address /0.0.0.0:5019
+2025-08-21 14:21:30,527 [main] INFO  c.d.c.e.CommunityEnvironment tid:3f8b7099fa9042d5a9f432743eaa5b53 - Automatically starting all instances
+2025-08-21 14:21:32,230 [main] ERROR c.d.c.e.CommunityEnvironment tid:3f8b7099fa9042d5a9f432743eaa5b53 - Failed to start mydomain: Failed to bind to address /0.0.0.0:5019

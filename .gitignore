@@ -1,1 +1,3 @@
 *.jar
+config.bat
+node_modules
