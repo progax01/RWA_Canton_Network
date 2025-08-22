@@ -1,0 +1,440 @@
+
+
+
+@ participant1.domains.connect_local(mydomain) 
+
+
+@ utils.retry_until_true {
+    participant1.domains.list_connected().exists(_.domainId == mydomain.id)
+  } 
+
+@ val bank = participant1.parties.enable("NewBank") 
+bank: PartyId = NewBank::12209f481589...
+
+@ val alice = participant1.parties.enable("NewAlice")  
+alice: PartyId = NewAlice::12209f481589...
+
+@ val bob = participant1.parties.enable("NewBob") 
+bob: PartyId = NewBob::12209f481589...
+
+@ utils.retry_until_true {
+    participant1.parties.list().exists(_.party == bank) &&
+    participant1.parties.list().exists(_.party == alice) &&
+    participant1.parties.list().exists(_.party == bob)
+  } 
+
+
+@ println(s"Bank party: $bank") 
+Bank party: NewBank::12209f481589...
+
+
+@ println(s"Alice party: $alice")  
+Alice party: NewAlice::12209f481589...
+
+
+@ println(s"Bob party: $bob") 
+Bob party: NewBob::12209f481589...
+
+
+@ participant1.dars.upload("dars/RWA.dar") 
+res10: String = "1220adad75b3e14d40bd63014357faf632ad18c2c22b3478868f6d04f2158770e9bb"
+
+@ utils.retry_until_true {
+    participant1.dars.list().exists(_.name == "RWA")
+  } 
+
+
+@  
+
+n participant1")
+println("Ready to create AssetRegistry contracts and mint tokens")
+@ println("RWA Platform setup completed successfully!") 
+RWA Platform setup completed successfully!
+
+
+@ println("All parties (Bank, Alice, Bob) are on participant1") 
+All parties (Bank, Alice, Bob) are on participant1
+
+
+@ println("Ready to create AssetRegistry contracts and mint tokens") 
+Ready to create AssetRegistry contracts and mint tokens
+
+
+@ val rwaPkg   = participant1.packages.find("TokenExample").head 
+rwaPkg: com.digitalasset.canton.participant.admin.v0.PackageDescription = PackageDescription(
+  packageId = "323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1",
+  sourceDescription = "RWA"
+)
+
+@ val rwaPackageId = rwaPkg.packageId 
+rwaPackageId: String = "323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1"
+
+@ println(s"RWA Package ID: $rwaPackageId") 
+RWA Package ID: 323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1
+
+
+  Step 1: Create AssetRegistry contracts for Gold and Silver
+
+  Copy and paste these commands in your Canton console:
+
+  // Create Gold AssetRegistry
+  val createGoldRegistryCmd = ledger_api_utils.create(rwaPackageId,
+  "TokenExample", "AssetRegistry", Map("admin" -> bank, "name" ->
+  "Gold Token", "symbol" -> "GLD"))
+
+  // Create Silver AssetRegistry  
+  val createSilverRegistryCmd = ledger_api_utils.create(rwaPackageId,
+  "TokenExample", "AssetRegistry", Map("admin" -> bank, "name" ->
+  "Silver Token", "symbol" -> "SLV"))
+
+  // Submit both registry creation commands
+  participant1.ledger_api.commands.submit(Seq(bank),
+  Seq(createGoldRegistryCmd, createSilverRegistryCmd))
+
+  println("✓ Created Gold and Silver AssetRegistry contracts")
+
+
+
+Step 1: Get registry references 
+  (corrected syntax)
+
+  // Get all AssetRegistry contracts for the bank
+
+val registries = participant1.ledger_api.acs.of_party(bank).filter(_.templateId.isModuleEntity("TokenExample",
+  "AssetRegistry"))
+
+
+  // Find Gold registry
+  val goldRegistry = registries.find(reg => reg.arguments("symbol").toString.contains("GLD")).get
+
+
+
+  // Find Silver registry  
+  val silverRegistry =registries.find(reg => reg.arguments("symbol").toString.contains("SLV")).get
+
+  println("✓ Retrieved Gold and Silver registry references")
+
+
+
+  Step 2: Mint tokens to users
+
+  // Mint 100 Gold tokens to Alice and 
+  50 Gold tokens to Bob
+
+  val mintAliceGoldCmd =
+  ledger_api_utils.exercise("Mint",
+  Map("to" -> alice, "amount" -> 100),
+  goldRegistry.event)
+
+
+   val mintBobGoldCmd =
+  ledger_api_utils.exercise("Mint",
+  Map("to" -> bob, "amount" -> 50),
+  goldRegistry.event)
+
+
+
+   participant1.ledger_api.commands.submit(Seq(bank), Seq(mintAliceGoldCmd,
+  mintBobGoldCmd))
+
+
+
+  Step 3: Mint Silver tokens
+
+  // Mint 100 Silver tokens to Alice and
+   50 Silver tokens to Bob  
+  val mintAliceSilverCmd =
+  ledger_api_utils.exercise("Mint",
+  Map("to" -> alice, "amount" -> 100),
+  silverRegistry.event)
+  val mintBobSilverCmd =
+  ledger_api_utils.exercise("Mint",
+  Map("to" -> bob, "amount" -> 50),
+  silverRegistry.event)
+
+  participant1.ledger_api.commands.submi
+  t(Seq(bank), Seq(mintAliceSilverCmd,
+  mintBobSilverCmd))
+  println("✓ Minted Silver tokens: Alice
+   100 SLV, Bob 50 SLV")
+
+
+  Step 4: Check token balances
+
+  // Check Alice's tokens
+  val aliceTokens = participant1.ledger_api.acs.of_party(alice).filter(_.templateId.isModuleEntity("TokenExample",
+  "Token"))
+
+  aliceTokens.foreach { token =>
+    val symbol =
+  token.arguments("symbol")
+    val amount =
+  token.arguments("amount")
+    println(s"Alice has $amount $symbol tokens")
+  }
+
+  // Check Bob's tokens  
+  val bobTokens = participant1.ledger_api.acs.of_party(bob).filter(_.templateId.isModuleEntity("TokenExample",
+  "Token"))
+  bobTokens.foreach { token =>
+    val symbol =
+  token.arguments("symbol")
+    val amount =
+  token.arguments("amount")
+    println(s"Bob has $amount $symbol tokens")
+  }
+
+
+println(s"Bank has ${bankContracts.size} active contracts:")
+bankContracts.foreach { contract =>println(s"  - ${contract.templateId.entityName}: ${contract.contractId}")}
+
+  Step 5: Test Token Transfer 
+  Functionality
+
+
+  // Get fresh registry references
+  val currentRegistries = participant1.ledger_api.acs.of_party(bank).filter(_.templateId.isModuleEntity("TokenExample",
+  "AssetRegistry"))
+
+  // Find current Gold registry
+  val goldRegistry =
+  currentRegistries.find(reg => reg.arguments
+  ("symbol").toString.contains("GLD")).get
+
+  // Find current Silver registry  
+  val silverRegistry =
+  currentRegistries.find(reg => reg.arguments
+  ("symbol").toString.contains("SLV")).get
+
+
+
+  Transfer Gold tokens from Alice to Bob
+   (30 GLD)
+
+  println("=== Testing Token Transfers 
+  ===")
+
+  // Alice transfers 30 Gold to Bob
+  val transferGoldCmd =
+  ledger_api_utils.exercise("Transfer",
+  Map("sender" -> alice, "recipient" ->
+  bob, "amount" -> 30),
+  goldRegistry.event)
+
+  participant1.ledger_api.commands.submit(Seq(alice, bank), Seq(transferGoldCmd))
+  println("✓ Alice transferred 30 GLD to Bob")
+
+  Transfer Silver tokens from Bob to 
+  Alice (20 SLV)
+
+  // Bob transfers 20 Silver to Alice
+  val transferSilverCmd =
+  ledger_api_utils.exercise("Transfer",
+  Map("sender" -> bob, "recipient" ->
+  alice, "amount" -> 20),
+  silverRegistry.event)
+
+  participant1.ledger_api.commands.submit(Seq(bob, bank), Seq(transferSilverCmd))
+  println("✓ Bob transferred 20 SLV to 
+  Alice")
+
+  Check updated balances after transfers
+
+  println("=== Updated Balances After 
+  Transfers ===")
+
+  // Check Alice's updated tokens
+  val aliceTokensAfter =
+  participant1.ledger_api.acs.of_party(alice).filter(_.templateId.isModuleEntity("TokenExample", "Token"))
+  aliceTokensAfter.foreach { token =>
+    val symbol =
+  token.arguments("symbol")
+    val amount =
+  token.arguments("amount")
+    println(s"Alice now has $amount $symbol tokens")
+  }
+
+  // Check Bob's updated tokens  
+  val bobTokensAfter = participant1.ledger_api.acs.of_party(bob).filter(_.templateId.isModuleEntity("TokenExample",
+  "Token"))
+  bobTokensAfter.foreach { token =>
+    val symbol =
+  token.arguments("symbol")
+    val amount =
+  token.arguments("amount")
+    println(s"Bob now has $amount $symbol tokens")
+  }
+
+
+
+
+  Step 6: Test Redemption Request 
+  Workflow
+
+  Alice requests to redeem 50 Gold 
+  tokens
+
+  println("=== Testing Redemption 
+  Workflow ===")
+
+  // Alice requests to redeem 50 Gold 
+  tokens
+  val redemptionReqCmd = ledger_api_utils.exercise("RequestRedemption",
+  Map("redeemer" -> alice, "amount" ->
+  50), goldRegistry.event)
+
+  participant1.ledger_api.commands.submit(Seq(alice, bank), Seq(redemptionReqCmd))
+  println("✓ Alice requested redemption 
+  of 50 GLD tokens")
+
+  Check pending redemption request
+
+  // Check pending redemption request
+  val pendingRedemptions =
+  participant1.ledger_api.acs.of_party(bank).filter(_.templateId.isModuleEntity("TokenExample", "RedeemRequest"))
+
+  pendingRedemptions.foreach { req =>
+    val owner = req.arguments("owner")
+    val symbol = req.arguments("symbol")
+    val amount = req.arguments("amount")
+    println(s"Pending redemption: $owner wants to redeem $amount $symbol")
+  }
+
+  Step 7: Test Admin Redemption 
+  Management
+
+  Test canceling a redemption (returns 
+  tokens to user)
+
+  println("=== Testing Redemption 
+  Cancellation ===")
+
+  // Get the pending redemption request
+  val pendingReq =pendingRedemptions.head
+
+  // Bank cancels the redemption request
+  val cancelCmd =
+  ledger_api_utils.exercise("Cancel",
+  Map(), pendingReq.event)
+  participant1.ledger_api.commands.submit(Seq(bank), Seq(cancelCmd))
+  println("✓ Bank canceled the 
+  redemption request - tokens returned 
+  to Alice")
+
+  Check Alice's balance after 
+  cancellation
+
+  // Check Alice's tokens after cancellation
+
+
+
+  val aliceTokensAfterCancel =
+  participant1.ledger_api.acs.of_party(alice).filter(_.templateId.isModuleEntity("TokenExample", "Token"))
+  aliceTokensAfterCancel.foreach { token =>
+    val symbol =
+  token.arguments("symbol")
+    val amount =
+  token.arguments("amount")
+    println(s"Alice after cancellation: $amount $symbol tokens")
+  }
+
+  
+   println("=== Testing Redemption 
+  Acceptance ===")
+
+  // Alice makes another redemption request (for 40 GLD this time)
+  val redemptionReq2Cmd = ledger_api_utils.exercise("RequestRedemption",
+  Map("redeemer" -> alice, "amount" ->
+  40), goldRegistry.event)
+
+  participant1.ledger_api.commands.submit(Seq(alice, bank), Seq(redemptionReq2Cmd))
+  println("✓ Alice made another 
+  redemption request for 40 GLD")
+
+
+
+  // Get the new pending redemption request
+
+  val pendingRedemptions2 =
+  participant1.ledger_api.acs.of_party(bank).filter(_.templateId.isModuleEntity("TokenExample", "RedeemRequest"))
+  
+  
+  val pendingReq2 =pendingRedemptions2.head
+
+  // Bank accepts the redemption (burns  the tokens)
+  val acceptCmd =
+  ledger_api_utils.exercise("Accept",
+  Map(), pendingReq2.event)
+  participant1.ledger_api.commands.submit(Seq(bank), Seq(acceptCmd))
+  println("✓ Bank accepted the 
+  redemption request - 40 GLD tokens 
+  burned")
+
+  Step 8: Final Balance Check
+
+  println("=== Final Token Balances 
+  ===")
+
+  // Final balance check for Alice
+  val aliceTokensFinal =
+  participant1.ledger_api.acs.of_party(alice).filter(_.templateId.isModuleEntity("TokenExample", "Token"))
+ 
+  aliceTokensFinal.foreach { token =>
+    val symbol =
+  token.arguments("symbol")
+    val amount =
+  token.arguments("amount")
+    println(s"Alice final balance: $amount $symbol tokens")
+  }
+
+  // Final balance check for Bob
+  val bobTokensFinal = participant1.ledger_api.acs.of_party(bob).filter(_.templateId.isModuleEntity("TokenExample",
+  "Token"))
+  bobTokensFinal.foreach { token =>
+    val symbol =
+  token.arguments("symbol")
+    val amount =
+  token.arguments("amount")
+    println(s"Bob final balance: $amount $symbol tokens")
+  }
+
+  println("=== RWA Platform Testing 
+  Complete! ===")
+
+  Step 9: Test Edge Cases (Optional)
+
+  Test insufficient balance transfer
+
+  println("=== Testing Edge Cases ===")
+
+  // Try to transfer more tokens than  Alice has (should fail)
+  val invalidTransferCmd =
+  ledger_api_utils.exercise("Transfer",
+  Map("sender" -> alice, "recipient" ->
+  bob, "amount" -> 1000),
+  goldRegistry.event)
+
+  try {
+    participant1.ledger_api.commands.submit(Seq(alice, bank),
+  Seq(invalidTransferCmd))
+    println("❌ Transfer should have failed but didn't")
+  } catch {
+    case e: Exception => println("✓ Transfer correctly failed with insufficient balance")
+  }
+
+  Test duplicate redemption request
+
+  // Alice tries to make another  redemption request while one is 
+
+  pending (should fail if any pending)
+  try {
+    val duplicateRedemptionCmd =
+  ledger_api_utils.exercise("RequestRedemption", Map("redeemer" -> alice,
+  "amount" -> 10), goldRegistry.event)
+    participant1.ledger_api.commands.submit(Seq(alice, bank),
+  Seq(duplicateRedemptionCmd))
+    println("✓ Multiple redemption requests allowed (no pending  requests)")
+  } catch {
+    case e: Exception => println("✓ Duplicate redemption request correctly rejected")
+  }
+
