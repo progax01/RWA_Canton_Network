@@ -15,23 +15,23 @@ create_certificate "root-ca" "/O=TESTING/OU=ROOT CA/emailAddress=canton@digitala
 
 # create public api certificate
 create_key "public-api"
-create_csr "public-api" "/O=TESTING/OU=DOMAIN/CN=localhost/emailAddress=canton@digitalasset.com" "DNS:localhost,IP:127.0.0.1"
+create_csr "public-api" "/O=TESTING/OU=DOMAIN/CN=localhost/emailAddress=canton@digitalasset.com" "DNS:localhost,DNS:*.localhost,IP:127.0.0.1,IP:0.0.0.0"
 sign_csr "public-api" "root-ca"
 print_certificate "public-api"
 
 # create participant ledger-api certificate
 create_key "ledger-api"
-create_csr "ledger-api" "/O=TESTING/OU=PARTICIPANT/CN=localhost/emailAddress=canton@digitalasset.com" "DNS:localhost,IP:127.0.0.1"
+create_csr "ledger-api" "/O=TESTING/OU=PARTICIPANT/CN=localhost/emailAddress=canton@digitalasset.com" "DNS:localhost,DNS:*.localhost,IP:127.0.0.1,IP:0.0.0.0"
 sign_csr "ledger-api" "root-ca"
 
 # create participant admin-api certificate
 create_key "admin-api"
-create_csr "admin-api" "/O=TESTING/OU=PARTICIPANT ADMIN/CN=localhost/emailAddress=canton@digitalasset.com" "DNS:localhost,IP:127.0.0.1"
+create_csr "admin-api" "/O=TESTING/OU=PARTICIPANT ADMIN/CN=localhost/emailAddress=canton@digitalasset.com" "DNS:localhost,DNS:*.localhost,IP:127.0.0.1,IP:0.0.0.0"
 sign_csr "admin-api" "root-ca"
 
 # create participant client key and certificate
 create_key "admin-client"
-create_csr "admin-client" "/O=TESTING/OU=PARTICIPANT ADMIN CLIENT/CN=localhost/emailAddress=canton@digitalasset.com"
+create_csr "admin-client" "/O=TESTING/OU=PARTICIPANT ADMIN CLIENT/CN=localhost/emailAddress=canton@digitalasset.com" "DNS:localhost,DNS:*.localhost,IP:127.0.0.1,IP:0.0.0.0"
 sign_csr "admin-client" "root-ca"
 print_certificate "admin-client"
 # architecture-handbook-entry-end: GenTestCerts

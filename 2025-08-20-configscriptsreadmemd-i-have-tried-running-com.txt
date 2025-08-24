@@ -1295,7 +1295,7 @@
   Protocol version: 7
 
   Status for Participant 'participant1':
-  Participant id: PAR::participant1::12209f4815890c4b2fa29c5014f50d4b8ebebce4c201765c884c29e3b3393baa7dbb
+  Participant id: PAR::participant1::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d
   Uptime: 27m 23.831485s
   Ports: 
           ledger: 5011

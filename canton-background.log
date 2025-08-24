@@ -1,0 +1,6 @@
+2025-08-24 13:51:55,420 [canton-env-ec-36] WARN  c.d.c.r.DbVersionCheck$:mydomain - Expected Postgres version 11, 12, 13, 14, or 15 but got higher version 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1)
+2025-08-24 13:51:55,420 [canton-env-ec-37] WARN  c.d.c.r.DbVersionCheck$:participant1 - Expected Postgres version 11, 12, 13, 14, or 15 but got higher version 16.9 (Ubuntu 16.9-0ubuntu0.24.04.1)
+2025-08-24 13:51:55,543 [canton-env-ec-37] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 16.9 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15.
+2025-08-24 13:51:55,543 [canton-env-ec-36] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 16.9 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15.
+2025-08-24 13:51:57,658 [canton-env-ec-38] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 16.9 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15.
+2025-08-24 13:51:57,781 [canton-env-ec-38] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 16.9 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15.

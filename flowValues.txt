@@ -38,13 +38,13 @@ curl -X POST http://localhost:7575/v1/create \
 root@ubuntu-16gb-hel1-1:~/canton-prod/canton-open-source-2.10.2# curl -X POST http://localhost:7575/v1/create   -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwczovL2RhbWwuY29tL2xlZGdlci1hcGkiOnsibGVkZ2VySWQiOiJwYXJ0aWNpcGFudDEiLCJhcHBsaWNhdGlvbklkIjoianNvbi1hcGkiLCJhY3RBcyI6WyJCYW5rOjoxMjIwOWY0ODE1ODkwYzRiMmZhMjljNTAxNGY1MGQ0YjhlYmViY2U0YzIwMTc2NWM4ODRjMjllM2IzMzkzYmFhN2RiYiJdfX0.ihbtn6U9K_47HzfKyaojvbbvKD3MUmx86jjsNBEgf7w"   -H "Content-Type: application/json"   -d '{            
     "templateId": "e205977ea6cb451f7c899f7169024a2dc2fa546741d2065515e86b08e3ce364f:Iou:Iou",
     "payload": {                                                                             
-      "payer": "Bank::12209f4815890c4b2fa29c5014f50d4b8ebebce4c201765c884c29e3b3393baa7dbb",
-      "owner": "Alice::12209f4815890c4b2fa29c5014f50d4b8ebebce4c201765c884c29e3b3393baa7dbb",
+      "payer": "Bank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d",
+      "owner": "Alice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d",
       "amount": { "currency": "USD", "value": "100.0" },
       "viewers": []
     }
   }'
-{"result":{"agreementText":"","completionOffset":"000000000000000008","contractId":"0054abff70a88a60d8e73c470927b601d1ffd3d71fdc6945a1e04ef91a035f77e0ca03122013ce62688127ba21895b59d66b2a0de0125e8ced1f259566beaa27ce91902754","observers":["Alice::12209f4815890c4b2fa29c5014f50d4b8ebebce4c201765c884c29e3b3393baa7dbb"],"payload":{"payer":"Bank::12209f4815890c4b2fa29c5014f50d4b8ebebce4c201765c884c29e3b3393baa7dbb","owner":"Alice::12209f4815890c4b2fa29c5014f50d4b8ebebce4c201765c884c29e3b3393baa7dbb","amount":{"value":"100.0","currency":"USD"},"viewers":[]},"signatories":["Bank::12209f4815890c4b2fa29c5014f50d4b8ebebce4c201765c884c29e3b3393baa7dbb"],"templateId":"e205977ea6cb451f7c899f7169024a2dc2fa546741d2065515e86b08e3ce364f:Iou:Iou"},"status":200}root@ubuntu-16gb-hel1-1:~/canton-prod/canton-open-source-2.10.2# 
+{"result":{"agreementText":"","completionOffset":"000000000000000008","contractId":"0054abff70a88a60d8e73c470927b601d1ffd3d71fdc6945a1e04ef91a035f77e0ca03122013ce62688127ba21895b59d66b2a0de0125e8ced1f259566beaa27ce91902754","observers":["Alice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d"],"payload":{"payer":"Bank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d","owner":"Alice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d","amount":{"value":"100.0","currency":"USD"},"viewers":[]},"signatories":["Bank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d"],"templateId":"e205977ea6cb451f7c899f7169024a2dc2fa546741d2065515e86b08e3ce364f:Iou:Iou"},"status":200}root@ubuntu-16gb-hel1-1:~/canton-prod/canton-open-source-2.10.2# 
 
 curl -X POST http://localhost:7575/v1/query \                                                                                     
      -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwczovL2RhbWwuY29tL2xlZGdlci1hcGkiOnsibGVkZ2VySWQiOiJwYXJ0aWNpcGFudDEiLCJhcHBsaWNhdGlvbklkIjoianNvbi1hcGkiLCJhY3RBcyI6WyJCYW5rOjoxMjIwOWY0ODE1ODkwYzRiMmZhMjljNTAxNGY1MGQ0YjhlYmViY2U0YzIwMTc2NWM4ODRjMjllM2IzMzkzYmFhN2RiYiJdfX0.ihbtn6U9K_47HzfKyaojvbbvKD3MUmx86jjsNBEgf7w" \       

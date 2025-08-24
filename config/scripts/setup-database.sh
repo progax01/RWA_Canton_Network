@@ -20,8 +20,11 @@ POSTGRES_ADMIN_USER="${POSTGRES_ADMIN_USER:-postgres}"
 POSTGRES_ADMIN_PASSWORD="${POSTGRES_ADMIN_PASSWORD:-}"
 CANTON_DB_USER="${CANTON_DB_USER:-canton}"
 CANTON_DB_PASSWORD="${CANTON_DB_PASSWORD:-}"
+JSON_API_DB_USER="${JSON_API_DB_USER:-json_api}"
+JSON_API_DB_PASSWORD="${JSON_API_DB_PASSWORD:-}"
 PARTICIPANT_DB="${PARTICIPANT_DB:-canton_participant}"
 DOMAIN_DB="${DOMAIN_DB:-canton_domain}"
+JSON_API_DB="${JSON_API_DB:-json_api_store}"
 
 log_info() {
     echo -e "${BLUE}[INFO]${NC} $1"
@@ -52,8 +55,11 @@ Environment Variables:
   POSTGRES_ADMIN_PASSWORD   PostgreSQL admin password (required)
   CANTON_DB_USER           Canton database user (default: canton)
   CANTON_DB_PASSWORD       Canton database password (required)
+  JSON_API_DB_USER         JSON API database user (default: json_api)
+  JSON_API_DB_PASSWORD     JSON API database password (required)
   PARTICIPANT_DB           Participant database name (default: canton_participant)
   DOMAIN_DB                Domain database name (default: canton_domain)
+  JSON_API_DB              JSON API database name (default: json_api_store)
 
 Options:
   -h, --help               Show this help message
@@ -62,9 +68,10 @@ Options:
   --dry-run               Show what would be done without executing
 
 Examples:
-  # Basic setup (requires POSTGRES_ADMIN_PASSWORD and CANTON_DB_PASSWORD)
+  # Basic setup (requires passwords)
   export POSTGRES_ADMIN_PASSWORD=admin_password
   export CANTON_DB_PASSWORD=strong_canton_password
+  export JSON_API_DB_PASSWORD=strong_json_api_password
   ./setup-database.sh
 
   # Setup with custom host and user
@@ -92,6 +99,11 @@ check_prerequisites() {
     
     if [[ -z "$CANTON_DB_PASSWORD" ]]; then
         log_error "CANTON_DB_PASSWORD environment variable is required"
+        exit 1
+    fi
+    
+    if [[ -z "$JSON_API_DB_PASSWORD" ]]; then
+        log_error "JSON_API_DB_PASSWORD environment variable is required"
         exit 1
     fi
     
@@ -137,12 +149,31 @@ check_existing_databases() {
         fi
     fi
     
-    # Check if user exists
+    # Check if JSON API database exists
+    if psql -h "$POSTGRES_HOST" -p "$POSTGRES_PORT" -U "$POSTGRES_ADMIN_USER" -lqt | cut -d \| -f 1 | grep -qw "$JSON_API_DB"; then
+        if [[ "${FORCE:-false}" == "true" ]]; then
+            log_warn "JSON API database '$JSON_API_DB' exists and will be dropped"
+        else
+            log_error "JSON API database '$JSON_API_DB' already exists. Use --force to drop it."
+            exit 1
+        fi
+    fi
+    
+    # Check if canton user exists
     if psql -h "$POSTGRES_HOST" -p "$POSTGRES_PORT" -U "$POSTGRES_ADMIN_USER" -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='$CANTON_DB_USER'" | grep -q 1; then
         if [[ "${FORCE:-false}" == "true" ]]; then
             log_warn "User '$CANTON_DB_USER' exists and will be updated"
         else
             log_info "User '$CANTON_DB_USER' already exists and will be updated"
+        fi
+    fi
+    
+    # Check if JSON API user exists
+    if psql -h "$POSTGRES_HOST" -p "$POSTGRES_PORT" -U "$POSTGRES_ADMIN_USER" -d postgres -tAc "SELECT 1 FROM pg_roles WHERE rolname='$JSON_API_DB_USER'" | grep -q 1; then
+        if [[ "${FORCE:-false}" == "true" ]]; then
+            log_warn "User '$JSON_API_DB_USER' exists and will be updated"
+        else
+            log_info "User '$JSON_API_DB_USER' already exists and will be updated"
         fi
     fi
 }
@@ -158,18 +189,23 @@ create_databases() {
 -- Drop existing databases (if --force specified)
 DROP DATABASE IF EXISTS $PARTICIPANT_DB;
 DROP DATABASE IF EXISTS $DOMAIN_DB;
+DROP DATABASE IF EXISTS $JSON_API_DB;
 
--- Create or update Canton user
+-- Create or update users
 DROP USER IF EXISTS $CANTON_DB_USER;
+DROP USER IF EXISTS $JSON_API_DB_USER;
 CREATE USER $CANTON_DB_USER WITH PASSWORD '$CANTON_DB_PASSWORD';
+CREATE USER $JSON_API_DB_USER WITH PASSWORD '$JSON_API_DB_PASSWORD';
 
 -- Create databases
 CREATE DATABASE $PARTICIPANT_DB OWNER $CANTON_DB_USER;
 CREATE DATABASE $DOMAIN_DB OWNER $CANTON_DB_USER;
+CREATE DATABASE $JSON_API_DB OWNER $JSON_API_DB_USER;
 
 -- Grant privileges
 GRANT ALL PRIVILEGES ON DATABASE $PARTICIPANT_DB TO $CANTON_DB_USER;
 GRANT ALL PRIVILEGES ON DATABASE $DOMAIN_DB TO $CANTON_DB_USER;
+GRANT ALL PRIVILEGES ON DATABASE $JSON_API_DB TO $JSON_API_DB_USER;
 EOF
         return 0
     fi
@@ -187,7 +223,9 @@ EOF
         cat >> "$SQL_SCRIPT" << EOF
 DROP DATABASE IF EXISTS $PARTICIPANT_DB;
 DROP DATABASE IF EXISTS $DOMAIN_DB;
+DROP DATABASE IF EXISTS $JSON_API_DB;
 DROP USER IF EXISTS $CANTON_DB_USER;
+DROP USER IF EXISTS $JSON_API_DB_USER;
 EOF
     fi
     
@@ -204,13 +242,26 @@ BEGIN
 END
 \$\$;
 
+-- Create JSON API user
+DO \$\$
+BEGIN
+    IF NOT EXISTS (SELECT FROM pg_catalog.pg_roles WHERE rolname = '$JSON_API_DB_USER') THEN
+        CREATE USER $JSON_API_DB_USER WITH PASSWORD '$JSON_API_DB_PASSWORD';
+    ELSE
+        ALTER USER $JSON_API_DB_USER WITH PASSWORD '$JSON_API_DB_PASSWORD';
+    END IF;
+END
+\$\$;
+
 -- Create databases
 CREATE DATABASE $PARTICIPANT_DB OWNER $CANTON_DB_USER;
 CREATE DATABASE $DOMAIN_DB OWNER $CANTON_DB_USER;
+CREATE DATABASE $JSON_API_DB OWNER $JSON_API_DB_USER;
 
 -- Grant privileges
 GRANT ALL PRIVILEGES ON DATABASE $PARTICIPANT_DB TO $CANTON_DB_USER;
 GRANT ALL PRIVILEGES ON DATABASE $DOMAIN_DB TO $CANTON_DB_USER;
+GRANT ALL PRIVILEGES ON DATABASE $JSON_API_DB TO $JSON_API_DB_USER;
 
 -- Apply performance tuning (adjust based on your hardware)
 ALTER SYSTEM SET shared_buffers = '512MB';
@@ -259,12 +310,23 @@ verify_setup() {
         exit 1
     fi
     
+    # Test JSON API database
+    export PGPASSWORD="$JSON_API_DB_PASSWORD"
+    if psql -h "$POSTGRES_HOST" -p "$POSTGRES_PORT" -U "$JSON_API_DB_USER" -d "$JSON_API_DB" -c "SELECT 1;" > /dev/null 2>&1; then
+        log_success "JSON API database connection test passed"
+    else
+        log_error "Failed to connect to JSON API database as $JSON_API_DB_USER"
+        exit 1
+    fi
+    
     # Show database information
     log_info "Database setup summary:"
     echo "  Host: $POSTGRES_HOST:$POSTGRES_PORT"
-    echo "  User: $CANTON_DB_USER"
+    echo "  Canton User: $CANTON_DB_USER"
+    echo "  JSON API User: $JSON_API_DB_USER"
     echo "  Participant DB: $PARTICIPANT_DB"
     echo "  Domain DB: $DOMAIN_DB"
+    echo "  JSON API DB: $JSON_API_DB"
 }
 
 main() {
@@ -313,9 +375,10 @@ main() {
         fi
         
         log_success "Database setup completed successfully!"
-        log_info "You can now start Canton with the single participant configuration"
+        log_info "You can now start Canton with the production configuration"
         log_info "Connection string for participant: jdbc:postgresql://$POSTGRES_HOST:$POSTGRES_PORT/$PARTICIPANT_DB"
         log_info "Connection string for domain: jdbc:postgresql://$POSTGRES_HOST:$POSTGRES_PORT/$DOMAIN_DB"
+        log_info "Connection string for JSON API: jdbc:postgresql://$POSTGRES_HOST:$POSTGRES_PORT/$JSON_API_DB"
     fi
 }
 

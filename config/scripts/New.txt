@@ -37,14 +37,66 @@ Bob party: NewBob::12209f481589...
 
 
 @ participant1.dars.upload("dars/RWA.dar") 
-res10: String = "1220adad75b3e14d40bd63014357faf632ad18c2c22b3478868f6d04f2158770e9bb"
+
 
 @ utils.retry_until_true {
     participant1.dars.list().exists(_.name == "RWA")
   } 
 
 
-@  
+REUSE PARTY.......................
+
+// --- Paste this whole block at once into the Canton console ---
+
+import com.digitalasset.canton.topology.PartyId
+
+def findPartyByPrefix(prefix: String): Option[PartyId] = {
+  try {
+    participant1.parties.list().find { p =>
+      val partyObj = try p.party catch { case _: Throwable => null }
+      partyObj != null && partyObj.toString.startsWith(prefix)
+    }.map(_.party.asInstanceOf[PartyId])
+  } catch {
+    case _: Throwable => None
+  }
+}
+
+def getOrReuseParty(identifierHint: String): PartyId = {
+  val prefix = identifierHint + "::"
+  findPartyByPrefix(prefix) match {
+    case Some(existing) =>
+      println(s"↪ Reusing existing party for '$identifierHint': ${existing.toString}")
+      existing
+    case None =>
+      try {
+        val enabled = participant1.parties.enable(identifierHint)
+        println(s"✅ Enabled party: ${enabled.toString}")
+        enabled.asInstanceOf[PartyId]
+      } catch {
+        case e: Throwable =>
+          println(s"⚠ enable($identifierHint) failed: ${e.getMessage}. Re-querying...")
+          findPartyByPrefix(prefix) match {
+            case Some(existing2) =>
+              println(s"↪ Found existing party after failed enable: ${existing2.toString}")
+              existing2
+            case None =>
+              println(s"❌ Could not enable or find party '$identifierHint' after retry.")
+              throw e
+          }
+      }
+  }
+}
+
+// Use it:
+val bank = getOrReuseParty("NewBank")
+val alice = getOrReuseParty("NewAlice")
+val bob   = getOrReuseParty("NewBob")
+
+println(s"Assigned bank = ${bank.toString}")
+println(s"Assigned alice = ${alice.toString}")
+println(s"Assigned bob = ${bob.toString}")
+
+-----------------------------------------------------
 
 n participant1")
 println("Ready to create AssetRegistry contracts and mint tokens")
@@ -61,10 +113,7 @@ Ready to create AssetRegistry contracts and mint tokens
 
 
 @ val rwaPkg   = participant1.packages.find("TokenExample").head 
-rwaPkg: com.digitalasset.canton.participant.admin.v0.PackageDescription = PackageDescription(
-  packageId = "323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1",
-  sourceDescription = "RWA"
-)
+ 
 
 @ val rwaPackageId = rwaPkg.packageId 
 rwaPackageId: String = "323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1"
@@ -88,9 +137,7 @@ RWA Package ID: 323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1
   "Silver Token", "symbol" -> "SLV"))
 
   // Submit both registry creation commands
-  participant1.ledger_api.commands.submit(Seq(bank),
-  Seq(createGoldRegistryCmd, createSilverRegistryCmd))
-
+ 
   println("✓ Created Gold and Silver AssetRegistry contracts")
 
 

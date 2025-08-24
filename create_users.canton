@@ -1,0 +1,18 @@
+// Create users for JWT authentication
+participant1.ledger_api.users.create(
+  user = "bank_user",
+  primary_party = Some("NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d")
+)
+
+participant1.ledger_api.users.create(
+  user = "alice_user", 
+  primary_party = Some("NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d")
+)
+
+participant1.ledger_api.users.create(
+  user = "bob_user",
+  primary_party = Some("NewBob::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d")
+)
+
+// List all users to verify
+participant1.ledger_api.users.list()

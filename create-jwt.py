@@ -38,9 +38,9 @@ def create_jwt_token(party, full_party_id):
 
 # Create tokens for each party with full party IDs
 parties = {
-    "Alice": "Alice::12209f4815890c4b2fa29c5014f50d4b8ebebce4c201765c884c29e3b3393baa7dbb",
-    "Bob": "Bob::12209f4815890c4b2fa29c5014f50d4b8ebebce4c201765c884c29e3b3393baa7dbb",
-    "Bank": "Bank::12209f4815890c4b2fa29c5014f50d4b8ebebce4c201765c884c29e3b3393baa7dbb"
+    "Alice": "Alice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d",
+    "Bob": "Bob::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d",
+    "Bank": "Bank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d"
 }
 tokens = {}
 

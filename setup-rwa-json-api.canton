@@ -1,0 +1,17 @@
+import better.files._
+import com.digitalasset.canton.console.ParticipantReference
+
+val rwaDar = DarFile(File("dars/RWA.dar"))
+participant1.dars.upload(rwaDar)
+
+// Create parties if they dont exist
+val bank = participant1.parties.enable("NewBank")
+val alice = participant1.parties.enable("NewAlice") 
+val bob = participant1.parties.enable("NewBob")
+
+println("=== RWA Contract Deployed ===")
+println(s"Bank party: $bank")
+println(s"Alice party: $alice")
+println(s"Bob party: $bob")
+
+exit

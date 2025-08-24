@@ -1,0 +1,93 @@
+// Production Network Setup Script for RWA Platform
+// This script connects participant to domain and sets up parties
+
+println("🚀 Starting RWA Platform Production Network Setup...")
+
+// Step 1: Connect participant to domain
+println("Step 1: Connecting participant1 to mydomain...")
+participant1.domains.connect_local(mydomain)
+
+// Wait for connection
+utils.retry_until_true {
+  participant1.domains.list_connected().exists(_.domainId == mydomain.id)
+}
+
+println("✅ Participant1 connected to mydomain")
+
+// Step 2: Enable parties
+println("Step 2: Setting up parties...")
+
+val bank = participant1.parties.enable("NewBank")
+println(s"✅ Bank party created: $bank")
+
+val alice = participant1.parties.enable("NewAlice")  
+println(s"✅ Alice party created: $alice")
+
+val bob = participant1.parties.enable("NewBob")
+println(s"✅ Bob party created: $bob")
+
+// Wait for parties to be available
+utils.retry_until_true {
+  participant1.parties.list().exists(_.party == bank) &&
+  participant1.parties.list().exists(_.party == alice) &&
+  participant1.parties.list().exists(_.party == bob)
+}
+
+println("✅ All parties are active and ready")
+
+// Step 3: Upload RWA contract
+println("Step 3: Uploading RWA contract...")
+participant1.dars.upload("dars/RWA.dar")
+
+// Wait for DAR to be uploaded
+utils.retry_until_true {
+  participant1.dars.list().exists(_.name == "RWA")
+}
+
+println("✅ RWA contract uploaded successfully")
+
+// Step 4: Get package information
+val rwaPkg = participant1.packages.find("TokenExample").head
+val rwaPackageId = rwaPkg.packageId
+
+println(s"✅ RWA Package ID: $rwaPackageId")
+
+// Step 5: Create ledger users for JWT authentication
+println("Step 5: Setting up ledger users for JWT authentication...")
+
+// Create users
+participant1.users.create("participant_admin", None, None)
+participant1.users.create("bank_admin", None, None)
+participant1.users.create("alice_user", None, None) 
+participant1.users.create("bob_user", None, None)
+
+// Grant rights to users
+participant1.users.grant("bank_admin", Some(Set(bank)), Some(Set(bank)))
+participant1.users.grant("alice_user", Some(Set(alice)), Some(Set(alice)))
+participant1.users.grant("bob_user", Some(Set(bob)), Some(Set(bob)))
+
+println("✅ Ledger users created and granted permissions")
+
+// Step 6: Display summary
+println("\n🎉 RWA Platform Production Network Setup Complete!")
+println("=" * 50)
+println("Network Summary:")
+println(s"  Domain: mydomain (${mydomain.id})")
+println(s"  Participant: participant1")
+println("")
+println("Parties:")
+println(s"  Bank: $bank")
+println(s"  Alice: $alice") 
+println(s"  Bob: $bob")
+println("")
+println("Contract:")
+println(s"  Package: RWA")
+println(s"  Package ID: $rwaPackageId")
+println("")
+println("Ledger Users:")
+println("  - participant_admin (full access)")
+println("  - bank_admin (actAs: Bank)")
+println("  - alice_user (actAs: Alice)")
+println("  - bob_user (actAs: Bob)")
+println("")
+println("🔗 Network is ready for JSON API and JWT authentication!")

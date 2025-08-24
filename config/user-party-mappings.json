@@ -1,0 +1,12 @@
+{
+  "participant_admin": [],
+  "bank_admin": [
+    "NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d"
+  ],
+  "alice_user": [
+    "NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d"
+  ],
+  "bob_user": [
+    "NewBob::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d"
+  ]
+}
