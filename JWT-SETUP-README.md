@@ -89,7 +89,7 @@ curl -X POST http://localhost:7575/v1/create \
   -d '{
     "templateId": "323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry",
     "payload": {
-      "admin": "NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d",
+      "admin": "NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9e5261b69405d1e0de8a768d",
       "name": "Gold Token", 
       "symbol": "GLD"
     }

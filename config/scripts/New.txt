@@ -98,7 +98,128 @@ println(s"Assigned bob = ${bob.toString}")
 
 -----------------------------------------------------
 
-n participant1")
+VERY IMP OPERAION --------------------------
+
+
+// --- Paste entire block at once into the Canton REPL ---
+
+import com.digitalasset.canton.topology.PartyId
+
+// helper: find an existing party by prefix (returns PartyId)
+def findPartyByPrefix(prefix: String): Option[PartyId] = {
+  try {
+    participant1.parties.list().find { p =>
+      val partyObj = try p.party catch { case _: Throwable => null }
+      partyObj != null && partyObj.toString.startsWith(prefix)
+    }.map(_.party.asInstanceOf[PartyId])
+  } catch {
+    case _: Throwable => None
+  }
+}
+
+// helper: enable or reuse a party
+def getOrReuseParty(identifierHint: String): PartyId = {
+  val prefix = identifierHint + "::"
+  findPartyByPrefix(prefix) match {
+    case Some(existing) =>
+      println(s"↪ Reusing existing party for '$identifierHint': ${existing.toString}")
+      existing
+    case None =>
+      try {
+        val enabled = participant1.parties.enable(identifierHint)
+        println(s"✅ Enabled party: ${enabled.toString}")
+        enabled.asInstanceOf[PartyId]
+      } catch {
+        case e: Throwable =>
+          println(s"⚠ enable($identifierHint) failed: ${e.getMessage}. Re-querying...")
+          findPartyByPrefix(prefix) match {
+            case Some(existing2) =>
+              println(s"↪ Found existing party after failed enable: ${existing2.toString}")
+              existing2
+            case None =>
+              println(s"❌ Could not enable or find party '$identifierHint' after retry.")
+              throw e
+          }
+      }
+  }
+}
+
+// helper: check if a user exists
+def userExists(userId: String): Boolean = {
+  try {
+    val page = participant1.ledger_api.users.list()
+    val users = try page.users catch { case _: Throwable => Seq.empty }
+    users.exists(u => try u.id == userId catch { case _: Throwable => false })
+  } catch {
+    case _: Throwable => false
+  }
+}
+
+// helper: create user if absent
+def ensureUserExists(userId: String, primaryPartyOpt: Option[PartyId]): Unit = {
+  if (userExists(userId)) {
+    println(s"User already exists: $userId")
+  } else {
+    println(s"Creating user: $userId")
+    try {
+      primaryPartyOpt match {
+        case Some(p) => participant1.ledger_api.users.create(id = userId, primaryParty = Some(p))
+        case None    => participant1.ledger_api.users.create(id = userId, primaryParty = None)
+      }
+      println(s"Created user: $userId")
+    } catch {
+      case e: Throwable =>
+        println(s"❌ Error creating user $userId: ${e.getMessage}")
+        throw e
+    }
+  }
+}
+
+// helper: grant rights (idempotent-ish)
+def grantRights(userId: String, actAsParties: Set[PartyId], readAsParties: Set[PartyId]): Unit = {
+  try {
+    participant1.ledger_api.users.rights.grant(
+      id = userId,
+      actAs = actAsParties,
+      readAs = readAsParties,
+      participantAdmin = false
+    )
+    println(s"Granted rights for user: $userId")
+  } catch {
+    case e: Throwable =>
+      println(s"❌ Error granting rights to $userId: ${e.getMessage}")
+      throw e
+  }
+}
+
+// --- actual flow: find/enable parties then create users and grant rights ---
+val bank  = getOrReuseParty("NewBank")
+val alice = getOrReuseParty("NewAlice")
+val bob   = getOrReuseParty("NewBob")
+
+println(s"Parties: bank=${bank.toString}, alice=${alice.toString}, bob=${bob.toString}")
+
+// create ledger users if absent
+ensureUserExists("bank_admin", Some(bank))
+ensureUserExists("alice_user", Some(alice))
+  ensureUserExists("bob_user", Some(bob))
+
+  // grant actAs/readAs rights
+  grantRights("bank_admin", Set(bank), Set(bank))
+  grantRights("alice_user", Set(alice), Set(alice))
+  grantRights("bob_user", Set(bob), Set(bob))
+
+  println("✅ Users created/granted (or already present).")
+
+
+
+
+--------------------------------------------------------------
+
+
+
+
+
 println("Ready to create AssetRegistry contracts and mint tokens")
 @ println("RWA Platform setup completed successfully!") 
 RWA Platform setup completed successfully!
@@ -138,6 +259,10 @@ RWA Package ID: 323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1
 
   // Submit both registry creation commands
  
+  participant1.ledger_api.commands.submit(Seq(bank),
+  Seq(createGoldRegistryCmd, createSilverRegistryCmd))
+
+
   println("✓ Created Gold and Silver AssetRegistry contracts")
 
 
@@ -169,9 +294,7 @@ val registries = participant1.ledger_api.acs.of_party(bank).filter(_.templateId.
   50 Gold tokens to Bob
 
   val mintAliceGoldCmd =
-  ledger_api_utils.exercise("Mint",
-  Map("to" -> alice, "amount" -> 100),
-  goldRegistry.event)
+  ledger_api_utils.exercise("Mint",Map("to" -> alice, "amount" -> 100),goldRegistry.event)
 
 
    val mintBobGoldCmd =
@@ -199,8 +322,7 @@ val registries = participant1.ledger_api.acs.of_party(bank).filter(_.templateId.
   Map("to" -> bob, "amount" -> 50),
   silverRegistry.event)
 
-  participant1.ledger_api.commands.submi
-  t(Seq(bank), Seq(mintAliceSilverCmd,
+  participant1.ledger_api.commands.submit(Seq(bank), Seq(mintAliceSilverCmd,
   mintBobSilverCmd))
   println("✓ Minted Silver tokens: Alice
    100 SLV, Bob 50 SLV")
@@ -255,11 +377,9 @@ bankContracts.foreach { contract =>println(s"  - ${contract.templateId.entityNam
 
 
 
-  Transfer Gold tokens from Alice to Bob
-   (30 GLD)
+ // Transfer Gold tokens from Alice to Bob (30 GLD)
 
-  println("=== Testing Token Transfers 
-  ===")
+  println("=== Testing Token Transfers ===")
 
   // Alice transfers 30 Gold to Bob
   val transferGoldCmd =
@@ -485,3 +605,86 @@ bankContracts.foreach { contract =>println(s"  - ${contract.templateId.entityNam
     case e: Exception => println("✓ Duplicate redemption request correctly rejected")
   }
 
+
+
+
+
+source jwt-tokens-shell.txt && curl -X POST http://localhost:7575/v1/query \
+-H "Authorization: Bearer $BANK_ADMIN_TOKEN" \
+-H "Content-Type: application/json" \
+-d '{
+"templateIds": ["323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:Token"],
+"query": {"owner": "NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d"}}'
+
+
+ curl -X POST http://localhost:7575/v1/query \
+    -H "Authorization: Bearer $BANK_ADMIN_TOKEN" \
+    -H "Content-Type: application/json" \
+    -d '{"templateIds": ["323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:Token"], "query": {"owner": 
+  "NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d"}}'
+
+
+
+curl -X GET http://localhost:7575/v1/parties \
+    -H "Authorization: Bearer $PARTICIPANT_ADMIN_TOKEN" \
+    -H "Content-Type: application/json"
+
+
+    curl -X POST http://37.27.190.172/v1/query \
+    -H "Authorization: Bearer $BANK_ADMIN_TOKEN" \
+    -H "Content-Type: application/json" \
+    -d '{"templateIds": ["323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:Token"]}'
+
+
+
+
+    curl -X POST http://localhost:7575/v1/query \
+    -H "Authorization: Bearer $BANK_ADMIN_TOKEN" \
+    -H "Content-Type: application/json" \
+    -d '{"templateIds": ["323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry"]}'
+
+
+
+    curl -X POST http://localhost:7575/v1/query \
+    -H "Authorization: Bearer $BANK_ADMIN_TOKEN" \
+    -H "Content-Type: application/json" \
+    -d '{"templateIds": ["323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:RedeemRequest"]}'
+
+
+
+    curl -X POST http://localhost:7575/v1/create \
+    -H "Authorization: Bearer $BANK_ADMIN_TOKEN" \
+    -H "Content-Type: application/json" \
+    -d '{"templateId": "323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry", "payload": 
+  {"admin": "NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d", "name": "Gold Token", "symbol": "GLD"}}'
+
+
+
+  curl -X POST http://localhost:7575/v1/create \
+    -H "Authorization: Bearer $BANK_ADMIN_TOKEN" \
+    -H "Content-Type: application/json" \
+    -d '{"templateId": "323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry", "payload": 
+  {"admin": "NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d", "name": "Silver Token", "symbol": "SLV"}}'
+
+
+
+   curl -X POST http://localhost:7575/v1/exercise \
+    -H "Authorization: Bearer $BANK_ADMIN_TOKEN" \
+    -H "Content-Type: application/json" \
+    -d '{"templateId": "323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry", "contractId": "000ea9c074d4a1b8d539b5e3a0f21a8c7969da32cf0f81174ee0c210c34c59c08bca0312209161ca4f9f6ea7821c32ed296826bd1a57a08a337cb158d146edc2e803aed82b", "choice": "Mint", "argument": {"to": "NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d", "amount": 100}}'
+
+
+
+curl -s -X POST http://localhost:7575/v1/query \
+  -H "Authorization: Bearer $BANK_ADMIN_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "templateIds": ["323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry"]
+  }' | jq
+
+
+    curl -X POST http://localhost:7575/v1/exercise \
+    -H "Authorization: Bearer $ALICE_USER_TOKEN" \
+    -H "Content-Type: application/json" \
+    -d '{"templateId": "323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry", "contractId": "0043617d711682dd60fc0e9e22b482af77dbb80af5c9c24ab1e68dd8d8013cf532ca031220d2d1e28a7762c2ebe6e38ee813714321e0bba37e4cc06bb9d8cfccf9d0b8bee6", "choice": "Transfer", "argument": {"sender": 
+  "NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d", "recipient": "NewBob::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d", "amount": 30}}'

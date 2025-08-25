@@ -775,3 +775,1008 @@ spray.json.DeserializationException: Could not read value for sub
 2025-08-24 20:44:35.809 [http-json-ledger-api-pekko.actor.default-dispatcher-157] INFO  com.daml.http.Endpoints - Responding to client with HTTP 500 Internal Server Error, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "ab851d67-0809-4692-964d-49ad29d2605e"} 
 [WARN] [08/24/2025 21:02:21.555] [http-json-ledger-api-pekko.actor.default-dispatcher-163] [org.apache.pekko.actor.ActorSystemImpl(http-json-ledger-api)] Illegal header: Illegal 'accept-language' header: Invalid input 'U', expected WSP, CRLF, '-', weight, listSep or 'EOI' (line 1, column 4): en US,en;q=0.9,sv;q=0.8
    ^
+2025-08-24 21:25:05.273 [http-json-ledger-api-pekko.actor.default-dispatcher-169] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/readyz from 127.0.0.1:57210, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "eab659d1-5cc7-47aa-9f3c-2fe82fa2fe7e"} 
+2025-08-24 21:25:05.306 [http-json-ledger-api-pekko.actor.default-dispatcher-169] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "eab659d1-5cc7-47aa-9f3c-2fe82fa2fe7e"} 
+[WARN] [08/24/2025 21:30:06.188] [http-json-ledger-api-pekko.actor.default-dispatcher-175] [org.apache.pekko.actor.ActorSystemImpl(http-json-ledger-api)] Illegal header: Illegal 'user-agent' header: Invalid input ';', expected tchar, OWS, comment, product-or-comment or 'EOI' (line 1, column 12): Mozilla/5.0; Keydrop.io/1.0(onlyscans.com/about);
+           ^
+[WARN] [08/24/2025 21:30:06.405] [http-json-ledger-api-pekko.actor.default-dispatcher-174] [org.apache.pekko.actor.ActorSystemImpl(http-json-ledger-api)] Illegal header: Illegal 'user-agent' header: Invalid input ';', expected tchar, OWS, comment, product-or-comment or 'EOI' (line 1, column 12): Mozilla/5.0; Keydrop.io/1.0(onlyscans.com/about);
+           ^
+2025-08-24 21:35:43.265 [http-json-ledger-api-pekko.actor.default-dispatcher-180] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/readyz from 127.0.0.1:58290, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "51efd4eb-c293-4a6c-baa6-2aec8e0b5c28"} 
+2025-08-24 21:35:43.278 [http-json-ledger-api-pekko.actor.default-dispatcher-180] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "51efd4eb-c293-4a6c-baa6-2aec8e0b5c28"} 
+2025-08-24 21:36:23.338 [http-json-ledger-api-pekko.actor.default-dispatcher-180] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/readyz from 127.0.0.1:52020, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "c04083da-736e-46bd-88ca-6c6fbdb44451"} 
+2025-08-24 21:36:23.348 [http-json-ledger-api-pekko.actor.default-dispatcher-180] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "c04083da-736e-46bd-88ca-6c6fbdb44451"} 
+2025-08-24 21:41:54.822 [http-json-ledger-api-pekko.actor.default-dispatcher-186] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/readyz from 127.0.0.1:44326, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "a9bdc2ed-7c87-436d-873f-dcc3ceacd51c"} 
+2025-08-24 21:41:54.836 [http-json-ledger-api-pekko.actor.default-dispatcher-186] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "a9bdc2ed-7c87-436d-873f-dcc3ceacd51c"} 
+2025-08-24 21:41:54.871 [http-json-ledger-api-pekko.actor.default-dispatcher-187] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/readyz from 127.0.0.1:44328, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "a05fef36-27c4-4474-81e9-bb115a488cf3"} 
+2025-08-24 21:41:54.882 [http-json-ledger-api-pekko.actor.default-dispatcher-187] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "a05fef36-27c4-4474-81e9-bb115a488cf3"} 
+2025-08-24 21:41:54.920 [http-json-ledger-api-pekko.actor.default-dispatcher-186] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/v1/parties from 127.0.0.1:44342, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "86da38ef-9ef9-4d7c-ac43-9b5fb842427d"} 
+2025-08-24 21:41:54.920 [http-json-ledger-api-pekko.actor.default-dispatcher-186] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "86da38ef-9ef9-4d7c-ac43-9b5fb842427d"} 
+2025-08-24 21:41:54.941 [http-json-ledger-api-pekko.actor.default-dispatcher-186] INFO  com.daml.http.Endpoints - Responding to client with HTTP 401 Unauthorized, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "86da38ef-9ef9-4d7c-ac43-9b5fb842427d"} 
+2025-08-24 21:41:54.960 [http-json-ledger-api-pekko.actor.default-dispatcher-189] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/v1/parties from 127.0.0.1:44352, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "0a3c3dc1-8b4e-44fd-af16-ba311b6d992e"} 
+2025-08-24 21:41:54.960 [http-json-ledger-api-pekko.actor.default-dispatcher-189] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "0a3c3dc1-8b4e-44fd-af16-ba311b6d992e"} 
+2025-08-24 21:41:54.971 [http-json-ledger-api-pekko.actor.default-dispatcher-189] INFO  com.daml.http.Endpoints - Responding to client with HTTP 401 Unauthorized, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "0a3c3dc1-8b4e-44fd-af16-ba311b6d992e"} 
+2025-08-24 21:41:54.993 [http-json-ledger-api-pekko.actor.default-dispatcher-189] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/v1/parties from 127.0.0.1:44366, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "7986a04b-5fb7-4dcc-bc84-7fe175dafc0b"} 
+2025-08-24 21:41:54.993 [http-json-ledger-api-pekko.actor.default-dispatcher-189] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "7986a04b-5fb7-4dcc-bc84-7fe175dafc0b"} 
+2025-08-24 21:41:55.005 [http-json-ledger-api-pekko.actor.default-dispatcher-186] INFO  com.daml.http.Endpoints - Responding to client with HTTP 401 Unauthorized, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "7986a04b-5fb7-4dcc-bc84-7fe175dafc0b"} 
+2025-08-24 21:41:55.028 [http-json-ledger-api-pekko.actor.default-dispatcher-188] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/v1/parties from 127.0.0.1:44374, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "dbbcda78-9a41-4ace-b105-d89c2cf318ee"} 
+2025-08-24 21:41:55.028 [http-json-ledger-api-pekko.actor.default-dispatcher-188] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "dbbcda78-9a41-4ace-b105-d89c2cf318ee"} 
+2025-08-24 21:41:55.143 [http-json-ledger-api-pekko.actor.default-dispatcher-188] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "dbbcda78-9a41-4ace-b105-d89c2cf318ee"} 
+2025-08-24 21:41:55.162 [http-json-ledger-api-pekko.actor.default-dispatcher-187] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:44386, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "1cd60c33-98f5-4534-a270-fb7568f81e27"} 
+2025-08-24 21:41:55.162 [http-json-ledger-api-pekko.actor.default-dispatcher-187] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "1cd60c33-98f5-4534-a270-fb7568f81e27"} 
+2025-08-24 21:41:55.164 [http-json-ledger-api-pekko.actor.default-dispatcher-188] ERROR com.daml.http.EndpointsCompanion - Internal server error occured, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "1cd60c33-98f5-4534-a270-fb7568f81e27"} 
+spray.json.DeserializationException: Could not read value for sub
+	at spray.json.package$.deserializationError(package.scala:23)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.readString(AuthServiceJWTPayload.scala:413)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.readScopeBasedToken(AuthServiceJWTPayload.scala:253)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.$anonfun$readScopeBasedTokenFromString$3(AuthServiceJWTPayload.scala:270)
+	at scala.util.Try$.apply(Try.scala:210)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.$anonfun$readScopeBasedTokenFromString$2(AuthServiceJWTPayload.scala:270)
+	at scala.util.Success.flatMap(Try.scala:258)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.readScopeBasedTokenFromString(AuthServiceJWTPayload.scala:269)
+	at com.daml.http.HttpService$.$anonfun$parseScopeJwt$1(HttpService.scala:373)
+	at scalaz.$bslash$div.flatMap(Either.scala:134)
+	at com.daml.http.EndpointsCompanion$.decodeAndParseJwt(EndpointsCompanion.scala:319)
+	at com.daml.http.EndpointsCompanion$.decodeAndParsePayload(EndpointsCompanion.scala:334)
+	at com.daml.http.endpoints.RouteSetup.withJwtPayload(RouteSetup.scala:92)
+	at com.daml.http.endpoints.RouteSetup.$anonfun$inputAndJwtPayload$1(RouteSetup.scala:102)
+	at scalaz.EitherT.$anonfun$flatMap$4(EitherT.scala:93)
+	at scalaz.$bslash$div.fold(Either.scala:58)
+	at scalaz.EitherT.$anonfun$flatMap$1(EitherT.scala:93)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:265)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$FulfilledFuture.transformWith(FastFuture.scala:45)
+	at scala.concurrent.Future.flatMap(Future.scala:263)
+	at scala.concurrent.Future.flatMap$(Future.scala:263)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$FulfilledFuture.flatMap(FastFuture.scala:85)
+	at scalaz.std.FutureInstance.bind(Future.scala:19)
+	at scalaz.std.FutureInstance.bind(Future.scala:17)
+	at scalaz.EitherT.flatMap(EitherT.scala:93)
+	at com.daml.http.endpoints.RouteSetup.inputAndJwtPayload(RouteSetup.scala:102)
+	at com.daml.http.endpoints.ContractList.query(ContractList.scala:116)
+	at com.daml.http.Endpoints.$anonfun$all$18(Endpoints.scala:340)
+	at com.daml.http.Endpoints.toRoute(Endpoints.scala:113)
+	at com.daml.http.Endpoints.$anonfun$all$17(Endpoints.scala:340)
+	at org.apache.pekko.http.scaladsl.server.Directive$.$anonfun$addByNameNullaryApply$2(Directive.scala:184)
+	at org.apache.pekko.http.scaladsl.server.ConjunctionMagnet$$anon$2.$anonfun$apply$3(Directive.scala:255)
+	at org.apache.pekko.http.scaladsl.server.ConjunctionMagnet$$anon$2.$anonfun$apply$3(Directive.scala:255)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRouteResultFuture$2(BasicDirectives.scala:71)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRequestContext$2(BasicDirectives.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRouteResult$2(BasicDirectives.scala:80)
+	at org.apache.pekko.http.scaladsl.server.Directive.$anonfun$recover$5(Directive.scala:142)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.Directive.$anonfun$recover$2(Directive.scala:141)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:87)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRequestContext$2(BasicDirectives.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRouteResult$2(BasicDirectives.scala:80)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRequestContext$2(BasicDirectives.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at com.daml.metrics.pekkohttp.HttpMetricsInterceptor$.$anonfun$rateDurationSizeMetrics$3(HttpMetricsInterceptor.scala:42)
+	at com.daml.metrics.api.MetricHandle$Timer.timeFuture(MetricHandle.scala:103)
+	at com.daml.metrics.api.MetricHandle$Timer.timeFuture$(MetricHandle.scala:99)
+	at com.daml.metrics.api.opentelemetry.OpenTelemetryTimer.timeFuture(OpenTelemetryMetricsFactory.scala:162)
+	at com.daml.metrics.pekkohttp.HttpMetricsInterceptor$.$anonfun$rateDurationSizeMetrics$2(HttpMetricsInterceptor.scala:42)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRouteResultWith$2(BasicDirectives.scala:86)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.directives.ExecutionDirectives.$anonfun$handleExceptions$2(ExecutionDirectives.scala:42)
+	at org.apache.pekko.http.scaladsl.server.Route$.$anonfun$createAsyncHandler$1(Route.scala:127)
+	at org.apache.pekko.stream.impl.fusing.MapAsyncUnordered$$anon$29.onPush(Ops.scala:1462)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:556)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:507)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:401)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:662)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:532)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:637)
+	at org.apache.pekko.stream.impl.fusing.ActorGraphInterpreter.org$apache$pekko$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:813)
+	at org.apache.pekko.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:831)
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547)
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545)
+	at org.apache.pekko.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:729)
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590)
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557)
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272)
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233)
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+2025-08-24 21:41:55.166 [http-json-ledger-api-pekko.actor.default-dispatcher-188] INFO  com.daml.http.Endpoints - Responding to client with HTTP 500 Internal Server Error, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "1cd60c33-98f5-4534-a270-fb7568f81e27"} 
+2025-08-24 21:41:55.185 [http-json-ledger-api-pekko.actor.default-dispatcher-188] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:44398, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "65e2db69-5752-422e-8fc1-e532999656ef"} 
+2025-08-24 21:41:55.185 [http-json-ledger-api-pekko.actor.default-dispatcher-188] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "65e2db69-5752-422e-8fc1-e532999656ef"} 
+2025-08-24 21:41:55.188 [http-json-ledger-api-pekko.actor.default-dispatcher-187] ERROR com.daml.http.EndpointsCompanion - Internal server error occured, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "65e2db69-5752-422e-8fc1-e532999656ef"} 
+spray.json.DeserializationException: Could not read value for sub
+	at spray.json.package$.deserializationError(package.scala:23)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.readString(AuthServiceJWTPayload.scala:413)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.readScopeBasedToken(AuthServiceJWTPayload.scala:253)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.$anonfun$readScopeBasedTokenFromString$3(AuthServiceJWTPayload.scala:270)
+	at scala.util.Try$.apply(Try.scala:210)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.$anonfun$readScopeBasedTokenFromString$2(AuthServiceJWTPayload.scala:270)
+	at scala.util.Success.flatMap(Try.scala:258)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.readScopeBasedTokenFromString(AuthServiceJWTPayload.scala:269)
+	at com.daml.http.HttpService$.$anonfun$parseScopeJwt$1(HttpService.scala:373)
+	at scalaz.$bslash$div.flatMap(Either.scala:134)
+	at com.daml.http.EndpointsCompanion$.decodeAndParseJwt(EndpointsCompanion.scala:319)
+	at com.daml.http.EndpointsCompanion$.decodeAndParsePayload(EndpointsCompanion.scala:334)
+	at com.daml.http.endpoints.RouteSetup.withJwtPayload(RouteSetup.scala:92)
+	at com.daml.http.endpoints.RouteSetup.$anonfun$inputAndJwtPayload$1(RouteSetup.scala:102)
+	at scalaz.EitherT.$anonfun$flatMap$4(EitherT.scala:93)
+	at scalaz.$bslash$div.fold(Either.scala:58)
+	at scalaz.EitherT.$anonfun$flatMap$1(EitherT.scala:93)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:265)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$FulfilledFuture.transformWith(FastFuture.scala:45)
+	at scala.concurrent.Future.flatMap(Future.scala:263)
+	at scala.concurrent.Future.flatMap$(Future.scala:263)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$FulfilledFuture.flatMap(FastFuture.scala:85)
+	at scalaz.std.FutureInstance.bind(Future.scala:19)
+	at scalaz.std.FutureInstance.bind(Future.scala:17)
+	at scalaz.EitherT.flatMap(EitherT.scala:93)
+	at com.daml.http.endpoints.RouteSetup.inputAndJwtPayload(RouteSetup.scala:102)
+	at com.daml.http.endpoints.ContractList.query(ContractList.scala:116)
+	at com.daml.http.Endpoints.$anonfun$all$18(Endpoints.scala:340)
+	at com.daml.http.Endpoints.toRoute(Endpoints.scala:113)
+	at com.daml.http.Endpoints.$anonfun$all$17(Endpoints.scala:340)
+	at org.apache.pekko.http.scaladsl.server.Directive$.$anonfun$addByNameNullaryApply$2(Directive.scala:184)
+	at org.apache.pekko.http.scaladsl.server.ConjunctionMagnet$$anon$2.$anonfun$apply$3(Directive.scala:255)
+	at org.apache.pekko.http.scaladsl.server.ConjunctionMagnet$$anon$2.$anonfun$apply$3(Directive.scala:255)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRouteResultFuture$2(BasicDirectives.scala:71)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRequestContext$2(BasicDirectives.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRouteResult$2(BasicDirectives.scala:80)
+	at org.apache.pekko.http.scaladsl.server.Directive.$anonfun$recover$5(Directive.scala:142)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.Directive.$anonfun$recover$2(Directive.scala:141)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:87)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRequestContext$2(BasicDirectives.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRouteResult$2(BasicDirectives.scala:80)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRequestContext$2(BasicDirectives.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at com.daml.metrics.pekkohttp.HttpMetricsInterceptor$.$anonfun$rateDurationSizeMetrics$3(HttpMetricsInterceptor.scala:42)
+	at com.daml.metrics.api.MetricHandle$Timer.timeFuture(MetricHandle.scala:103)
+	at com.daml.metrics.api.MetricHandle$Timer.timeFuture$(MetricHandle.scala:99)
+	at com.daml.metrics.api.opentelemetry.OpenTelemetryTimer.timeFuture(OpenTelemetryMetricsFactory.scala:162)
+	at com.daml.metrics.pekkohttp.HttpMetricsInterceptor$.$anonfun$rateDurationSizeMetrics$2(HttpMetricsInterceptor.scala:42)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRouteResultWith$2(BasicDirectives.scala:86)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.directives.ExecutionDirectives.$anonfun$handleExceptions$2(ExecutionDirectives.scala:42)
+	at org.apache.pekko.http.scaladsl.server.Route$.$anonfun$createAsyncHandler$1(Route.scala:127)
+	at org.apache.pekko.stream.impl.fusing.MapAsyncUnordered$$anon$29.onPush(Ops.scala:1462)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:556)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:507)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:401)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:662)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:532)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:637)
+	at org.apache.pekko.stream.impl.fusing.ActorGraphInterpreter.org$apache$pekko$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:813)
+	at org.apache.pekko.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:831)
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547)
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545)
+	at org.apache.pekko.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:729)
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590)
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557)
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272)
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233)
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+2025-08-24 21:41:55.189 [http-json-ledger-api-pekko.actor.default-dispatcher-187] INFO  com.daml.http.Endpoints - Responding to client with HTTP 500 Internal Server Error, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "65e2db69-5752-422e-8fc1-e532999656ef"} 
+2025-08-24 21:41:55.207 [http-json-ledger-api-pekko.actor.default-dispatcher-186] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/v1/packages from 127.0.0.1:44408, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "7236d882-9314-49ac-b0cc-abe4a3c0d53c"} 
+2025-08-24 21:41:55.208 [http-json-ledger-api-pekko.actor.default-dispatcher-186] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "7236d882-9314-49ac-b0cc-abe4a3c0d53c"} 
+2025-08-24 21:41:55.210 [http-json-ledger-api-pekko.actor.default-dispatcher-188] ERROR com.daml.http.EndpointsCompanion - Internal server error occured, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "7236d882-9314-49ac-b0cc-abe4a3c0d53c"} 
+spray.json.DeserializationException: Could not read value for sub
+	at spray.json.package$.deserializationError(package.scala:23)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.readString(AuthServiceJWTPayload.scala:413)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.readScopeBasedToken(AuthServiceJWTPayload.scala:253)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.$anonfun$readScopeBasedTokenFromString$3(AuthServiceJWTPayload.scala:270)
+	at scala.util.Try$.apply(Try.scala:210)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.$anonfun$readScopeBasedTokenFromString$2(AuthServiceJWTPayload.scala:270)
+	at scala.util.Success.flatMap(Try.scala:258)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.readScopeBasedTokenFromString(AuthServiceJWTPayload.scala:269)
+	at com.daml.http.HttpService$.$anonfun$parseScopeJwt$1(HttpService.scala:373)
+	at scalaz.$bslash$div.flatMap(Either.scala:134)
+	at com.daml.http.EndpointsCompanion$.decodeAndParseJwt(EndpointsCompanion.scala:319)
+	at com.daml.http.EndpointsCompanion$.decodeAndParsePayload(EndpointsCompanion.scala:334)
+	at com.daml.http.endpoints.RouteSetup.withJwtPayload(RouteSetup.scala:92)
+	at com.daml.http.endpoints.RouteSetup.$anonfun$inputAndJwtPayload$1(RouteSetup.scala:102)
+	at scalaz.EitherT.$anonfun$flatMap$4(EitherT.scala:93)
+	at scalaz.$bslash$div.fold(Either.scala:58)
+	at scalaz.EitherT.$anonfun$flatMap$1(EitherT.scala:93)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:265)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$FulfilledFuture.transformWith(FastFuture.scala:45)
+	at scala.concurrent.Future.flatMap(Future.scala:263)
+	at scala.concurrent.Future.flatMap$(Future.scala:263)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$FulfilledFuture.flatMap(FastFuture.scala:85)
+	at scalaz.std.FutureInstance.bind(Future.scala:19)
+	at scalaz.std.FutureInstance.bind(Future.scala:17)
+	at scalaz.EitherT.flatMap(EitherT.scala:93)
+	at com.daml.http.endpoints.RouteSetup.inputAndJwtPayload(RouteSetup.scala:102)
+	at com.daml.http.Endpoints.extractJwtAndLedgerId(Endpoints.scala:189)
+	at com.daml.http.Endpoints.toGetRouteLedgerId(Endpoints.scala:158)
+	at com.daml.http.Endpoints.$anonfun$all$52(Endpoints.scala:362)
+	at org.apache.pekko.http.scaladsl.server.Directive$.$anonfun$addByNameNullaryApply$2(Directive.scala:184)
+	at org.apache.pekko.http.scaladsl.server.ConjunctionMagnet$$anon$2.$anonfun$apply$3(Directive.scala:255)
+	at org.apache.pekko.http.scaladsl.server.ConjunctionMagnet$$anon$2.$anonfun$apply$3(Directive.scala:255)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRouteResultFuture$2(BasicDirectives.scala:71)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRequestContext$2(BasicDirectives.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRouteResult$2(BasicDirectives.scala:80)
+	at org.apache.pekko.http.scaladsl.server.Directive.$anonfun$recover$5(Directive.scala:142)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.Directive.$anonfun$recover$2(Directive.scala:141)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:87)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRequestContext$2(BasicDirectives.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRouteResult$2(BasicDirectives.scala:80)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRequestContext$2(BasicDirectives.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at com.daml.metrics.pekkohttp.HttpMetricsInterceptor$.$anonfun$rateDurationSizeMetrics$3(HttpMetricsInterceptor.scala:42)
+	at com.daml.metrics.api.MetricHandle$Timer.timeFuture(MetricHandle.scala:103)
+	at com.daml.metrics.api.MetricHandle$Timer.timeFuture$(MetricHandle.scala:99)
+	at com.daml.metrics.api.opentelemetry.OpenTelemetryTimer.timeFuture(OpenTelemetryMetricsFactory.scala:162)
+	at com.daml.metrics.pekkohttp.HttpMetricsInterceptor$.$anonfun$rateDurationSizeMetrics$2(HttpMetricsInterceptor.scala:42)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRouteResultWith$2(BasicDirectives.scala:86)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.directives.ExecutionDirectives.$anonfun$handleExceptions$2(ExecutionDirectives.scala:42)
+	at org.apache.pekko.http.scaladsl.server.Route$.$anonfun$createAsyncHandler$1(Route.scala:127)
+	at org.apache.pekko.stream.impl.fusing.MapAsyncUnordered$$anon$29.onPush(Ops.scala:1462)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:556)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:507)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:401)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:662)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:532)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:637)
+	at org.apache.pekko.stream.impl.fusing.ActorGraphInterpreter.org$apache$pekko$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:813)
+	at org.apache.pekko.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:831)
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547)
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545)
+	at org.apache.pekko.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:729)
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590)
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557)
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272)
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233)
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+2025-08-24 21:41:55.211 [http-json-ledger-api-pekko.actor.default-dispatcher-188] INFO  com.daml.http.Endpoints - Responding to client with HTTP 500 Internal Server Error, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "7236d882-9314-49ac-b0cc-abe4a3c0d53c"} 
+2025-08-24 21:41:55.228 [http-json-ledger-api-pekko.actor.default-dispatcher-187] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/v1/packages from 127.0.0.1:44424, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "81a343c6-9a20-4bf9-99a2-4bc0181534e9"} 
+2025-08-24 21:41:55.228 [http-json-ledger-api-pekko.actor.default-dispatcher-187] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "81a343c6-9a20-4bf9-99a2-4bc0181534e9"} 
+2025-08-24 21:41:55.230 [http-json-ledger-api-pekko.actor.default-dispatcher-188] ERROR com.daml.http.EndpointsCompanion - Internal server error occured, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "81a343c6-9a20-4bf9-99a2-4bc0181534e9"} 
+spray.json.DeserializationException: Could not read value for sub
+	at spray.json.package$.deserializationError(package.scala:23)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.readString(AuthServiceJWTPayload.scala:413)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.readScopeBasedToken(AuthServiceJWTPayload.scala:253)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.$anonfun$readScopeBasedTokenFromString$3(AuthServiceJWTPayload.scala:270)
+	at scala.util.Try$.apply(Try.scala:210)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.$anonfun$readScopeBasedTokenFromString$2(AuthServiceJWTPayload.scala:270)
+	at scala.util.Success.flatMap(Try.scala:258)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.readScopeBasedTokenFromString(AuthServiceJWTPayload.scala:269)
+	at com.daml.http.HttpService$.$anonfun$parseScopeJwt$1(HttpService.scala:373)
+	at scalaz.$bslash$div.flatMap(Either.scala:134)
+	at com.daml.http.EndpointsCompanion$.decodeAndParseJwt(EndpointsCompanion.scala:319)
+	at com.daml.http.EndpointsCompanion$.decodeAndParsePayload(EndpointsCompanion.scala:334)
+	at com.daml.http.endpoints.RouteSetup.withJwtPayload(RouteSetup.scala:92)
+	at com.daml.http.endpoints.RouteSetup.$anonfun$inputAndJwtPayload$1(RouteSetup.scala:102)
+	at scalaz.EitherT.$anonfun$flatMap$4(EitherT.scala:93)
+	at scalaz.$bslash$div.fold(Either.scala:58)
+	at scalaz.EitherT.$anonfun$flatMap$1(EitherT.scala:93)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:265)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$FulfilledFuture.transformWith(FastFuture.scala:45)
+	at scala.concurrent.Future.flatMap(Future.scala:263)
+	at scala.concurrent.Future.flatMap$(Future.scala:263)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$FulfilledFuture.flatMap(FastFuture.scala:85)
+	at scalaz.std.FutureInstance.bind(Future.scala:19)
+	at scalaz.std.FutureInstance.bind(Future.scala:17)
+	at scalaz.EitherT.flatMap(EitherT.scala:93)
+	at com.daml.http.endpoints.RouteSetup.inputAndJwtPayload(RouteSetup.scala:102)
+	at com.daml.http.Endpoints.extractJwtAndLedgerId(Endpoints.scala:189)
+	at com.daml.http.Endpoints.toGetRouteLedgerId(Endpoints.scala:158)
+	at com.daml.http.Endpoints.$anonfun$all$52(Endpoints.scala:362)
+	at org.apache.pekko.http.scaladsl.server.Directive$.$anonfun$addByNameNullaryApply$2(Directive.scala:184)
+	at org.apache.pekko.http.scaladsl.server.ConjunctionMagnet$$anon$2.$anonfun$apply$3(Directive.scala:255)
+	at org.apache.pekko.http.scaladsl.server.ConjunctionMagnet$$anon$2.$anonfun$apply$3(Directive.scala:255)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRouteResultFuture$2(BasicDirectives.scala:71)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRequestContext$2(BasicDirectives.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRouteResult$2(BasicDirectives.scala:80)
+	at org.apache.pekko.http.scaladsl.server.Directive.$anonfun$recover$5(Directive.scala:142)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.Directive.$anonfun$recover$2(Directive.scala:141)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:87)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRequestContext$2(BasicDirectives.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRouteResult$2(BasicDirectives.scala:80)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRequestContext$2(BasicDirectives.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at com.daml.metrics.pekkohttp.HttpMetricsInterceptor$.$anonfun$rateDurationSizeMetrics$3(HttpMetricsInterceptor.scala:42)
+	at com.daml.metrics.api.MetricHandle$Timer.timeFuture(MetricHandle.scala:103)
+	at com.daml.metrics.api.MetricHandle$Timer.timeFuture$(MetricHandle.scala:99)
+	at com.daml.metrics.api.opentelemetry.OpenTelemetryTimer.timeFuture(OpenTelemetryMetricsFactory.scala:162)
+	at com.daml.metrics.pekkohttp.HttpMetricsInterceptor$.$anonfun$rateDurationSizeMetrics$2(HttpMetricsInterceptor.scala:42)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRouteResultWith$2(BasicDirectives.scala:86)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.directives.ExecutionDirectives.$anonfun$handleExceptions$2(ExecutionDirectives.scala:42)
+	at org.apache.pekko.http.scaladsl.server.Route$.$anonfun$createAsyncHandler$1(Route.scala:127)
+	at org.apache.pekko.stream.impl.fusing.MapAsyncUnordered$$anon$29.onPush(Ops.scala:1462)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:556)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:507)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:401)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:662)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:532)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:637)
+	at org.apache.pekko.stream.impl.fusing.ActorGraphInterpreter.org$apache$pekko$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:813)
+	at org.apache.pekko.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:831)
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547)
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545)
+	at org.apache.pekko.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:729)
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590)
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557)
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272)
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233)
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+2025-08-24 21:41:55.231 [http-json-ledger-api-pekko.actor.default-dispatcher-188] INFO  com.daml.http.Endpoints - Responding to client with HTTP 500 Internal Server Error, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "81a343c6-9a20-4bf9-99a2-4bc0181534e9"} 
+2025-08-24 21:41:55.247 [http-json-ledger-api-pekko.actor.default-dispatcher-187] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/v1/parties from 127.0.0.1:44434, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "179c38d3-7f16-472c-9b25-7805afc9dba4"} 
+2025-08-24 21:41:55.247 [http-json-ledger-api-pekko.actor.default-dispatcher-187] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "179c38d3-7f16-472c-9b25-7805afc9dba4"} 
+2025-08-24 21:41:55.264 [http-json-ledger-api-pekko.actor.default-dispatcher-186] INFO  com.daml.http.Endpoints - Responding to client with HTTP 500 Internal Server Error, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "179c38d3-7f16-472c-9b25-7805afc9dba4"} 
+2025-08-24 21:41:55.282 [http-json-ledger-api-pekko.actor.default-dispatcher-186] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/v1/parties from 127.0.0.1:44450, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "90dcd170-2007-47a5-b381-b0c3b5193169"} 
+2025-08-24 21:41:55.283 [http-json-ledger-api-pekko.actor.default-dispatcher-186] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "90dcd170-2007-47a5-b381-b0c3b5193169"} 
+2025-08-24 21:41:55.284 [http-json-ledger-api-pekko.actor.default-dispatcher-188] INFO  com.daml.http.Endpoints - Responding to client with HTTP 401 Unauthorized, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "90dcd170-2007-47a5-b381-b0c3b5193169"} 
+[WARN] [08/24/2025 23:45:27.089] [http-json-ledger-api-pekko.actor.default-dispatcher-204] [org.apache.pekko.actor.ActorSystemImpl(http-json-ledger-api)] Illegal header: Illegal 'accept-language' header: Invalid input 'U', expected WSP, CRLF, '-', weight, listSep or 'EOI' (line 1, column 4): en US,en;q=0.9,sv;q=0.8
+   ^
+[WARN] [08/25/2025 01:00:41.180] [http-json-ledger-api-pekko.actor.default-dispatcher-233] [org.apache.pekko.actor.ActorSystemImpl(http-json-ledger-api)] Illegal header: Illegal 'accept-language' header: Invalid input 'U', expected WSP, CRLF, '-', weight, listSep or 'EOI' (line 1, column 4): en US,en;q=0.9,sv;q=0.8
+   ^
+[WARN] [08/25/2025 02:51:32.364] [http-json-ledger-api-pekko.actor.default-dispatcher-260] [org.apache.pekko.actor.ActorSystemImpl(http-json-ledger-api)] Illegal header: Illegal 'accept-language' header: Invalid input 'U', expected WSP, CRLF, '-', weight, listSep or 'EOI' (line 1, column 4): en US,en;q=0.9,sv;q=0.8
+   ^
+2025-08-25 03:43:33.199 [http-json-ledger-api-pekko.actor.default-dispatcher-267] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/v1/query from 127.0.0.1:53736, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "c347da97-1468-4ea6-aa3d-6cdfebb585a0"} 
+2025-08-25 03:43:33.200 [http-json-ledger-api-pekko.actor.default-dispatcher-266] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "c347da97-1468-4ea6-aa3d-6cdfebb585a0"} 
+2025-08-25 03:43:33.202 [http-json-ledger-api-pekko.actor.default-dispatcher-266] ERROR com.daml.http.EndpointsCompanion - Internal server error occured, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "c347da97-1468-4ea6-aa3d-6cdfebb585a0"} 
+spray.json.DeserializationException: Could not read value for sub
+	at spray.json.package$.deserializationError(package.scala:23)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.readString(AuthServiceJWTPayload.scala:413)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.readScopeBasedToken(AuthServiceJWTPayload.scala:253)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.$anonfun$readScopeBasedTokenFromString$3(AuthServiceJWTPayload.scala:270)
+	at scala.util.Try$.apply(Try.scala:210)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.$anonfun$readScopeBasedTokenFromString$2(AuthServiceJWTPayload.scala:270)
+	at scala.util.Success.flatMap(Try.scala:258)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.readScopeBasedTokenFromString(AuthServiceJWTPayload.scala:269)
+	at com.daml.http.HttpService$.$anonfun$parseScopeJwt$1(HttpService.scala:373)
+	at scalaz.$bslash$div.flatMap(Either.scala:134)
+	at com.daml.http.EndpointsCompanion$.decodeAndParseJwt(EndpointsCompanion.scala:319)
+	at com.daml.http.EndpointsCompanion$.decodeAndParsePayload(EndpointsCompanion.scala:334)
+	at com.daml.http.endpoints.RouteSetup.withJwtPayload(RouteSetup.scala:92)
+	at com.daml.http.endpoints.RouteSetup.$anonfun$inputAndJwtPayload$1(RouteSetup.scala:102)
+	at scalaz.EitherT.$anonfun$flatMap$4(EitherT.scala:93)
+	at scalaz.$bslash$div.fold(Either.scala:58)
+	at scalaz.EitherT.$anonfun$flatMap$1(EitherT.scala:93)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:265)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$FulfilledFuture.transformWith(FastFuture.scala:45)
+	at scala.concurrent.Future.flatMap(Future.scala:263)
+	at scala.concurrent.Future.flatMap$(Future.scala:263)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$FulfilledFuture.flatMap(FastFuture.scala:85)
+	at scalaz.std.FutureInstance.bind(Future.scala:19)
+	at scalaz.std.FutureInstance.bind(Future.scala:17)
+	at scalaz.EitherT.flatMap(EitherT.scala:93)
+	at com.daml.http.endpoints.RouteSetup.inputAndJwtPayload(RouteSetup.scala:102)
+	at com.daml.http.endpoints.ContractList.$anonfun$retrieveAll$2(ContractList.scala:92)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)
+	at org.apache.pekko.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:73)
+	at org.apache.pekko.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:110)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:94)
+	at org.apache.pekko.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:110)
+	at org.apache.pekko.dispatch.TaskInvocation.run(AbstractDispatcher.scala:59)
+	at org.apache.pekko.dispatch.ForkJoinExecutorConfigurator$PekkoForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:61)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+2025-08-25 03:43:33.203 [http-json-ledger-api-pekko.actor.default-dispatcher-266] INFO  com.daml.http.Endpoints - Responding to client with HTTP 500 Internal Server Error, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "c347da97-1468-4ea6-aa3d-6cdfebb585a0"} 
+2025-08-25 03:46:27.158 [http-json-ledger-api-pekko.actor.default-dispatcher-266] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/readyz from 127.0.0.1:56038, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "04cbf732-1de1-4764-b2ba-8a0964ab36f5"} 
+2025-08-25 03:46:27.227 [http-json-ledger-api-pekko.actor.default-dispatcher-266] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "04cbf732-1de1-4764-b2ba-8a0964ab36f5"} 
+2025-08-25 03:47:21.461 [http-json-ledger-api-pekko.actor.default-dispatcher-267] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/v1/parties from 127.0.0.1:38868, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "876e01f0-fe26-4463-bfcf-aae3353ad85d"} 
+2025-08-25 03:47:21.461 [http-json-ledger-api-pekko.actor.default-dispatcher-267] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "876e01f0-fe26-4463-bfcf-aae3353ad85d"} 
+2025-08-25 03:47:21.463 [http-json-ledger-api-pekko.actor.default-dispatcher-266] INFO  com.daml.http.Endpoints - Responding to client with HTTP 401 Unauthorized, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "876e01f0-fe26-4463-bfcf-aae3353ad85d"} 
+2025-08-25 03:47:42.218 [http-json-ledger-api-pekko.actor.default-dispatcher-266] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/v1/parties from 127.0.0.1:35610, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "c5e8a275-7fb0-4d73-91b3-1d4cb38faa12"} 
+2025-08-25 03:47:42.218 [http-json-ledger-api-pekko.actor.default-dispatcher-266] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "c5e8a275-7fb0-4d73-91b3-1d4cb38faa12"} 
+2025-08-25 03:47:42.219 [http-json-ledger-api-pekko.actor.default-dispatcher-267] INFO  com.daml.http.Endpoints - Responding to client with HTTP 401 Unauthorized, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "c5e8a275-7fb0-4d73-91b3-1d4cb38faa12"} 
+2025-08-25 04:09:36.512 [http-json-ledger-api-pekko.actor.default-dispatcher-282] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:60686, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "7b521fb5-5b65-483e-98e5-d96f8b98a118"} 
+2025-08-25 04:09:36.512 [http-json-ledger-api-pekko.actor.default-dispatcher-282] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "7b521fb5-5b65-483e-98e5-d96f8b98a118"} 
+2025-08-25 04:09:36.513 [http-json-ledger-api-pekko.actor.default-dispatcher-283] INFO  com.daml.http.Endpoints - Responding to client with HTTP 401 Unauthorized, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "7b521fb5-5b65-483e-98e5-d96f8b98a118"} 
+2025-08-25 04:11:51.498 [http-json-ledger-api-pekko.actor.default-dispatcher-286] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/create from 127.0.0.1:45308, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "18595f4e-3b7b-48b5-8fb8-ee98772a05dd"} 
+2025-08-25 04:11:51.505 [http-json-ledger-api-pekko.actor.default-dispatcher-287] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "18595f4e-3b7b-48b5-8fb8-ee98772a05dd"} 
+2025-08-25 04:11:51.510 [http-json-ledger-api-pekko.actor.default-dispatcher-287] ERROR com.daml.http.EndpointsCompanion - Internal server error occured, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "18595f4e-3b7b-48b5-8fb8-ee98772a05dd"} 
+spray.json.DeserializationException: Could not read value for sub
+	at spray.json.package$.deserializationError(package.scala:23)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.readString(AuthServiceJWTPayload.scala:413)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.readScopeBasedToken(AuthServiceJWTPayload.scala:253)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.$anonfun$readScopeBasedTokenFromString$3(AuthServiceJWTPayload.scala:270)
+	at scala.util.Try$.apply(Try.scala:210)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.$anonfun$readScopeBasedTokenFromString$2(AuthServiceJWTPayload.scala:270)
+	at scala.util.Success.flatMap(Try.scala:258)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.readScopeBasedTokenFromString(AuthServiceJWTPayload.scala:269)
+	at com.daml.http.HttpService$.$anonfun$parseScopeJwt$1(HttpService.scala:373)
+	at scalaz.$bslash$div.flatMap(Either.scala:134)
+	at com.daml.http.EndpointsCompanion$.decodeAndParseJwt(EndpointsCompanion.scala:319)
+	at com.daml.http.EndpointsCompanion$.decodeAndParsePayload(EndpointsCompanion.scala:334)
+	at com.daml.http.endpoints.RouteSetup.withJwtPayload(RouteSetup.scala:92)
+	at com.daml.http.endpoints.RouteSetup.$anonfun$inputJsValAndJwtPayload$1(RouteSetup.scala:86)
+	at scalaz.EitherT.$anonfun$flatMap$4(EitherT.scala:93)
+	at scalaz.$bslash$div.fold(Either.scala:58)
+	at scalaz.EitherT.$anonfun$flatMap$1(EitherT.scala:93)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)
+	at org.apache.pekko.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:73)
+	at org.apache.pekko.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:110)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:94)
+	at org.apache.pekko.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:110)
+	at org.apache.pekko.dispatch.TaskInvocation.run(AbstractDispatcher.scala:59)
+	at org.apache.pekko.dispatch.ForkJoinExecutorConfigurator$PekkoForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:61)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+2025-08-25 04:11:51.510 [http-json-ledger-api-pekko.actor.default-dispatcher-287] INFO  com.daml.http.Endpoints - Responding to client with HTTP 500 Internal Server Error, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "18595f4e-3b7b-48b5-8fb8-ee98772a05dd"} 
+2025-08-25 04:12:38.321 [http-json-ledger-api-pekko.actor.default-dispatcher-286] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/v1/parties from 127.0.0.1:42844, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "4db4d277-9ab9-4f7b-8a95-b4b447ff6172"} 
+2025-08-25 04:12:38.322 [http-json-ledger-api-pekko.actor.default-dispatcher-286] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "4db4d277-9ab9-4f7b-8a95-b4b447ff6172"} 
+2025-08-25 04:12:38.322 [http-json-ledger-api-pekko.actor.default-dispatcher-281] INFO  com.daml.http.Endpoints - Responding to client with HTTP 401 Unauthorized, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "4db4d277-9ab9-4f7b-8a95-b4b447ff6172"} 
+2025-08-25 04:12:59.261 [http-json-ledger-api-pekko.actor.default-dispatcher-281] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:57346, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "f1a175cf-cc26-4640-a7bc-9bb930fc1c53"} 
+2025-08-25 04:12:59.262 [http-json-ledger-api-pekko.actor.default-dispatcher-281] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "f1a175cf-cc26-4640-a7bc-9bb930fc1c53"} 
+2025-08-25 04:12:59.263 [http-json-ledger-api-pekko.actor.default-dispatcher-287] INFO  com.daml.http.Endpoints - Responding to client with HTTP 401 Unauthorized, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "f1a175cf-cc26-4640-a7bc-9bb930fc1c53"} 
+2025-08-25 04:13:44.742 [http-json-ledger-api-pekko.actor.default-dispatcher-287] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:43122, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "2d301ebb-e671-4bfd-8e14-e9c95c974433"} 
+2025-08-25 04:13:44.743 [http-json-ledger-api-pekko.actor.default-dispatcher-287] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "2d301ebb-e671-4bfd-8e14-e9c95c974433"} 
+2025-08-25 04:13:44.744 [http-json-ledger-api-pekko.actor.default-dispatcher-286] ERROR com.daml.http.EndpointsCompanion - Internal server error occured, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "2d301ebb-e671-4bfd-8e14-e9c95c974433"} 
+spray.json.DeserializationException: Could not read value for sub
+	at spray.json.package$.deserializationError(package.scala:23)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.readString(AuthServiceJWTPayload.scala:413)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.readScopeBasedToken(AuthServiceJWTPayload.scala:253)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.$anonfun$readScopeBasedTokenFromString$3(AuthServiceJWTPayload.scala:270)
+	at scala.util.Try$.apply(Try.scala:210)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.$anonfun$readScopeBasedTokenFromString$2(AuthServiceJWTPayload.scala:270)
+	at scala.util.Success.flatMap(Try.scala:258)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.readScopeBasedTokenFromString(AuthServiceJWTPayload.scala:269)
+	at com.daml.http.HttpService$.$anonfun$parseScopeJwt$1(HttpService.scala:373)
+	at scalaz.$bslash$div.flatMap(Either.scala:134)
+	at com.daml.http.EndpointsCompanion$.decodeAndParseJwt(EndpointsCompanion.scala:319)
+	at com.daml.http.EndpointsCompanion$.decodeAndParsePayload(EndpointsCompanion.scala:334)
+	at com.daml.http.endpoints.RouteSetup.withJwtPayload(RouteSetup.scala:92)
+	at com.daml.http.endpoints.RouteSetup.$anonfun$inputAndJwtPayload$1(RouteSetup.scala:102)
+	at scalaz.EitherT.$anonfun$flatMap$4(EitherT.scala:93)
+	at scalaz.$bslash$div.fold(Either.scala:58)
+	at scalaz.EitherT.$anonfun$flatMap$1(EitherT.scala:93)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:265)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$FulfilledFuture.transformWith(FastFuture.scala:45)
+	at scala.concurrent.Future.flatMap(Future.scala:263)
+	at scala.concurrent.Future.flatMap$(Future.scala:263)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$FulfilledFuture.flatMap(FastFuture.scala:85)
+	at scalaz.std.FutureInstance.bind(Future.scala:19)
+	at scalaz.std.FutureInstance.bind(Future.scala:17)
+	at scalaz.EitherT.flatMap(EitherT.scala:93)
+	at com.daml.http.endpoints.RouteSetup.inputAndJwtPayload(RouteSetup.scala:102)
+	at com.daml.http.endpoints.ContractList.query(ContractList.scala:116)
+	at com.daml.http.Endpoints.$anonfun$all$18(Endpoints.scala:340)
+	at com.daml.http.Endpoints.toRoute(Endpoints.scala:113)
+	at com.daml.http.Endpoints.$anonfun$all$17(Endpoints.scala:340)
+	at org.apache.pekko.http.scaladsl.server.Directive$.$anonfun$addByNameNullaryApply$2(Directive.scala:184)
+	at org.apache.pekko.http.scaladsl.server.ConjunctionMagnet$$anon$2.$anonfun$apply$3(Directive.scala:255)
+	at org.apache.pekko.http.scaladsl.server.ConjunctionMagnet$$anon$2.$anonfun$apply$3(Directive.scala:255)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRouteResultFuture$2(BasicDirectives.scala:71)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRequestContext$2(BasicDirectives.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRouteResult$2(BasicDirectives.scala:80)
+	at org.apache.pekko.http.scaladsl.server.Directive.$anonfun$recover$5(Directive.scala:142)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.Directive.$anonfun$recover$2(Directive.scala:141)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:87)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRequestContext$2(BasicDirectives.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRouteResult$2(BasicDirectives.scala:80)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRequestContext$2(BasicDirectives.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at com.daml.metrics.pekkohttp.HttpMetricsInterceptor$.$anonfun$rateDurationSizeMetrics$3(HttpMetricsInterceptor.scala:42)
+	at com.daml.metrics.api.MetricHandle$Timer.timeFuture(MetricHandle.scala:103)
+	at com.daml.metrics.api.MetricHandle$Timer.timeFuture$(MetricHandle.scala:99)
+	at com.daml.metrics.api.opentelemetry.OpenTelemetryTimer.timeFuture(OpenTelemetryMetricsFactory.scala:162)
+	at com.daml.metrics.pekkohttp.HttpMetricsInterceptor$.$anonfun$rateDurationSizeMetrics$2(HttpMetricsInterceptor.scala:42)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRouteResultWith$2(BasicDirectives.scala:86)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.directives.ExecutionDirectives.$anonfun$handleExceptions$2(ExecutionDirectives.scala:42)
+	at org.apache.pekko.http.scaladsl.server.Route$.$anonfun$createAsyncHandler$1(Route.scala:127)
+	at org.apache.pekko.stream.impl.fusing.MapAsyncUnordered$$anon$29.onPush(Ops.scala:1462)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:556)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:507)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:401)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:662)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:532)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:637)
+	at org.apache.pekko.stream.impl.fusing.ActorGraphInterpreter.org$apache$pekko$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:813)
+	at org.apache.pekko.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:831)
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547)
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545)
+	at org.apache.pekko.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:729)
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590)
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557)
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272)
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233)
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+2025-08-25 04:13:44.745 [http-json-ledger-api-pekko.actor.default-dispatcher-286] INFO  com.daml.http.Endpoints - Responding to client with HTTP 500 Internal Server Error, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "2d301ebb-e671-4bfd-8e14-e9c95c974433"} 
+2025-08-25 04:16:23.944 [http-json-ledger-api-pekko.actor.default-dispatcher-290] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:35366, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "a172e921-7992-45dc-a229-ea185ec00cc3"} 
+2025-08-25 04:16:23.945 [http-json-ledger-api-pekko.actor.default-dispatcher-290] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "a172e921-7992-45dc-a229-ea185ec00cc3"} 
+2025-08-25 04:16:23.948 [http-json-ledger-api-pekko.actor.default-dispatcher-291] ERROR com.daml.http.EndpointsCompanion - Internal server error occured, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "a172e921-7992-45dc-a229-ea185ec00cc3"} 
+spray.json.DeserializationException: Unexpected scope in the token
+	at spray.json.package$.deserializationError(package.scala:23)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.$anonfun$readScopeBasedTokenFromString$4(AuthServiceJWTPayload.scala:273)
+	at scala.util.Success.flatMap(Try.scala:258)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.$anonfun$readScopeBasedTokenFromString$2(AuthServiceJWTPayload.scala:270)
+	at scala.util.Success.flatMap(Try.scala:258)
+	at com.daml.ledger.api.auth.AuthServiceJWTCodec$.readScopeBasedTokenFromString(AuthServiceJWTPayload.scala:269)
+	at com.daml.http.HttpService$.$anonfun$parseScopeJwt$1(HttpService.scala:373)
+	at scalaz.$bslash$div.flatMap(Either.scala:134)
+	at com.daml.http.EndpointsCompanion$.decodeAndParseJwt(EndpointsCompanion.scala:319)
+	at com.daml.http.EndpointsCompanion$.decodeAndParsePayload(EndpointsCompanion.scala:334)
+	at com.daml.http.endpoints.RouteSetup.withJwtPayload(RouteSetup.scala:92)
+	at com.daml.http.endpoints.RouteSetup.$anonfun$inputAndJwtPayload$1(RouteSetup.scala:102)
+	at scalaz.EitherT.$anonfun$flatMap$4(EitherT.scala:93)
+	at scalaz.$bslash$div.fold(Either.scala:58)
+	at scalaz.EitherT.$anonfun$flatMap$1(EitherT.scala:93)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:265)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$FulfilledFuture.transformWith(FastFuture.scala:45)
+	at scala.concurrent.Future.flatMap(Future.scala:263)
+	at scala.concurrent.Future.flatMap$(Future.scala:263)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$FulfilledFuture.flatMap(FastFuture.scala:85)
+	at scalaz.std.FutureInstance.bind(Future.scala:19)
+	at scalaz.std.FutureInstance.bind(Future.scala:17)
+	at scalaz.EitherT.flatMap(EitherT.scala:93)
+	at com.daml.http.endpoints.RouteSetup.inputAndJwtPayload(RouteSetup.scala:102)
+	at com.daml.http.endpoints.ContractList.query(ContractList.scala:116)
+	at com.daml.http.Endpoints.$anonfun$all$18(Endpoints.scala:340)
+	at com.daml.http.Endpoints.toRoute(Endpoints.scala:113)
+	at com.daml.http.Endpoints.$anonfun$all$17(Endpoints.scala:340)
+	at org.apache.pekko.http.scaladsl.server.Directive$.$anonfun$addByNameNullaryApply$2(Directive.scala:184)
+	at org.apache.pekko.http.scaladsl.server.ConjunctionMagnet$$anon$2.$anonfun$apply$3(Directive.scala:255)
+	at org.apache.pekko.http.scaladsl.server.ConjunctionMagnet$$anon$2.$anonfun$apply$3(Directive.scala:255)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRouteResultFuture$2(BasicDirectives.scala:71)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRequestContext$2(BasicDirectives.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRouteResult$2(BasicDirectives.scala:80)
+	at org.apache.pekko.http.scaladsl.server.Directive.$anonfun$recover$5(Directive.scala:142)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.Directive.$anonfun$recover$2(Directive.scala:141)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:87)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRequestContext$2(BasicDirectives.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRouteResult$2(BasicDirectives.scala:80)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRequestContext$2(BasicDirectives.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at com.daml.metrics.pekkohttp.HttpMetricsInterceptor$.$anonfun$rateDurationSizeMetrics$3(HttpMetricsInterceptor.scala:42)
+	at com.daml.metrics.api.MetricHandle$Timer.timeFuture(MetricHandle.scala:103)
+	at com.daml.metrics.api.MetricHandle$Timer.timeFuture$(MetricHandle.scala:99)
+	at com.daml.metrics.api.opentelemetry.OpenTelemetryTimer.timeFuture(OpenTelemetryMetricsFactory.scala:162)
+	at com.daml.metrics.pekkohttp.HttpMetricsInterceptor$.$anonfun$rateDurationSizeMetrics$2(HttpMetricsInterceptor.scala:42)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$2(RouteConcatenation.scala:58)
+	at org.apache.pekko.http.scaladsl.util.FastFuture$.flatMap$extension(FastFuture.scala:49)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.RouteConcatenation$RouteWithConcatenation.$anonfun$$tilde$1(RouteConcatenation.scala:55)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$mapRouteResultWith$2(BasicDirectives.scala:86)
+	at org.apache.pekko.http.scaladsl.server.directives.BasicDirectives.$anonfun$textract$2(BasicDirectives.scala:173)
+	at org.apache.pekko.http.scaladsl.server.directives.ExecutionDirectives.$anonfun$handleExceptions$2(ExecutionDirectives.scala:42)
+	at org.apache.pekko.http.scaladsl.server.Route$.$anonfun$createAsyncHandler$1(Route.scala:127)
+	at org.apache.pekko.stream.impl.fusing.MapAsyncUnordered$$anon$29.onPush(Ops.scala:1462)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:556)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:507)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:401)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:662)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:532)
+	at org.apache.pekko.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:637)
+	at org.apache.pekko.stream.impl.fusing.ActorGraphInterpreter.org$apache$pekko$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:813)
+	at org.apache.pekko.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:831)
+	at org.apache.pekko.actor.Actor.aroundReceive(Actor.scala:547)
+	at org.apache.pekko.actor.Actor.aroundReceive$(Actor.scala:545)
+	at org.apache.pekko.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:729)
+	at org.apache.pekko.actor.ActorCell.receiveMessage(ActorCell.scala:590)
+	at org.apache.pekko.actor.ActorCell.invoke(ActorCell.scala:557)
+	at org.apache.pekko.dispatch.Mailbox.processMailbox(Mailbox.scala:272)
+	at org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:233)
+	at org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+2025-08-25 04:16:23.949 [http-json-ledger-api-pekko.actor.default-dispatcher-291] INFO  com.daml.http.Endpoints - Responding to client with HTTP 500 Internal Server Error, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "a172e921-7992-45dc-a229-ea185ec00cc3"} 
+[WARN] [08/25/2025 04:17:24.141] [http-json-ledger-api-pekko.actor.default-dispatcher-291] [org.apache.pekko.actor.ActorSystemImpl(http-json-ledger-api)] Illegal header: Illegal 'accept-language' header: Invalid input 'U', expected WSP, CRLF, '-', weight, listSep or 'EOI' (line 1, column 4): en US,en;q=0.9,sv;q=0.8
+   ^
+2025-08-25 04:19:26.499 [http-json-ledger-api-pekko.actor.default-dispatcher-295] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:39540, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "87145660-9b12-4c35-b012-37a4f6c8be84"} 
+2025-08-25 04:19:26.499 [http-json-ledger-api-pekko.actor.default-dispatcher-295] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "87145660-9b12-4c35-b012-37a4f6c8be84"} 
+2025-08-25 04:19:26.616 [http-json-ledger-api-pekko.actor.default-dispatcher-296] INFO  com.daml.http.Endpoints - Responding to client with HTTP 500 Internal Server Error, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "87145660-9b12-4c35-b012-37a4f6c8be84"} 
+2025-08-25 04:19:42.929 [http-json-ledger-api-pekko.actor.default-dispatcher-296] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/v1/parties from 127.0.0.1:51474, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "61e259bd-7431-4afa-afe8-efcc341365c6"} 
+2025-08-25 04:19:42.930 [http-json-ledger-api-pekko.actor.default-dispatcher-296] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "61e259bd-7431-4afa-afe8-efcc341365c6"} 
+2025-08-25 04:19:42.930 [http-json-ledger-api-pekko.actor.default-dispatcher-281] INFO  com.daml.http.Endpoints - Responding to client with HTTP 401 Unauthorized, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "61e259bd-7431-4afa-afe8-efcc341365c6"} 
+2025-08-25 04:20:39.219 [http-json-ledger-api-pekko.actor.default-dispatcher-281] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:51444, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "7700ce43-b801-494e-96fa-a3b5d2dc55d1"} 
+2025-08-25 04:20:39.220 [http-json-ledger-api-pekko.actor.default-dispatcher-281] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "7700ce43-b801-494e-96fa-a3b5d2dc55d1"} 
+2025-08-25 04:20:39.240 [http-json-ledger-api-pekko.actor.default-dispatcher-295] INFO  com.daml.http.Endpoints - Responding to client with HTTP 403 Forbidden, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "7700ce43-b801-494e-96fa-a3b5d2dc55d1"} 
+2025-08-25 04:21:34.157 [http-json-ledger-api-pekko.actor.default-dispatcher-281] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/v1/parties from 127.0.0.1:56402, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "422b3b2f-a8be-432a-aef2-61f1041b316b"} 
+2025-08-25 04:21:34.157 [http-json-ledger-api-pekko.actor.default-dispatcher-281] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "422b3b2f-a8be-432a-aef2-61f1041b316b"} 
+2025-08-25 04:21:34.170 [http-json-ledger-api-pekko.actor.default-dispatcher-281] INFO  com.daml.http.Endpoints - Responding to client with HTTP 401 Unauthorized, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "422b3b2f-a8be-432a-aef2-61f1041b316b"} 
+2025-08-25 04:21:49.588 [http-json-ledger-api-pekko.actor.default-dispatcher-281] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:46632, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "04ced43c-0cea-4cf5-a0e9-6f4e204261cb"} 
+2025-08-25 04:21:49.588 [http-json-ledger-api-pekko.actor.default-dispatcher-281] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "04ced43c-0cea-4cf5-a0e9-6f4e204261cb"} 
+2025-08-25 04:21:49.603 [http-json-ledger-api-pekko.actor.default-dispatcher-295] INFO  com.daml.http.Endpoints - Responding to client with HTTP 403 Forbidden, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "04ced43c-0cea-4cf5-a0e9-6f4e204261cb"} 
+2025-08-25 04:38:15.793 [http-json-ledger-api-pekko.actor.default-dispatcher-305] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:43352, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "cd68767a-037c-4aec-ad04-d228675fbba4"} 
+2025-08-25 04:38:15.793 [http-json-ledger-api-pekko.actor.default-dispatcher-305] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "cd68767a-037c-4aec-ad04-d228675fbba4"} 
+2025-08-25 04:38:15.862 [http-json-ledger-api-pekko.actor.default-dispatcher-306] INFO  com.daml.http.Endpoints - Responding to client with HTTP 400 Bad Request, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "cd68767a-037c-4aec-ad04-d228675fbba4"} 
+2025-08-25 04:39:06.566 [http-json-ledger-api-pekko.actor.default-dispatcher-305] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:36472, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "46958e11-0bed-4966-a8d4-43911bdf0ea4"} 
+2025-08-25 04:39:06.566 [http-json-ledger-api-pekko.actor.default-dispatcher-305] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "46958e11-0bed-4966-a8d4-43911bdf0ea4"} 
+2025-08-25 04:39:07.672 [http-json-ledger-api-pekko.actor.default-dispatcher-309] INFO  com.daml.http.PackageService - new package IDs loaded: 18597917bc74b69da52b6868f118979353b62ebec4363329cd3d843b46e76702, 86828b9843465f419db1ef8a8ee741d1eef645df02375ebf509cdc8c3ddd16cb, 5921708ce82f4255deb1b26d2c05358b548720938a5a325718dc69f381ba47ff, cc348d369011362a5190fe96dd1f0dfbc697fdfd10e382b9e9666f0da05961b7, 99a2705ed38c1c26cbb8fe7acf36bbf626668e167a33335de932599219e0a235, e22bce619ae24ca3b8e6519281cb5a33b64b3190cc763248b4c3f9ad5087a92c, d58cf9939847921b2aab78eaa7b427dc4c649d25e6bee3c749ace4c3f52f5c97, 6c2c0667393c5f92f1885163068cd31800d2264eb088eb6fc740e11241b2bf06, 323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1, 315cb5676675c14e71453d4a9a2a58900e5b50d6665cba4cdf21f58b22abff83, 8a7806365bbd98d88b4c13832ebfa305f6abaeaf32cfa2b7dd25c4fa489b79fb, c1f1f00558799eec139fb4f4c76f95fb52fa1837a5dd29600baa1c8ed1bdccfd, 733e38d36a2759688a4b2c4cec69d48e7b55ecc8dedc8067b815926c917a182a, 1cc0ce9df7722b71fdfd172e9684c4855a7946a4a6933e784c7d9de8fac081c9, e8b3e0650dc0245a4a42133eb3b71b2ac7c3e03f25ee4df378b8089210a1bb6d, bf5d87e92f338ea2367741d6cfb9a1fa02f93c167cef6eb08e76e1a44474b746, 65921e553a353588e950cbc87e98a127730e63295f7ad8d3adae952ef0133b3e, f20de1e4e37b92280264c08bf15eca0be0bc5babd7a7b5e574997f154c00cb78, 3f4deaf145a15cdcfa762c058005e2edb9baa75bb7f95a4f8f6f937378e86415, bfcd37bd6b84768e86e432f5f6c33e25d9e7724a9d42e33875ff74f6348e733f, 6df2d1fd8ea994ed048a79587b2722e3a887ac7592abf31ecf46fe09ac02d689, 57b5c520512c24035057aa4c783cb7ac7f3f49db29806280962e188be7aadb66, e4cc67c3264eba4a19c080cac5ab32d87551578e0f5f58b6a9460f91c7abc254, 518032f41fd0175461b35ae0c9691e08b4aea55e62915f8360af2cc7a1f2ba6c, 6851f194e144b693e63e9034b956c76cef6b5088dd8c66a657ab652a204dba2b, 6839a6d3d430c569b2425e9391717b44ca324b88ba621d597778811b2d05031d, cb0552debf219cc909f51cbb5c3b41e9981d39f8f645b1f35e2ef5be2e0b858a, 76bf0fd12bd945762a01f8fc5bbcdfa4d0ff20f8762af490f8f41d6237c6524f, 852d8e3a8ccf952acc73e17522846bc1eb41498e840d637e519ddcca7dbc7671, 10e0333b52bba1ff147fc408a6b7d68465b157635ee230493bd6029b750dcb05, d14e08374fc7197d6a0de468c968ae8ba3aadbf9315476fd39071831f5923662, 057eed1fd48c238491b8ea06b9b5bf85a5d4c9275dd3f6183e0e6b01730cc2ba, 38e6274601b21d7202bb995bc5ec147decda5a01b68d57dda422425038772af7, e491352788e56ca4603acc411ffe1a49fefd76ed8b163af86cf5ee5f4c38645b, 40f452260bef3f29dede136108fc08a88d5a5250310281067087da6f0baddff7, 97b883cd8a2b7f49f90d5d39c981cf6e110cf1f1c64427a28a6d58ec88c43657, context: {ledger_id: "participant1", cmd: "GetActiveContractsRequest(Set(ContractTypeId(323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1,TokenExample,Token)),Map(owner -> \"NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d\"),None)", request_id: "46958e11-0bed-4966-a8d4-43911bdf0ea4", instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", application_id: "bank_admin", read_as: "List(NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", act_as: "List(NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)"} 
+2025-08-25 04:39:07.689 [http-json-ledger-api-pekko.actor.default-dispatcher-309] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "46958e11-0bed-4966-a8d4-43911bdf0ea4"} 
+2025-08-25 04:41:13.151 [http-json-ledger-api-pekko.actor.default-dispatcher-308] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/v1/parties from 127.0.0.1:44102, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "6bbf4713-acd8-4dc2-b947-7a40995b6916"} 
+2025-08-25 04:41:13.152 [http-json-ledger-api-pekko.actor.default-dispatcher-308] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "6bbf4713-acd8-4dc2-b947-7a40995b6916"} 
+2025-08-25 04:41:13.178 [http-json-ledger-api-pekko.actor.default-dispatcher-308] INFO  com.daml.http.Endpoints - Responding to client with HTTP 401 Unauthorized, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "6bbf4713-acd8-4dc2-b947-7a40995b6916"} 
+2025-08-25 04:42:00.815 [http-json-ledger-api-pekko.actor.default-dispatcher-310] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:36806, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "e52bd60a-218e-484b-8f3a-9394ccf99961"} 
+2025-08-25 04:42:00.816 [http-json-ledger-api-pekko.actor.default-dispatcher-310] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "e52bd60a-218e-484b-8f3a-9394ccf99961"} 
+2025-08-25 04:42:00.849 [http-json-ledger-api-pekko.actor.default-dispatcher-308] INFO  com.daml.http.Endpoints - Responding to client with HTTP 400 Bad Request, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "e52bd60a-218e-484b-8f3a-9394ccf99961"} 
+2025-08-25 04:42:24.116 [http-json-ledger-api-pekko.actor.default-dispatcher-309] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/v1/parties from 127.0.0.1:57644, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "7e7df303-f022-4084-bf08-da51d7f18fa5"} 
+2025-08-25 04:42:24.116 [http-json-ledger-api-pekko.actor.default-dispatcher-309] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "7e7df303-f022-4084-bf08-da51d7f18fa5"} 
+2025-08-25 04:42:24.131 [http-json-ledger-api-pekko.actor.default-dispatcher-309] INFO  com.daml.http.Endpoints - Responding to client with HTTP 401 Unauthorized, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "7e7df303-f022-4084-bf08-da51d7f18fa5"} 
+2025-08-25 04:44:15.140 [http-json-ledger-api-pekko.actor.default-dispatcher-308] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:54194, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "8ba1a557-5acb-4467-b750-c0c1a57b2e6d"} 
+2025-08-25 04:44:15.140 [http-json-ledger-api-pekko.actor.default-dispatcher-308] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "8ba1a557-5acb-4467-b750-c0c1a57b2e6d"} 
+2025-08-25 04:44:15.176 [http-json-ledger-api-pekko.actor.default-dispatcher-305] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "8ba1a557-5acb-4467-b750-c0c1a57b2e6d"} 
+2025-08-25 04:44:42.645 [http-json-ledger-api-pekko.actor.default-dispatcher-305] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/v1/parties from 127.0.0.1:33528, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "04ac6001-7a24-43ac-9e07-4f4d6acef787"} 
+2025-08-25 04:44:42.646 [http-json-ledger-api-pekko.actor.default-dispatcher-305] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "04ac6001-7a24-43ac-9e07-4f4d6acef787"} 
+2025-08-25 04:44:42.659 [http-json-ledger-api-pekko.actor.default-dispatcher-305] INFO  com.daml.http.Endpoints - Responding to client with HTTP 401 Unauthorized, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "04ac6001-7a24-43ac-9e07-4f4d6acef787"} 
+2025-08-25 04:44:57.689 [http-json-ledger-api-pekko.actor.default-dispatcher-310] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:58620, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "6633f477-3f3d-4f6e-ab5b-ca56f30c0d8e"} 
+2025-08-25 04:44:57.689 [http-json-ledger-api-pekko.actor.default-dispatcher-310] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "6633f477-3f3d-4f6e-ab5b-ca56f30c0d8e"} 
+2025-08-25 04:44:57.712 [http-json-ledger-api-pekko.actor.default-dispatcher-305] INFO  com.daml.http.Endpoints - Responding to client with HTTP 400 Bad Request, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "6633f477-3f3d-4f6e-ab5b-ca56f30c0d8e"} 
+2025-08-25 04:48:01.894 [http-json-ledger-api-pekko.actor.default-dispatcher-317] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:46984, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "e70623bf-3336-4477-866d-bcecb84739ab"} 
+2025-08-25 04:48:01.895 [http-json-ledger-api-pekko.actor.default-dispatcher-317] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "e70623bf-3336-4477-866d-bcecb84739ab"} 
+2025-08-25 04:48:01.919 [http-json-ledger-api-pekko.actor.default-dispatcher-304] INFO  com.daml.http.Endpoints - Responding to client with HTTP 400 Bad Request, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "e70623bf-3336-4477-866d-bcecb84739ab"} 
+2025-08-25 04:48:30.237 [http-json-ledger-api-pekko.actor.default-dispatcher-304] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:40282, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "cdbe711d-32fd-4a06-9206-3afd27774f0b"} 
+2025-08-25 04:48:30.237 [http-json-ledger-api-pekko.actor.default-dispatcher-304] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "cdbe711d-32fd-4a06-9206-3afd27774f0b"} 
+2025-08-25 04:48:30.262 [http-json-ledger-api-pekko.actor.default-dispatcher-319] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "cdbe711d-32fd-4a06-9206-3afd27774f0b"} 
+2025-08-25 04:48:47.971 [http-json-ledger-api-pekko.actor.default-dispatcher-319] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/v1/parties from 127.0.0.1:56910, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "29444353-0329-471d-b2a8-34801eedae93"} 
+2025-08-25 04:48:47.972 [http-json-ledger-api-pekko.actor.default-dispatcher-319] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "29444353-0329-471d-b2a8-34801eedae93"} 
+2025-08-25 04:48:48.018 [http-json-ledger-api-pekko.actor.default-dispatcher-319] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "29444353-0329-471d-b2a8-34801eedae93"} 
+2025-08-25 04:49:10.151 [http-json-ledger-api-pekko.actor.default-dispatcher-304] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:49892, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "367303f8-edf8-4b47-ab72-12a2924bd44d"} 
+2025-08-25 04:49:10.151 [http-json-ledger-api-pekko.actor.default-dispatcher-304] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "367303f8-edf8-4b47-ab72-12a2924bd44d"} 
+2025-08-25 04:49:10.172 [http-json-ledger-api-pekko.actor.default-dispatcher-319] INFO  com.daml.http.Endpoints - Responding to client with HTTP 400 Bad Request, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "367303f8-edf8-4b47-ab72-12a2924bd44d"} 
+2025-08-25 04:49:22.287 [http-json-ledger-api-pekko.actor.default-dispatcher-304] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/v1/parties from 127.0.0.1:38248, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "8707bd21-2e90-450b-aa40-9369e4cca9a4"} 
+2025-08-25 04:49:22.288 [http-json-ledger-api-pekko.actor.default-dispatcher-304] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "8707bd21-2e90-450b-aa40-9369e4cca9a4"} 
+2025-08-25 04:49:22.314 [http-json-ledger-api-pekko.actor.default-dispatcher-304] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "8707bd21-2e90-450b-aa40-9369e4cca9a4"} 
+2025-08-25 04:49:44.775 [http-json-ledger-api-pekko.actor.default-dispatcher-319] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:57068, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "f9aea7aa-a8ca-4686-9d54-a222e6d633ff"} 
+2025-08-25 04:49:44.776 [http-json-ledger-api-pekko.actor.default-dispatcher-319] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "f9aea7aa-a8ca-4686-9d54-a222e6d633ff"} 
+2025-08-25 04:49:44.795 [http-json-ledger-api-pekko.actor.default-dispatcher-304] INFO  com.daml.http.Endpoints - Responding to client with HTTP 400 Bad Request, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "f9aea7aa-a8ca-4686-9d54-a222e6d633ff"} 
+2025-08-25 04:50:05.331 [http-json-ledger-api-pekko.actor.default-dispatcher-319] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:34454, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "2af12de0-d2fd-4d81-ae09-95ac3cf689fc"} 
+2025-08-25 04:50:05.331 [http-json-ledger-api-pekko.actor.default-dispatcher-319] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "2af12de0-d2fd-4d81-ae09-95ac3cf689fc"} 
+2025-08-25 04:50:05.352 [http-json-ledger-api-pekko.actor.default-dispatcher-304] INFO  com.daml.http.Endpoints - Responding to client with HTTP 400 Bad Request, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "2af12de0-d2fd-4d81-ae09-95ac3cf689fc"} 
+2025-08-25 04:50:31.190 [http-json-ledger-api-pekko.actor.default-dispatcher-319] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:59086, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "a0938564-454f-461f-b294-c2aa09c70638"} 
+2025-08-25 04:50:31.191 [http-json-ledger-api-pekko.actor.default-dispatcher-319] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "a0938564-454f-461f-b294-c2aa09c70638"} 
+2025-08-25 04:50:31.211 [http-json-ledger-api-pekko.actor.default-dispatcher-304] INFO  com.daml.http.Endpoints - Responding to client with HTTP 400 Bad Request, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "a0938564-454f-461f-b294-c2aa09c70638"} 
+2025-08-25 04:50:51.547 [http-json-ledger-api-pekko.actor.default-dispatcher-304] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:52574, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "334c3a29-6411-40d6-a19c-46b3204d075c"} 
+2025-08-25 04:50:51.548 [http-json-ledger-api-pekko.actor.default-dispatcher-304] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "334c3a29-6411-40d6-a19c-46b3204d075c"} 
+2025-08-25 04:50:51.569 [http-json-ledger-api-pekko.actor.default-dispatcher-319] INFO  com.daml.http.Endpoints - Responding to client with HTTP 400 Bad Request, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "334c3a29-6411-40d6-a19c-46b3204d075c"} 
+2025-08-25 04:51:10.727 [http-json-ledger-api-pekko.actor.default-dispatcher-319] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/create from 127.0.0.1:43222, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "78e1d30e-44b0-48d4-b44f-655540998e8e"} 
+2025-08-25 04:51:10.728 [http-json-ledger-api-pekko.actor.default-dispatcher-304] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "78e1d30e-44b0-48d4-b44f-655540998e8e"} 
+2025-08-25 04:51:10.729 [http-json-ledger-api-pekko.actor.default-dispatcher-304] INFO  com.daml.http.Endpoints - Responding to client with HTTP 400 Bad Request, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "78e1d30e-44b0-48d4-b44f-655540998e8e"} 
+2025-08-25 04:51:25.571 [http-json-ledger-api-pekko.actor.default-dispatcher-319] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:44248, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "46e5fd34-b6f4-4a8e-a733-6a50e5c97462"} 
+2025-08-25 04:51:25.572 [http-json-ledger-api-pekko.actor.default-dispatcher-319] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "46e5fd34-b6f4-4a8e-a733-6a50e5c97462"} 
+2025-08-25 04:51:25.597 [http-json-ledger-api-pekko.actor.default-dispatcher-318] INFO  com.daml.http.Endpoints - Responding to client with HTTP 400 Bad Request, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "46e5fd34-b6f4-4a8e-a733-6a50e5c97462"} 
+2025-08-25 04:57:23.743 [http-json-ledger-api-pekko.actor.default-dispatcher-323] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:51566, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "8846f9ce-2f26-496d-ab93-880be5ecd267"} 
+2025-08-25 04:57:23.744 [http-json-ledger-api-pekko.actor.default-dispatcher-323] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "8846f9ce-2f26-496d-ab93-880be5ecd267"} 
+2025-08-25 04:57:23.763 [http-json-ledger-api-pekko.actor.default-dispatcher-324] INFO  com.daml.http.Endpoints - Responding to client with HTTP 500 Internal Server Error, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "8846f9ce-2f26-496d-ab93-880be5ecd267"} 
+2025-08-25 04:57:40.500 [http-json-ledger-api-pekko.actor.default-dispatcher-324] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:39704, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "16651749-6cda-4108-83af-6fa096b60b58"} 
+2025-08-25 04:57:40.501 [http-json-ledger-api-pekko.actor.default-dispatcher-324] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "16651749-6cda-4108-83af-6fa096b60b58"} 
+2025-08-25 04:57:40.523 [http-json-ledger-api-pekko.actor.default-dispatcher-322] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "16651749-6cda-4108-83af-6fa096b60b58"} 
+[WARN] [08/25/2025 04:58:09.635] [http-json-ledger-api-pekko.actor.default-dispatcher-322] [org.apache.pekko.actor.ActorSystemImpl(http-json-ledger-api)] Illegal header: Illegal 'accept-language' header: Invalid input 'U', expected WSP, CRLF, '-', weight, listSep or 'EOI' (line 1, column 4): en US,en;q=0.9,sv;q=0.8
+   ^
+2025-08-25 04:58:28.793 [http-json-ledger-api-pekko.actor.default-dispatcher-324] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:41492, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "f06cd1df-131c-4808-afb6-d743ba195219"} 
+2025-08-25 04:58:28.794 [http-json-ledger-api-pekko.actor.default-dispatcher-324] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "f06cd1df-131c-4808-afb6-d743ba195219"} 
+2025-08-25 04:58:28.815 [http-json-ledger-api-pekko.actor.default-dispatcher-322] INFO  com.daml.http.Endpoints - Responding to client with HTTP 400 Bad Request, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "f06cd1df-131c-4808-afb6-d743ba195219"} 
+2025-08-25 04:58:57.319 [http-json-ledger-api-pekko.actor.default-dispatcher-322] INFO  com.daml.http.Endpoints - Incoming GET request on http://localhost:7575/v1/parties from 127.0.0.1:55226, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "1de37cc6-8d42-471f-bdfd-4f3e612a4076"} 
+2025-08-25 04:58:57.319 [http-json-ledger-api-pekko.actor.default-dispatcher-322] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "1de37cc6-8d42-471f-bdfd-4f3e612a4076"} 
+2025-08-25 04:58:57.335 [http-json-ledger-api-pekko.actor.default-dispatcher-322] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "1de37cc6-8d42-471f-bdfd-4f3e612a4076"} 
+2025-08-25 04:59:29.974 [http-json-ledger-api-pekko.actor.default-dispatcher-323] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:42086, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "6915c6c8-6a56-45d1-9e3f-77c8f82a40f2"} 
+2025-08-25 04:59:29.975 [http-json-ledger-api-pekko.actor.default-dispatcher-323] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "6915c6c8-6a56-45d1-9e3f-77c8f82a40f2"} 
+2025-08-25 04:59:29.997 [http-json-ledger-api-pekko.actor.default-dispatcher-322] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "6915c6c8-6a56-45d1-9e3f-77c8f82a40f2"} 
+2025-08-25 04:59:54.404 [http-json-ledger-api-pekko.actor.default-dispatcher-323] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:59910, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "8659e4c8-a8e4-41c0-97f5-4d4ee2b2cc83"} 
+2025-08-25 04:59:54.405 [http-json-ledger-api-pekko.actor.default-dispatcher-323] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "8659e4c8-a8e4-41c0-97f5-4d4ee2b2cc83"} 
+2025-08-25 04:59:54.428 [http-json-ledger-api-pekko.actor.default-dispatcher-324] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "8659e4c8-a8e4-41c0-97f5-4d4ee2b2cc83"} 
+2025-08-25 05:00:32.147 [http-json-ledger-api-pekko.actor.default-dispatcher-324] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:59526, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "b9c7854f-051e-4b81-898b-a6ea4e4b57ec"} 
+2025-08-25 05:00:32.147 [http-json-ledger-api-pekko.actor.default-dispatcher-324] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "b9c7854f-051e-4b81-898b-a6ea4e4b57ec"} 
+2025-08-25 05:00:32.168 [http-json-ledger-api-pekko.actor.default-dispatcher-322] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "b9c7854f-051e-4b81-898b-a6ea4e4b57ec"} 
+2025-08-25 05:01:22.112 [http-json-ledger-api-pekko.actor.default-dispatcher-322] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/create from 127.0.0.1:54392, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "c42cf280-5411-4b22-810f-a2082f182fae"} 
+2025-08-25 05:01:22.112 [http-json-ledger-api-pekko.actor.default-dispatcher-324] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "c42cf280-5411-4b22-810f-a2082f182fae"} 
+2025-08-25 05:01:22.189 [http-json-ledger-api-pekko.actor.default-dispatcher-324] INFO  com.daml.http.CommandService - Submitting create command, context: {command_id: "483d9401-4f3e-4f5c-a9c8-f48face3ca9f", ledger_id: "participant1", request_id: "c42cf280-5411-4b22-810f-a2082f182fae", instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", application_id: "bank_admin", template_id: "TemplateId(323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1,TokenExample,AssetRegistry)", read_as: "List(NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", act_as: "List(NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)"} 
+2025-08-25 05:01:22.934 [http-json-ledger-api-pekko.actor.default-dispatcher-324] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "c42cf280-5411-4b22-810f-a2082f182fae"} 
+2025-08-25 05:02:17.918 [http-json-ledger-api-pekko.actor.default-dispatcher-323] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/create from 127.0.0.1:58598, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "dec079b5-0a2b-4af4-a834-6fefe6d09840"} 
+2025-08-25 05:02:17.919 [http-json-ledger-api-pekko.actor.default-dispatcher-322] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "dec079b5-0a2b-4af4-a834-6fefe6d09840"} 
+2025-08-25 05:02:17.940 [http-json-ledger-api-pekko.actor.default-dispatcher-322] INFO  com.daml.http.CommandService - Submitting create command, context: {command_id: "fb4d8b4a-89c7-4d5d-b305-c6d80587bd05", ledger_id: "participant1", request_id: "dec079b5-0a2b-4af4-a834-6fefe6d09840", instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", application_id: "bank_admin", template_id: "TemplateId(323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1,TokenExample,AssetRegistry)", read_as: "List(NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", act_as: "List(NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)"} 
+2025-08-25 05:02:18.237 [http-json-ledger-api-pekko.actor.default-dispatcher-322] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "dec079b5-0a2b-4af4-a834-6fefe6d09840"} 
+2025-08-25 05:03:41.199 [http-json-ledger-api-pekko.actor.default-dispatcher-323] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/exercise from 127.0.0.1:58966, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "dae66fa7-bfec-4fc6-9de0-2adfb33fff08"} 
+2025-08-25 05:03:41.205 [http-json-ledger-api-pekko.actor.default-dispatcher-324] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "dae66fa7-bfec-4fc6-9de0-2adfb33fff08"} 
+2025-08-25 05:03:41.267 [http-json-ledger-api-pekko.actor.default-dispatcher-324] INFO  com.daml.http.CommandService - Submitting exercise command, context: {command_id: "9d9269ce-60a8-45b4-9723-a59711a9510a", ledger_id: "participant1", instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", application_id: "bank_admin", read_as: "List(NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", act_as: "List(NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", request_id: "dae66fa7-bfec-4fc6-9de0-2adfb33fff08", choice: "Mint", template_id: "TemplateId(323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1,TokenExample,AssetRegistry)", contract_id: ""} 
+2025-08-25 05:03:41.289 [http-json-ledger-api-pekko.actor.default-dispatcher-324] INFO  com.daml.http.Endpoints - Responding to client with HTTP 400 Bad Request, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "dae66fa7-bfec-4fc6-9de0-2adfb33fff08"} 
+2025-08-25 05:10:50.842 [http-json-ledger-api-pekko.actor.default-dispatcher-329] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/exercise from 127.0.0.1:48740, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "d73d1c99-759f-45d4-a14e-8c2087c8688f"} 
+2025-08-25 05:10:50.843 [http-json-ledger-api-pekko.actor.default-dispatcher-330] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "d73d1c99-759f-45d4-a14e-8c2087c8688f"} 
+2025-08-25 05:10:50.867 [http-json-ledger-api-pekko.actor.default-dispatcher-330] INFO  com.daml.http.CommandService - Submitting exercise command, context: {command_id: "f72529df-a786-48f4-8349-3290923ff5d7", ledger_id: "participant1", instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", application_id: "bank_admin", read_as: "List(NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", act_as: "List(NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", request_id: "d73d1c99-759f-45d4-a14e-8c2087c8688f", choice: "Mint", template_id: "TemplateId(323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1,TokenExample,AssetRegistry)", contract_id: ""} 
+2025-08-25 05:10:50.948 [http-json-ledger-api-pekko.actor.default-dispatcher-330] INFO  com.daml.http.Endpoints - Responding to client with HTTP 400 Bad Request, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "d73d1c99-759f-45d4-a14e-8c2087c8688f"} 
+2025-08-25 05:19:25.035 [http-json-ledger-api-pekko.actor.default-dispatcher-338] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/exercise from 127.0.0.1:60384, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "1f370c6c-908a-4b51-b6d6-c3abb597193b"} 
+2025-08-25 05:19:25.036 [http-json-ledger-api-pekko.actor.default-dispatcher-339] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "1f370c6c-908a-4b51-b6d6-c3abb597193b"} 
+2025-08-25 05:19:25.066 [http-json-ledger-api-pekko.actor.default-dispatcher-339] INFO  com.daml.http.CommandService - Submitting exercise command, context: {command_id: "07619bbc-5536-4fdb-b33e-eea432696680", ledger_id: "participant1", instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", application_id: "bank_admin", read_as: "List(NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", act_as: "List(NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", request_id: "1f370c6c-908a-4b51-b6d6-c3abb597193b", choice: "Mint", template_id: "TemplateId(323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1,TokenExample,AssetRegistry)", contract_id: ""} 
+2025-08-25 05:19:25.512 [http-json-ledger-api-pekko.actor.default-dispatcher-339] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "1f370c6c-908a-4b51-b6d6-c3abb597193b"} 
+2025-08-25 05:21:01.252 [http-json-ledger-api-pekko.actor.default-dispatcher-338] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/exercise from 127.0.0.1:47676, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "05058b23-a870-448b-8a3b-d572243e4cb9"} 
+2025-08-25 05:21:01.253 [http-json-ledger-api-pekko.actor.default-dispatcher-339] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "05058b23-a870-448b-8a3b-d572243e4cb9"} 
+2025-08-25 05:21:01.283 [http-json-ledger-api-pekko.actor.default-dispatcher-339] INFO  com.daml.http.CommandService - Submitting exercise command, context: {command_id: "e0d506d8-9707-4c89-aebe-6dd8ce583236", ledger_id: "participant1", instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", application_id: "alice_user", read_as: "List(NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", act_as: "List(NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", request_id: "05058b23-a870-448b-8a3b-d572243e4cb9", choice: "Transfer", template_id: "TemplateId(323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1,TokenExample,AssetRegistry)", contract_id: ""} 
+2025-08-25 05:21:01.311 [http-json-ledger-api-pekko.actor.default-dispatcher-339] INFO  com.daml.http.Endpoints - Responding to client with HTTP 404 Not Found, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "05058b23-a870-448b-8a3b-d572243e4cb9"} 
+2025-08-25 05:26:32.502 [http-json-ledger-api-pekko.actor.default-dispatcher-345] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/exercise from 127.0.0.1:48996, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "15955c16-4176-4298-a3e6-e3b21aa35fa5"} 
+2025-08-25 05:26:32.502 [http-json-ledger-api-pekko.actor.default-dispatcher-346] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "15955c16-4176-4298-a3e6-e3b21aa35fa5"} 
+2025-08-25 05:26:32.528 [http-json-ledger-api-pekko.actor.default-dispatcher-346] INFO  com.daml.http.CommandService - Submitting exercise command, context: {command_id: "306feca2-c096-47af-a52c-047ef1ace5bd", ledger_id: "participant1", instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", application_id: "bank_admin", read_as: "List(NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", act_as: "List(NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", request_id: "15955c16-4176-4298-a3e6-e3b21aa35fa5", choice: "Mint", template_id: "TemplateId(323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1,TokenExample,AssetRegistry)", contract_id: ""} 
+2025-08-25 05:26:32.553 [http-json-ledger-api-pekko.actor.default-dispatcher-346] INFO  com.daml.http.Endpoints - Responding to client with HTTP 404 Not Found, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "15955c16-4176-4298-a3e6-e3b21aa35fa5"} 
+2025-08-25 05:26:59.832 [http-json-ledger-api-pekko.actor.default-dispatcher-345] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/exercise from 127.0.0.1:33178, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "04f3f020-ec95-42f7-b71a-4cd60a4f074e"} 
+2025-08-25 05:26:59.832 [http-json-ledger-api-pekko.actor.default-dispatcher-345] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "04f3f020-ec95-42f7-b71a-4cd60a4f074e"} 
+2025-08-25 05:26:59.855 [http-json-ledger-api-pekko.actor.default-dispatcher-345] INFO  com.daml.http.CommandService - Submitting exercise command, context: {command_id: "debe83ef-920a-4150-bd66-c5d7eb7d44fa", ledger_id: "participant1", instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", application_id: "bank_admin", read_as: "List(NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", act_as: "List(NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", request_id: "04f3f020-ec95-42f7-b71a-4cd60a4f074e", choice: "Mint", template_id: "TemplateId(323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1,TokenExample,AssetRegistry)", contract_id: ""} 
+2025-08-25 05:27:00.213 [http-json-ledger-api-pekko.actor.default-dispatcher-345] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "04f3f020-ec95-42f7-b71a-4cd60a4f074e"} 
+2025-08-25 05:27:52.746 [http-json-ledger-api-pekko.actor.default-dispatcher-346] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/exercise from 127.0.0.1:55580, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "99e0d4d1-1e27-47dc-b2d1-3f66f336a490"} 
+2025-08-25 05:27:52.746 [http-json-ledger-api-pekko.actor.default-dispatcher-344] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "99e0d4d1-1e27-47dc-b2d1-3f66f336a490"} 
+2025-08-25 05:27:52.766 [http-json-ledger-api-pekko.actor.default-dispatcher-344] INFO  com.daml.http.CommandService - Submitting exercise command, context: {command_id: "d1ef745f-034d-45f3-9e33-7fcaf675a01e", ledger_id: "participant1", instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", application_id: "alice_user", read_as: "List(NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", act_as: "List(NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", request_id: "99e0d4d1-1e27-47dc-b2d1-3f66f336a490", choice: "Transfer", template_id: "TemplateId(323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1,TokenExample,AssetRegistry)", contract_id: ""} 
+2025-08-25 05:27:52.787 [http-json-ledger-api-pekko.actor.default-dispatcher-344] INFO  com.daml.http.Endpoints - Responding to client with HTTP 404 Not Found, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "99e0d4d1-1e27-47dc-b2d1-3f66f336a490"} 
+2025-08-25 05:34:47.865 [http-json-ledger-api-pekko.actor.default-dispatcher-350] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/exercise from 127.0.0.1:52484, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "22ddf7d2-1f51-442c-af19-176628c69d80"} 
+2025-08-25 05:34:47.866 [http-json-ledger-api-pekko.actor.default-dispatcher-351] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "22ddf7d2-1f51-442c-af19-176628c69d80"} 
+2025-08-25 05:34:47.894 [http-json-ledger-api-pekko.actor.default-dispatcher-351] INFO  com.daml.http.Endpoints - Responding to client with HTTP 400 Bad Request, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "22ddf7d2-1f51-442c-af19-176628c69d80"} 
+2025-08-25 05:36:02.068 [http-json-ledger-api-pekko.actor.default-dispatcher-349] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/exercise from 127.0.0.1:49300, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "5c81bcc0-f6f7-4cd6-9a7b-f84d69602431"} 
+2025-08-25 05:36:02.069 [http-json-ledger-api-pekko.actor.default-dispatcher-351] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "5c81bcc0-f6f7-4cd6-9a7b-f84d69602431"} 
+2025-08-25 05:36:02.088 [http-json-ledger-api-pekko.actor.default-dispatcher-351] INFO  com.daml.http.CommandService - Submitting exercise command, context: {command_id: "32ab6c39-cc66-4a6c-b8ca-7e1acbadbd37", ledger_id: "participant1", instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", application_id: "alice_user", read_as: "List(NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", act_as: "List(NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", request_id: "5c81bcc0-f6f7-4cd6-9a7b-f84d69602431", choice: "Transfer", template_id: "TemplateId(323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1,TokenExample,AssetRegistry)", contract_id: ""} 
+2025-08-25 05:36:02.106 [http-json-ledger-api-pekko.actor.default-dispatcher-351] INFO  com.daml.http.Endpoints - Responding to client with HTTP 404 Not Found, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "5c81bcc0-f6f7-4cd6-9a7b-f84d69602431"} 
+2025-08-25 05:39:52.780 [http-json-ledger-api-pekko.actor.default-dispatcher-357] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/exercise from 127.0.0.1:54602, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "53a416a2-ff54-4362-8d3c-5a42ad1a5984"} 
+2025-08-25 05:39:52.780 [http-json-ledger-api-pekko.actor.default-dispatcher-358] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "53a416a2-ff54-4362-8d3c-5a42ad1a5984"} 
+2025-08-25 05:39:52.816 [http-json-ledger-api-pekko.actor.default-dispatcher-358] INFO  com.daml.http.Endpoints - Responding to client with HTTP 400 Bad Request, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "53a416a2-ff54-4362-8d3c-5a42ad1a5984"} 
+2025-08-25 05:40:30.748 [http-json-ledger-api-pekko.actor.default-dispatcher-358] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:58476, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "45470cad-54e9-42da-8bff-7633a0e619b9"} 
+2025-08-25 05:40:30.748 [http-json-ledger-api-pekko.actor.default-dispatcher-358] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "45470cad-54e9-42da-8bff-7633a0e619b9"} 
+2025-08-25 05:40:30.774 [http-json-ledger-api-pekko.actor.default-dispatcher-356] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "45470cad-54e9-42da-8bff-7633a0e619b9"} 
+2025-08-25 05:41:51.931 [http-json-ledger-api-pekko.actor.default-dispatcher-358] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/exercise from 127.0.0.1:55814, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "b69b5efb-1c81-4ae5-ac52-0993be13a72a"} 
+2025-08-25 05:41:51.932 [http-json-ledger-api-pekko.actor.default-dispatcher-356] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "b69b5efb-1c81-4ae5-ac52-0993be13a72a"} 
+2025-08-25 05:41:51.958 [http-json-ledger-api-pekko.actor.default-dispatcher-356] INFO  com.daml.http.Endpoints - Responding to client with HTTP 400 Bad Request, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "b69b5efb-1c81-4ae5-ac52-0993be13a72a"} 
+2025-08-25 05:43:57.446 [http-json-ledger-api-pekko.actor.default-dispatcher-358] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:44108, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "1426f17b-f24a-47fa-9f75-50407db3ff93"} 
+2025-08-25 05:43:57.446 [http-json-ledger-api-pekko.actor.default-dispatcher-358] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "1426f17b-f24a-47fa-9f75-50407db3ff93"} 
+2025-08-25 05:43:57.465 [http-json-ledger-api-pekko.actor.default-dispatcher-364] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "1426f17b-f24a-47fa-9f75-50407db3ff93"} 
+2025-08-25 05:44:34.400 [http-json-ledger-api-pekko.actor.default-dispatcher-365] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/create from 127.0.0.1:37382, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "1eaf31a6-24ae-47ad-8572-b8b786e33e65"} 
+2025-08-25 05:44:34.401 [http-json-ledger-api-pekko.actor.default-dispatcher-358] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "1eaf31a6-24ae-47ad-8572-b8b786e33e65"} 
+2025-08-25 05:44:34.419 [http-json-ledger-api-pekko.actor.default-dispatcher-358] INFO  com.daml.http.CommandService - Submitting create command, context: {command_id: "bad93d55-94a7-4997-8322-f83617a9a9c0", ledger_id: "participant1", request_id: "1eaf31a6-24ae-47ad-8572-b8b786e33e65", instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", application_id: "alice_user", template_id: "TemplateId(323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1,TokenExample,AssetRegistry)", read_as: "List(NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", act_as: "List(NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)"} 
+2025-08-25 05:44:34.443 [http-json-ledger-api-pekko.actor.default-dispatcher-358] INFO  com.daml.http.Endpoints - Responding to client with HTTP 400 Bad Request, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "1eaf31a6-24ae-47ad-8572-b8b786e33e65"} 
+2025-08-25 05:45:43.593 [http-json-ledger-api-pekko.actor.default-dispatcher-364] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/create from 127.0.0.1:53924, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "462d90c2-26d9-4f05-94d6-7f07ac17cea1"} 
+2025-08-25 05:45:43.593 [http-json-ledger-api-pekko.actor.default-dispatcher-358] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "462d90c2-26d9-4f05-94d6-7f07ac17cea1"} 
+2025-08-25 05:45:43.613 [http-json-ledger-api-pekko.actor.default-dispatcher-358] INFO  com.daml.http.CommandService - Submitting create command, context: {command_id: "a978776a-0ffe-4383-a478-05faa24c4685", ledger_id: "participant1", request_id: "462d90c2-26d9-4f05-94d6-7f07ac17cea1", instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", application_id: "bank_admin", template_id: "TemplateId(323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1,TokenExample,AssetRegistry)", read_as: "List(NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", act_as: "List(NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)"} 
+2025-08-25 05:45:43.636 [http-json-ledger-api-pekko.actor.default-dispatcher-358] INFO  com.daml.http.Endpoints - Responding to client with HTTP 400 Bad Request, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "462d90c2-26d9-4f05-94d6-7f07ac17cea1"} 
+2025-08-25 05:46:33.635 [http-json-ledger-api-pekko.actor.default-dispatcher-358] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/exercise from 127.0.0.1:36180, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "b27670b5-21eb-4ca2-98a1-dbaddbbedcb9"} 
+2025-08-25 05:46:33.636 [http-json-ledger-api-pekko.actor.default-dispatcher-364] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "b27670b5-21eb-4ca2-98a1-dbaddbbedcb9"} 
+2025-08-25 05:46:33.657 [http-json-ledger-api-pekko.actor.default-dispatcher-364] INFO  com.daml.http.CommandService - Submitting exercise command, context: {command_id: "a443b747-0511-42dc-aef8-50aff3cf720d", ledger_id: "participant1", instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", application_id: "alice_user", read_as: "List(NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", act_as: "List(NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", request_id: "b27670b5-21eb-4ca2-98a1-dbaddbbedcb9", choice: "Transfer", template_id: "TemplateId(323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1,TokenExample,AssetRegistry)", contract_id: ""} 
+2025-08-25 05:46:33.674 [http-json-ledger-api-pekko.actor.default-dispatcher-364] INFO  com.daml.http.Endpoints - Responding to client with HTTP 404 Not Found, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "b27670b5-21eb-4ca2-98a1-dbaddbbedcb9"} 
+2025-08-25 06:03:16.884 [http-json-ledger-api-pekko.actor.default-dispatcher-374] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/exercise from 127.0.0.1:45162, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "f1eaf4c7-5939-413d-9f14-560946f4bf87"} 
+2025-08-25 06:03:16.885 [http-json-ledger-api-pekko.actor.default-dispatcher-375] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "f1eaf4c7-5939-413d-9f14-560946f4bf87"} 
+2025-08-25 06:03:16.913 [http-json-ledger-api-pekko.actor.default-dispatcher-375] INFO  com.daml.http.CommandService - Submitting exercise command, context: {command_id: "2b23a3d8-3f0e-49cb-8e5c-0f2cabe639c6", ledger_id: "participant1", instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", application_id: "bank_admin", read_as: "List(NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", act_as: "List(NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", request_id: "f1eaf4c7-5939-413d-9f14-560946f4bf87", choice: "Mint", template_id: "TemplateId(323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1,TokenExample,AssetRegistry)", contract_id: ""} 
+2025-08-25 06:03:17.244 [http-json-ledger-api-pekko.actor.default-dispatcher-375] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "f1eaf4c7-5939-413d-9f14-560946f4bf87"} 
+2025-08-25 06:27:16.605 [http-json-ledger-api-pekko.actor.default-dispatcher-388] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/exercise from 127.0.0.1:58580, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "2e96405f-dd10-490b-850d-22625721f529"} 
+2025-08-25 06:27:16.606 [http-json-ledger-api-pekko.actor.default-dispatcher-389] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "2e96405f-dd10-490b-850d-22625721f529"} 
+2025-08-25 06:27:16.636 [http-json-ledger-api-pekko.actor.default-dispatcher-389] INFO  com.daml.http.CommandService - Submitting exercise command, context: {command_id: "aa6496c5-c58d-4e7a-8202-439afa0db998", ledger_id: "participant1", instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", application_id: "alice_user", read_as: "List(NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", act_as: "List(NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", request_id: "2e96405f-dd10-490b-850d-22625721f529", choice: "Transfer", template_id: "TemplateId(323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1,TokenExample,AssetRegistry)", contract_id: ""} 
+2025-08-25 06:27:16.657 [http-json-ledger-api-pekko.actor.default-dispatcher-389] INFO  com.daml.http.Endpoints - Responding to client with HTTP 404 Not Found, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "2e96405f-dd10-490b-850d-22625721f529"} 
+2025-08-25 06:29:56.361 [http-json-ledger-api-pekko.actor.default-dispatcher-391] INFO  com.daml.http.Endpoints - Incoming POST request on http://37.27.190.172/v1/query from 37.27.190.172, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "ca38abdb-a0c2-42ca-be03-26cbae3163bb"} 
+2025-08-25 06:29:56.361 [http-json-ledger-api-pekko.actor.default-dispatcher-391] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "ca38abdb-a0c2-42ca-be03-26cbae3163bb"} 
+2025-08-25 06:29:56.393 [http-json-ledger-api-pekko.actor.default-dispatcher-389] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "ca38abdb-a0c2-42ca-be03-26cbae3163bb"} 
+[WARN] [08/25/2025 06:31:09.256] [http-json-ledger-api-pekko.actor.default-dispatcher-391] [org.apache.pekko.actor.ActorSystemImpl(http-json-ledger-api)] Illegal header: Illegal 'user-agent' header: Invalid input '@', expected tchar, OWS, ws, comment, product-or-comment or 'EOI' (line 1, column 82): Mozilla/5.0 (Windows NT 6.1; WOW64) SkypeUriPreview Preview/0.5 skype-url-preview@microsoft.com
+                                                                                 ^
+2025-08-25 06:31:09.257 [http-json-ledger-api-pekko.actor.default-dispatcher-391] INFO  com.daml.http.Endpoints - Incoming GET request on http://37.27.190.172/v1/query from 52.112.125.8, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "b8156535-79ce-4b19-8b07-f158ed55bcfe"} 
+2025-08-25 06:31:09.258 [http-json-ledger-api-pekko.actor.default-dispatcher-389] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "b8156535-79ce-4b19-8b07-f158ed55bcfe"} 
+2025-08-25 06:31:09.258 [http-json-ledger-api-pekko.actor.default-dispatcher-389] INFO  com.daml.http.Endpoints - Responding to client with HTTP 401 Unauthorized, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "b8156535-79ce-4b19-8b07-f158ed55bcfe"} 
+[WARN] [08/25/2025 06:32:37.062] [http-json-ledger-api-pekko.actor.default-dispatcher-396] [org.apache.pekko.actor.ActorSystemImpl(http-json-ledger-api)] Illegal header: Illegal 'user-agent' header: Invalid input '@', expected tchar, OWS, ws, comment, product-or-comment or 'EOI' (line 1, column 82): Mozilla/5.0 (Windows NT 6.1; WOW64) SkypeUriPreview Preview/0.5 skype-url-preview@microsoft.com
+                                                                                 ^
+2025-08-25 06:32:37.063 [http-json-ledger-api-pekko.actor.default-dispatcher-396] INFO  com.daml.http.Endpoints - Incoming GET request on http://37.27.190.172/v1/query from 52.112.125.8, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "e4505d98-bce7-47d6-b08a-9f9b3773e11f"} 
+2025-08-25 06:32:37.064 [http-json-ledger-api-pekko.actor.default-dispatcher-398] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "e4505d98-bce7-47d6-b08a-9f9b3773e11f"} 
+2025-08-25 06:32:37.065 [http-json-ledger-api-pekko.actor.default-dispatcher-398] INFO  com.daml.http.Endpoints - Responding to client with HTTP 401 Unauthorized, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "e4505d98-bce7-47d6-b08a-9f9b3773e11f"} 
+2025-08-25 06:45:46.675 [http-json-ledger-api-pekko.actor.default-dispatcher-401] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/exercise from 127.0.0.1:43986, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "8a3bf73a-e155-4490-ad1b-5865eeecafc5"} 
+2025-08-25 06:45:46.676 [http-json-ledger-api-pekko.actor.default-dispatcher-402] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "8a3bf73a-e155-4490-ad1b-5865eeecafc5"} 
+2025-08-25 06:45:46.697 [http-json-ledger-api-pekko.actor.default-dispatcher-402] INFO  com.daml.http.CommandService - Submitting exercise command, context: {command_id: "3f08370c-6bd6-4b07-834a-643fd0affc8c", ledger_id: "participant1", instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", application_id: "alice_user", read_as: "List(NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", act_as: "List(NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", request_id: "8a3bf73a-e155-4490-ad1b-5865eeecafc5", choice: "Transfer", template_id: "TemplateId(323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1,TokenExample,AssetRegistry)", contract_id: ""} 
+2025-08-25 06:45:46.718 [http-json-ledger-api-pekko.actor.default-dispatcher-402] INFO  com.daml.http.Endpoints - Responding to client with HTTP 404 Not Found, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "8a3bf73a-e155-4490-ad1b-5865eeecafc5"} 
+2025-08-25 06:47:13.380 [http-json-ledger-api-pekko.actor.default-dispatcher-403] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:51804, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "bd62d168-1173-4d06-aba4-3c400238fdf2"} 
+2025-08-25 06:47:13.380 [http-json-ledger-api-pekko.actor.default-dispatcher-403] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "bd62d168-1173-4d06-aba4-3c400238fdf2"} 
+2025-08-25 06:47:13.400 [http-json-ledger-api-pekko.actor.default-dispatcher-402] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "bd62d168-1173-4d06-aba4-3c400238fdf2"} 
+2025-08-25 06:47:51.875 [http-json-ledger-api-pekko.actor.default-dispatcher-402] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/exercise from 127.0.0.1:35970, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "418408fa-9624-41c2-839c-4b6a36a48b89"} 
+2025-08-25 06:47:51.876 [http-json-ledger-api-pekko.actor.default-dispatcher-405] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "418408fa-9624-41c2-839c-4b6a36a48b89"} 
+2025-08-25 06:47:51.894 [http-json-ledger-api-pekko.actor.default-dispatcher-405] INFO  com.daml.http.CommandService - Submitting exercise command, context: {command_id: "eb37d339-2c40-4d5e-bb7e-01221b7c7e43", ledger_id: "participant1", instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", application_id: "alice_user", read_as: "List(NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", act_as: "List(NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", request_id: "418408fa-9624-41c2-839c-4b6a36a48b89", choice: "Transfer", template_id: "TemplateId(323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1,TokenExample,AssetRegistry)", contract_id: ""} 
+2025-08-25 06:47:51.904 [http-json-ledger-api-pekko.actor.default-dispatcher-405] INFO  com.daml.http.Endpoints - Responding to client with HTTP 400 Bad Request, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "418408fa-9624-41c2-839c-4b6a36a48b89"} 
+2025-08-25 06:48:33.013 [http-json-ledger-api-pekko.actor.default-dispatcher-402] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/exercise from 127.0.0.1:52564, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "48655995-9e6c-48b1-9120-a743343d1fd5"} 
+2025-08-25 06:48:33.013 [http-json-ledger-api-pekko.actor.default-dispatcher-403] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "48655995-9e6c-48b1-9120-a743343d1fd5"} 
+2025-08-25 06:48:33.034 [http-json-ledger-api-pekko.actor.default-dispatcher-403] INFO  com.daml.http.CommandService - Submitting exercise command, context: {command_id: "952fd77b-a4a3-4a82-874a-f20103f380bf", ledger_id: "participant1", instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", application_id: "alice_user", read_as: "List(NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", act_as: "List(NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d)", request_id: "48655995-9e6c-48b1-9120-a743343d1fd5", choice: "Transfer", template_id: "TemplateId(323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1,TokenExample,AssetRegistry)", contract_id: ""} 
+2025-08-25 06:48:33.052 [http-json-ledger-api-pekko.actor.default-dispatcher-403] INFO  com.daml.http.Endpoints - Responding to client with HTTP 404 Not Found, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "48655995-9e6c-48b1-9120-a743343d1fd5"} 
+[WARN] [08/25/2025 06:50:21.936] [http-json-ledger-api-pekko.actor.default-dispatcher-403] [org.apache.pekko.actor.ActorSystemImpl(http-json-ledger-api)] Illegal header: Illegal 'user-agent' header: Invalid input ',', expected tchar, OWS, ws, comment, product-or-comment or 'EOI' (line 1, column 30): Hello from Palo Alto Networks, find out more about our scans in https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity
+                             ^
+2025-08-25 06:50:24.329 [http-json-ledger-api-pekko.actor.default-dispatcher-403] INFO  com.daml.http.Endpoints - Incoming POST request on http://localhost:7575/v1/query from 127.0.0.1:50774, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "dec4d866-d7d0-4522-9e87-c54004694f58"} 
+2025-08-25 06:50:24.329 [http-json-ledger-api-pekko.actor.default-dispatcher-403] WARN  com.daml.http.endpoints.RouteSetup - missing HTTPS reverse-proxy request headers; for development launch with --allow-insecure-tokens, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "dec4d866-d7d0-4522-9e87-c54004694f58"} 
+2025-08-25 06:50:24.348 [http-json-ledger-api-pekko.actor.default-dispatcher-407] INFO  com.daml.http.Endpoints - Responding to client with HTTP 200 OK, context: {instance_uuid: "784b88de-ea26-4b76-acb3-e0ab6ab147c1", request_id: "dec4d866-d7d0-4522-9e87-c54004694f58"} 

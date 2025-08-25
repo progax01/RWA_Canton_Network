@@ -1,0 +1,136 @@
+
+  # Query all Token contracts
+  curl -X POST http://localhost:7575/v1/query \
+    -H "Authorization: Bearer $BANK_ADMIN_TOKEN" \
+    -H "Content-Type: application/json" \
+    -d '{"templateIds": ["323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da2
+  8d31baa5e53c72f2c8ce9c1:TokenExample:Token"]}'
+
+  ✅ 2. Query AssetRegistry Contracts
+
+  # Query all AssetRegistry contracts
+  curl -X POST http://localhost:7575/v1/query \
+    -H "Authorization: Bearer $BANK_ADMIN_TOKEN" \
+    -H "Content-Type: application/json" \
+    -d '{"templateIds": ["323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da2
+  8d31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry"]}'
+
+  ✅ 3. Query RedeemRequest Contracts
+
+  # Query all RedeemRequest contracts
+  curl -X POST http://localhost:7575/v1/query \
+    -H "Authorization: Bearer $BANK_ADMIN_TOKEN" \
+    -H "Content-Type: application/json" \
+    -d '{"templateIds": ["323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da2
+  8d31baa5e53c72f2c8ce9c1:TokenExample:RedeemRequest"]}'
+
+  ✅ 4. Create AssetRegistry (Gold)
+
+  # Create Gold AssetRegistry contract
+  curl -X POST http://localhost:7575/v1/create \
+    -H "Authorization: Bearer $BANK_ADMIN_TOKEN" \
+    -H "Content-Type: application/json" \
+    -d '{"templateId": "323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d
+  31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry", "payload": 
+  {"admin": "NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee
+  95261b69405d1e0de8a768d", "name": "Gold Token", "symbol": 
+  "GLD"}}'
+
+  ✅ 5. Create AssetRegistry (Silver)
+
+  # Create Silver AssetRegistry contract
+  curl -X POST http://localhost:7575/v1/create \
+    -H "Authorization: Bearer $BANK_ADMIN_TOKEN" \
+    -H "Content-Type: application/json" \
+    -d '{"templateId": "323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d
+  31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry", "payload": 
+  {"admin": "NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee
+  95261b69405d1e0de8a768d", "name": "Silver Token", "symbol": 
+  "SLV"}}'
+
+  ✅ 6. Exercise Mint Choice (Create tokens for Alice)
+
+  # First get the AssetRegistry contract ID from the query above, 
+  then:
+  # Replace CONTRACT_ID_HERE with actual contract ID from 
+  AssetRegistry query
+
+  curl -X POST http://localhost:7575/v1/exercise \
+    -H "Authorization: Bearer $BANK_ADMIN_TOKEN" \
+    -H "Content-Type: application/json" \
+    -d '{"templateId": "323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d
+  31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry", "contractId": 
+  "CONTRACT_ID_HERE", "choice": "Mint", "argument": {"to": 
+  "NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b694
+  05d1e0de8a768d", "amount": 100}}'
+
+  ✅ 7. Exercise Transfer Choice (Alice transfers to Bob)
+
+  # Transfer tokens from Alice to Bob (Alice must sign)
+  curl -X POST http://localhost:7575/v1/exercise \
+    -H "Authorization: Bearer $ALICE_USER_TOKEN" \
+    -H "Content-Type: application/json" \
+    -d '{"templateId": "323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d
+  31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry", "contractId": 
+  "CONTRACT_ID_HERE", "choice": "Transfer", "argument": {"sender": 
+  "NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b694
+  05d1e0de8a768d", "recipient": "NewBob::1220b845dcf0d9cf52ce1e7457
+  a744a6f3de7eff4a9ee95261b69405d1e0de8a768d", "amount": 30}}'
+
+  ✅ 8. Exercise RequestRedemption Choice (Alice requests 
+  redemption)
+
+  # Alice requests to redeem tokens
+  curl -X POST http://localhost:7575/v1/exercise \
+    -H "Authorization: Bearer $ALICE_USER_TOKEN" \
+    -H "Content-Type: application/json" \
+    -d '{"templateId": "323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d
+  31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry", "contractId": 
+  "CONTRACT_ID_HERE", "choice": "RequestRedemption", "argument": 
+  {"redeemer": "NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4
+  a9ee95261b69405d1e0de8a768d", "amount": 50}}'
+
+  ✅ 9. Exercise Accept Choice (Bank accepts redemption)
+
+  # Bank accepts the redemption request (burns tokens)
+  curl -X POST http://localhost:7575/v1/exercise \
+    -H "Authorization: Bearer $BANK_ADMIN_TOKEN" \
+    -H "Content-Type: application/json" \
+    -d '{"templateId": "323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d
+  31baa5e53c72f2c8ce9c1:TokenExample:RedeemRequest", "contractId": 
+  "REDEEM_REQUEST_CONTRACT_ID_HERE", "choice": "Accept", 
+  "argument": {}}'
+
+  ✅ 10. Exercise Cancel Choice (Bank cancels redemption)
+
+  # Bank cancels the redemption request (returns tokens to user)
+  curl -X POST http://localhost:7575/v1/exercise \
+    -H "Authorization: Bearer $BANK_ADMIN_TOKEN" \
+    -H "Content-Type: application/json" \
+    -d '{"templateId": "323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d
+  31baa5e53c72f2c8ce9c1:TokenExample:RedeemRequest", "contractId": 
+  "REDEEM_REQUEST_CONTRACT_ID_HERE", "choice": "Cancel", 
+  "argument": {}}'
+
+  📋 Step-by-Step Workflow
+
+  1. Start with creating AssetRegistry contracts:
+  source jwt-tokens-shell.txt
+
+  # Create Gold registry
+  curl -X POST http://localhost:7575/v1/create -H "Authorization: 
+  Bearer $BANK_ADMIN_TOKEN" -H "Content-Type: application/json" -d
+  '{"templateId": "323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa
+  5e53c72f2c8ce9c1:TokenExample:AssetRegistry", "payload": 
+  {"admin": "NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee
+  95261b69405d1e0de8a768d", "name": "Gold Token", "symbol": 
+  "GLD"}}'
+
+  2. Query to get the contract ID:
+  curl -X POST http://localhost:7575/v1/query -H "Authorization: 
+  Bearer $BANK_ADMIN_TOKEN" -H "Content-Type: application/json" -d
+  '{"templateIds": ["323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31b
+  aa5e53c72f2c8ce9c1:TokenExample:AssetRegistry"]}'
+
+  3. Use the contract ID to mint tokens, then continue with 
+  transfers and redemptions.
