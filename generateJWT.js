@@ -61,6 +61,35 @@ function generateToken(userRole, applicationId = "rwa-json-api") {
 }
 
 /**
+ * Generate multi-party JWT token for operations requiring multiple parties
+ * @param {string} tokenName - Name for the token (e.g., 'alice_bank')
+ * @param {Array<string>} parties - Array of party IDs to include in actAs
+ * @param {string} applicationId - Application identifier for the token
+ * @returns {string} Generated JWT token
+ */
+function generateMultiPartyToken(tokenName, parties, applicationId = "rwa-json-api") {
+    // Create multi-party JWT token for operations like Transfer
+    let payload = {
+        scope: "daml_ledger_api",  // Must match target-scope in config
+        aud: "https://daml.com/jwt/aud/participant/participant1",  // Must match target-audience in Canton config
+        sub: tokenName,            // Subject is a descriptive name
+        iss: "canton-jwt-issuer",  // Issuer identifier
+        exp: Math.floor(Date.now() / 1000) + (365 * 24 * 60 * 60), // 1 year expiry
+        iat: Math.floor(Date.now() / 1000),  // Issued at
+        actAs: parties,            // Multiple parties that can act
+        readAs: parties            // Same parties for read access
+    };
+
+    console.log(`Generating multi-party token: ${tokenName}`);
+    console.log(`Parties included: ${parties.join(', ')}`);
+
+    // Sign the JWT using the private key and RS256 algorithm
+    const token = jwt.sign(payload, privateKey, { algorithm: 'RS256' });
+    
+    return token;
+}
+
+/**
  * Generate tokens for all users and save to files
  */
 function generateAllTokens() {
@@ -86,6 +115,52 @@ function generateAllTokens() {
             console.log(`✓ Token saved to: ${tokenFile}`);
         } else {
             console.log(`✗ Failed to generate token for ${user}`);
+        }
+    });
+    
+    console.log('\n' + '='.repeat(40));
+    console.log('GENERATING MULTI-PARTY TOKENS');
+    console.log('='.repeat(40));
+    
+    // Generate multi-party tokens for operations
+    const multiPartyTokens = [
+        {
+            name: 'alice_bank_token',
+            parties: [
+                'NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d',
+                'NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d'
+            ]
+        },
+        {
+            name: 'bob_bank_token',
+            parties: [
+                'NewBob::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d',
+                'NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d'
+            ]
+        },
+        {
+            name: 'all_parties_token',
+            parties: [
+                'NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d',
+                'NewBob::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d',
+                'NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d'
+            ]
+        }
+    ];
+    
+    multiPartyTokens.forEach(tokenConfig => {
+        console.log(`\nGenerating multi-party token: ${tokenConfig.name}`);
+        const token = generateMultiPartyToken(tokenConfig.name, tokenConfig.parties);
+        
+        if (token) {
+            tokens[tokenConfig.name] = token;
+            console.log(`✓ Multi-party token generated successfully`);
+            console.log(`Token length: ${token.length} characters`);
+            
+            // Save individual token to file
+            const tokenFile = `${tokenConfig.name}-jwt-token.txt`;
+            fs.writeFileSync(tokenFile, token);
+            console.log(`✓ Token saved to: ${tokenFile}`);
         }
     });
     

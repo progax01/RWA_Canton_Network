@@ -4326,3 +4326,7 @@ org.apache.pekko.stream.AbruptTerminationException: Processor actor [Actor[pekko
 2025-08-25 04:57:23,757 [canton-env-ec-38] DEBUG c.d.c.n.g.ApiRequestLogger:participant=participant1 tid:7d3d3fcd20076ba3423c5ba722132698 - Request c.d.l.a.v.a.UserManagementService/ListUserRights by /127.0.0.1:34978: received a message 
   Request tid:7d3d3fcd20076ba3423c5ba722132698
 2025-08-25 04:57:23,758 [canton-env-ec-38] WARN  c.d.c.a.Authorizer:participant=participant1 tid:7d3d3fcd20076ba3423c5ba722132698 - UNAUTHENTICATED(6,7d3d3fcd): The command is missing a (valid) JWT token err-context:{location=Authorizer.scala:334} 
+2025-08-25 07:08:52,700 [canton-env-ec-163] WARN  c.d.c.l.a.a.i.UserBasedAuthorizationInterceptor:participant=participant1 tid:c932f887b49b53344a3ecc050a82ab3a - PERMISSION_DENIED(7,c932f887): Could not resolve is_deactivated status for user 'alice_bank_token' and identity_provider_id 'Default' due to 'UserNotFound(alice_bank_token)' err-context:{location=UserBasedAuthorizationInterceptor.scala:133} 
+2025-08-25 08:33:14,784 [canton-env-ec-169] DEBUG c.d.c.n.g.ApiRequestLogger:participant=participant1 tid:cbb01099df0e2e7e86497428205fa49b - Request c.d.l.a.v.a.UserManagementService/CreateUser by /127.0.0.1:34978: received a message 
+  Request tid:cbb01099df0e2e7e86497428205fa49b
+2025-08-25 08:33:14,785 [canton-env-ec-169] WARN  c.d.c.a.Authorizer:participant=participant1 tid:cbb01099df0e2e7e86497428205fa49b - PERMISSION_DENIED(7,cbb01099): Claims do not authorize the use of administrative services. err-context:{location=Authorizer.scala:305} 

@@ -217,7 +217,24 @@ ensureUserExists("alice_user", Some(alice))
 --------------------------------------------------------------
 
 
+------ IMP OPERATION FOR Transfer  COMBINED ROLE
 
+// Assume you already have PartyId values for 'alice' and 'bank' from your earlier code.
+val aliceBankUserId = "alice_bank_token"
+
+// Create the user (if it doesn't already exist)
+val aliceBankUser = participant1.ledger_api.users.create(id = aliceBankUserId, primaryParty = None)
+
+// Grant actAs and readAs rights for both Alice and Bank
+participant1.ledger_api.users.rights.grant(
+  id = aliceBankUserId,
+  actAs = Set(alice, bank),
+  readAs = Set(alice, bank),
+  participantAdmin = false
+)
+
+
+----------------------------------------
 
 
 println("Ready to create AssetRegistry contracts and mint tokens")
@@ -683,8 +700,106 @@ curl -s -X POST http://localhost:7575/v1/query \
   }' | jq
 
 
-    curl -X POST http://localhost:7575/v1/exercise \
+ //   curl -X POST http://localhost:7575/v1/exercise \
+  //  -H "Authorization: Bearer $ALICE_USER_TOKEN" \
+   // -H "Content-Type: application/json" \
+   // -d '{"templateId": "323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry", "contractId": "0043617d711682dd60fc0e9e22b482af77dbb80af5c9c24ab1e68dd8d8013cf532ca031220d2d1e28a7762c2ebe6e38ee813714321e0bba37e4cc06bb9d8cfccf9d0b8bee6", "choice": "Transfer", "argument": {"sender": 
+  // "NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d", "recipient": "NewBob::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d", "amount": 30}}'
+
+
+
+curl -s -X POST http://localhost:7575/v1/query \
+  -H "Authorization: Bearer $ALICE_USER_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "templateIds": ["323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:Token"],
+    "query": { "owner": "NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d" }
+  }' | jq
+
+curl -s -X POST http://localhost:7575/v1/query \
+  -H "Authorization: Bearer $BOB_USER_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "templateIds": ["323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:Token"],
+    "query": { "owner": "NewBob::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d" }
+  }' | jq
+
+
+
+curl -s -X POST http://localhost:7575/v1/query \
+    -H "Authorization: Bearer $BANK_ADMIN_TOKEN" \
+    -H "Content-Type: application/json" \
+    -d '{"templateIds": 
+  ["323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry"]}' | jq
+
+
+curl -X POST http://localhost:7575/v1/exercise \
+  -H "Authorization: Bearer ${ALICE_BANK_TOKEN_TOKEN}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "templateId": "323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry",
+    "contractId": "0043617d711682dd60fc0e9e22b482af77dbb80af5c9c24ab1e68dd8d8013cf532ca031220d2d1e28a7762c2ebe6e38ee813714321e0bba37e4cc06bb9d8cfccf9d0b8bee6",
+    "choice": "Transfer",
+    "argument": {
+      "sender":    "NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d",
+      "recipient": "NewBob::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d",
+      "amount": 30
+    }
+  }'
+
+
+
+curl -X POST http://localhost:7575/v1/exercise \
+  -H "Authorization: Bearer ${BOB_BANK_TOKEN_TOKEN}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "templateId": "323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry",
+    "contractId": "0043617d711682dd60fc0e9e22b482af77dbb80af5c9c24ab1e68dd8d8013cf532ca031220d2d1e28a7762c2ebe6e38ee813714321e0bba37e4cc06bb9d8cfccf9d0b8bee6",
+    "choice": "Transfer",
+    "argument": {
+      "sender":    "NewBob::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d",
+      "recipient": "NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d",
+      "amount": 15
+    }
+  }' |jq
+
+
+---------------------------------------------------
+new user JOIN NETWORK 
+
+curl -X POST http://localhost:7575/v1/parties/allocate \
+  -H "Authorization: Bearer $PARTICIPANT_ADMIN_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "identifierHint": "NewAnurag",
+    "displayName": "Anurag"
+  }'
+
+
+
+curl -X POST http://localhost:7575/v1/user/create \
+  -H "Authorization: Bearer $PARTICIPANT_ADMIN_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "userId": "anurag_user",
+    "primaryParty": "NewAnurag::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d",
+    "rights": [
+      { "type": "CanActAs",  "party": "NewAnurag::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d" },
+      { "type": "CanReadAs", "party": "NewAnurag::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d" }
+    ]
+  }' |jq
+
+
+
+--------------------
+Redeem request
+
+
+curl -X POST http://localhost:7575/v1/exercise \
     -H "Authorization: Bearer $ALICE_USER_TOKEN" \
     -H "Content-Type: application/json" \
-    -d '{"templateId": "323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry", "contractId": "0043617d711682dd60fc0e9e22b482af77dbb80af5c9c24ab1e68dd8d8013cf532ca031220d2d1e28a7762c2ebe6e38ee813714321e0bba37e4cc06bb9d8cfccf9d0b8bee6", "choice": "Transfer", "argument": {"sender": 
-  "NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d", "recipient": "NewBob::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d", "amount": 30}}'
+    -d '{"templateId": "323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry", "contractId": 
+  "CONTRACT_ID_HERE", "choice": "RequestRedemption", 
+  "argument": {"redeemer": "NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d", 
+  "amount": 39}}' |jq
+
