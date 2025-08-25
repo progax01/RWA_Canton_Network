@@ -1922,3 +1922,1123 @@ Expected contract of type TokenExample:AssetRegistry@323be96a but got TokenExamp
 2025-08-25 08:53:01,959 [canton-env-ec-36] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:9bbb78ee0e98492f41f775a8b0fd3215 - Received request for ledger identity: GetLedgerIdentityRequest().
 2025-08-25 08:53:01,966 [canton-env-ec-163] INFO  c.d.c.p.a.s.ApiCommandService:participant=participant1 tid:5dab01b0168c0846c6fa2764484956f0 - INVALID_FIELD(8,963b8daf): The submitted command has a field with invalid value: Invalid field contract_id: cannot parse ContractId "CONTRACT_ID_HERE" err-context:{location=ValidationErrors.scala:31} 
 2025-08-25 08:53:01,967 [canton-env-ec-163] INFO  c.d.c.n.g.ApiRequestLogger:participant=participant1 tid:5dab01b0168c0846c6fa2764484956f0 - Request c.d.l.a.v.CommandService/SubmitAndWaitForTransactionTree by /127.0.0.1:34978: failed with INVALID_ARGUMENT/INVALID_FIELD(8,963b8daf): The submitted command has a field with invalid value: Invalid field contract_id: cannot parse ContractId "CONTRACT_ID_HERE"
+2025-08-25 09:01:41,302 [daml.index.db.threadpool.connection.indexer-16] INFO  c.d.c.p.i.MeteringAggregator:participant=participant1 - Aggregating transaction metering for LedgerMeteringEnd(Offset(Bytes(00000000000000001e)),2025-08-25T09:00:00Z)
+2025-08-25 09:01:41,308 [daml.index.db.threadpool.connection.indexer-16] INFO  c.d.c.p.i.MeteringAggregator:participant=participant1 - Aggregating transaction metering completed up to LedgerMeteringEnd(Offset(Bytes(00000000000000001e)),2025-08-25T09:00:00Z)
+2025-08-25 09:08:05,900 [canton-env-ec-167] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:33861cd68e7b1bee9a613f8e02450bad - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 09:08:46,756 [canton-env-ec-169] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:fd022ada3eee0a7d07f76d0991e8ee2f - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 09:08:46,787 [canton-env-ec-37] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:022ee96ffd1089b8c4967925cda17cce - Received request for transactions, startExclusive -> '00000000000000001a', endInclusive -> '000000000000000020', filters -> {NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 09:22:07,873 [canton-env-ec-170] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:b158ca7c94f15af69c75ceea292985a0 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 09:22:07,898 [canton-env-ec-170] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:1bb89a25fefd6f32cbe3cde657df2583 - Received request for transactions, startExclusive -> '00000000000000001b', endInclusive -> '000000000000000020', filters -> {NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:Token']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 09:27:44,291 [canton-env-ec-170] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:a1ff7379ff6e3a52dc88431534a35e67 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 09:27:44,314 [canton-env-ec-163] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:5e3c2c625f1c5e5181449cd2a3572555 - Received request for transactions, startExclusive -> '00000000000000000d', endInclusive -> '000000000000000020', filters -> {NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:RedeemRequest']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 09:28:57,366 [canton-env-ec-170] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:f460e5170e26b7b4ce0fe9dc388e89dc - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 09:28:57,376 [canton-env-ec-160] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:a5de1b794db907b38e2eb20b0cc8ae04 - Phase 1 started: Submitting commands for interpretation: Commands(
+  commandId = a97b840f-a25a-487c-933d-21defccafbe7,
+  submissionId = 3b92bf86-2ad2-4539-8feb-e71e68e9fc9f,
+  applicationId = alice_user,
+  actAs = NewAlice::1220b845dcf0...,
+  submittedAt = 2025-08-25T09:28:57.375623Z,
+  ledgerEffectiveTime = 2025-08-25T09:28:57.375621Z,
+  deduplicationPeriod = (duration=PT168H),
+  ...
+).
+2025-08-25 09:28:57,387 [canton-env-ec-167] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:a5de1b794db907b38e2eb20b0cc8ae04 - WRONGLY_TYPED_CONTRACT(9,3b92bf86): Interpretation error: Error: Update failed due to wrongly typed contract id 00a2c7e6abf7f0fcc847af4783cd0fe5af3852e76fff8e03546025cbe9d3249159ca031220c3cc676676af08c8a7344c172b0b20ebe8c739a2c976a332fcb4956d404a38f8
+Expected contract of type TokenExample:AssetRegistry@323be96a but got TokenExample:Token@323be96a err-context:{location=RejectionGenerators.scala:121} 
+2025-08-25 09:28:57,388 [canton-env-ec-160] INFO  c.d.c.n.g.ApiRequestLogger:participant=participant1 tid:a5de1b794db907b38e2eb20b0cc8ae04 - Request c.d.l.a.v.CommandService/SubmitAndWaitForTransactionTree by /127.0.0.1:34978: failed with FAILED_PRECONDITION/WRONGLY_TYPED_CONTRACT(9,3b92bf86): Interpretation error: Error: Update failed due to wrongly typed contract id 00a2c7e6abf7f0fcc847af4783cd0fe5af3852e76fff8e03546025cbe9d3249159ca031220c3cc676676af08c8a7344c172b0b20ebe8c739a2c976a332fcb4956d404a38f8
+Expected contract of type TokenExample:AssetRegistry@323be96a but got TokenExample:Token@323be96a
+2025-08-25 09:29:32,192 [canton-env-ec-169] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:8edcdee904fe5f3777b831c0e659bcc3 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 09:29:32,203 [canton-env-ec-167] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:a1679cbe5ca4266cc1e9b9f17550ddac - Phase 1 started: Submitting commands for interpretation: Commands(
+  commandId = 027a28a5-1f86-444d-b13b-f534831cf0f8,
+  submissionId = fbf83774-c3d2-4c8b-87d6-65f7950e36a9,
+  applicationId = alice_user,
+  actAs = NewAlice::1220b845dcf0...,
+  submittedAt = 2025-08-25T09:29:32.202153Z,
+  ledgerEffectiveTime = 2025-08-25T09:29:32.202151Z,
+  deduplicationPeriod = (duration=PT168H),
+  ...
+).
+2025-08-25 09:29:32,206 [canton-env-ec-169] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:a1679cbe5ca4266cc1e9b9f17550ddac - WRONGLY_TYPED_CONTRACT(9,fbf83774): Interpretation error: Error: Update failed due to wrongly typed contract id 00a2c7e6abf7f0fcc847af4783cd0fe5af3852e76fff8e03546025cbe9d3249159ca031220c3cc676676af08c8a7344c172b0b20ebe8c739a2c976a332fcb4956d404a38f8
+Expected contract of type TokenExample:AssetRegistry@323be96a but got TokenExample:Token@323be96a err-context:{location=RejectionGenerators.scala:121} 
+2025-08-25 09:29:32,208 [canton-env-ec-160] INFO  c.d.c.n.g.ApiRequestLogger:participant=participant1 tid:a1679cbe5ca4266cc1e9b9f17550ddac - Request c.d.l.a.v.CommandService/SubmitAndWaitForTransactionTree by /127.0.0.1:34978: failed with FAILED_PRECONDITION/WRONGLY_TYPED_CONTRACT(9,fbf83774): Interpretation error: Error: Update failed due to wrongly typed contract id 00a2c7e6abf7f0fcc847af4783cd0fe5af3852e76fff8e03546025cbe9d3249159ca031220c3cc676676af08c8a7344c172b0b20ebe8c739a2c976a332fcb4956d404a38f8
+Expected contract of type TokenExample:AssetRegistry@323be96a but got TokenExample:Token@323be96a
+2025-08-25 09:29:41,370 [canton-env-ec-169] INFO  c.d.c.d.s.a.MemberAuthenticationServiceOld:domain=mydomain - DOM::mydomain::122060f2dea2... authenticated new token with expiry 2025-08-25T10:29:41.368783Z
+2025-08-25 09:29:41,515 [canton-env-ec-167] INFO  c.d.c.d.s.a.MemberAuthenticationServiceOld:domain=mydomain - MED::mydomain::122060f2dea2... authenticated new token with expiry 2025-08-25T10:29:41.513759Z
+2025-08-25 09:29:44,760 [canton-env-ec-162] INFO  c.d.c.d.s.a.MemberAuthenticationServiceOld:domain=mydomain - PAR::participant1::1220b845dcf0... authenticated new token with expiry 2025-08-25T10:29:44.758310Z
+2025-08-25 09:30:01,342 [canton-env-ec-36] INFO  c.d.c.s.c.t.GrpcSequencerSubscription:domain=mydomain/client=topology-manager - The sequencer subscription has been terminated by the server.
+2025-08-25 09:30:01,342 [canton-env-ec-170] INFO  c.d.c.s.c.t.GrpcSubscriptionErrorRetryPolicy:domain=mydomain/client=topology-manager - Trying to reconnect to give the sequencer the opportunity to become available again (after Connection terminated by the server.)
+2025-08-25 09:30:01,397 [canton-env-ec-36] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain - DOM::mydomain::122060f2dea2... subscribes from counter=31
+2025-08-25 09:30:01,480 [canton-env-ec-162] INFO  c.d.c.s.c.t.GrpcSequencerSubscription:domain=mydomain/client=mediator - The sequencer subscription has been terminated by the server.
+2025-08-25 09:30:01,480 [canton-env-ec-170] INFO  c.d.c.s.c.t.GrpcSubscriptionErrorRetryPolicy:domain=mydomain/client=mediator - Trying to reconnect to give the sequencer the opportunity to become available again (after Connection terminated by the server.)
+2025-08-25 09:30:01,533 [canton-env-ec-170] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain - MED::mydomain::122060f2dea2... subscribes from counter=90
+2025-08-25 09:30:04,722 [canton-env-ec-163] INFO  c.d.c.s.c.t.GrpcSequencerSubscription:participant=participant1/domainId=mydomain::122060f2dea2 - The sequencer subscription has been terminated by the server.
+2025-08-25 09:30:04,723 [canton-env-ec-167] INFO  c.d.c.s.c.t.GrpcSubscriptionErrorRetryPolicy:participant=participant1/domainId=mydomain::122060f2dea2 tid:a309fd82476cae3d9035408e7291eec8 - Trying to reconnect to give the sequencer the opportunity to become available again (after Connection terminated by the server.)
+2025-08-25 09:30:04,776 [canton-env-ec-162] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:a309fd82476cae3d9035408e7291eec8 - PAR::participant1::1220b845dcf0... subscribes from counter=106
+2025-08-25 09:30:36,487 [canton-env-ec-163] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:dc98237a225b068fc23793dbb8854839 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 09:30:58,951 [canton-env-ec-36] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:35688c0d47ccc53949b00c10bb07cf98 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 09:33:40,877 [canton-env-ec-162] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:ee8d9b1499817b11e3bf108b5e00d79e - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 09:45:50,932 [canton-env-ec-160] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:c0923b708a4db0ebf65c0abd0004c38b - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 09:45:50,942 [canton-env-ec-170] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:79da20c08fc8c7866f5ec7cd41d6f9a9 - Phase 1 started: Submitting commands for interpretation: Commands(
+  commandId = 963438a0-8f57-45a1-b601-02ce4f0c8c17,
+  submissionId = 9373160b-3b33-4999-a2be-b17cf49622d4,
+  applicationId = alice_user,
+  actAs = NewAlice::1220b845dcf0...,
+  submittedAt = 2025-08-25T09:45:50.942013Z,
+  ledgerEffectiveTime = 2025-08-25T09:45:50.942011Z,
+  deduplicationPeriod = (duration=PT168H),
+  ...
+).
+2025-08-25 09:45:50,951 [canton-env-ec-160] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:79da20c08fc8c7866f5ec7cd41d6f9a9 - WRONGLY_TYPED_CONTRACT(9,9373160b): Interpretation error: Error: Update failed due to wrongly typed contract id 00a2c7e6abf7f0fcc847af4783cd0fe5af3852e76fff8e03546025cbe9d3249159ca031220c3cc676676af08c8a7344c172b0b20ebe8c739a2c976a332fcb4956d404a38f8
+Expected contract of type TokenExample:AssetRegistry@323be96a but got TokenExample:Token@323be96a err-context:{location=RejectionGenerators.scala:121} 
+2025-08-25 09:45:50,953 [canton-env-ec-170] INFO  c.d.c.n.g.ApiRequestLogger:participant=participant1 tid:79da20c08fc8c7866f5ec7cd41d6f9a9 - Request c.d.l.a.v.CommandService/SubmitAndWaitForTransactionTree by /127.0.0.1:34978: failed with FAILED_PRECONDITION/WRONGLY_TYPED_CONTRACT(9,9373160b): Interpretation error: Error: Update failed due to wrongly typed contract id 00a2c7e6abf7f0fcc847af4783cd0fe5af3852e76fff8e03546025cbe9d3249159ca031220c3cc676676af08c8a7344c172b0b20ebe8c739a2c976a332fcb4956d404a38f8
+Expected contract of type TokenExample:AssetRegistry@323be96a but got TokenExample:Token@323be96a
+2025-08-25 09:47:50,123 [canton-env-ec-36] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:944e4972dae95bff491c2d2fb5fb51a1 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 09:47:50,149 [canton-env-ec-167] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:9b081dea36a671d6646f3fd7c9bc4f7c - Received request for transactions, startExclusive -> '000000000000000014', endInclusive -> '000000000000000020', filters -> {NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 09:49:31,121 [canton-env-ec-163] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:5b711dc9b59b5b8bcf74082e8b503741 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 09:55:30,890 [canton-env-ec-170] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:c36916cdbeb63d09f1d5dbd2758eeb17 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 10:00:52,990 [canton-env-ec-162] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:dd21c3b3dd48bb5678968a7f341059e4 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 10:00:52,999 [canton-env-ec-37] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:a6a71551da0093f65a859e065585c248 - Phase 1 started: Submitting commands for interpretation: Commands(
+  commandId = 33775653-26cf-45d3-ae3f-8ec18bc75abf,
+  submissionId = 242a2044-65ce-4e49-8bac-4ef01ba09d1b,
+  applicationId = alice_bank_token,
+  actAs = Set(NewAlice::1220b845dcf0..., NewBank::1220b845dcf0...),
+  submittedAt = 2025-08-25T10:00:52.998516Z,
+  ledgerEffectiveTime = 2025-08-25T10:00:52.998515Z,
+  deduplicationPeriod = (duration=PT168H),
+  ...
+).
+2025-08-25 10:00:53,192 [canton-env-ec-162] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:a6a71551da0093f65a859e065585c248 - Phase 1 completed: Submitting 3 envelopes for Transaction request, submitters Seq(NewAlice::1220b845dcf0..., NewBank::1220b845dcf0...), command-id 33775653-26cf-45d3-ae3f-8ec18bc75abf
+2025-08-25 10:00:53,203 [canton-env-ec-163] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:a6a71551da0093f65a859e065585c248 - 'PAR::participant1::1220b845dcf0...' sends request with id '31372e01-ec45-484a-b451-f9088b557933' of size 3079 bytes with 3 envelopes.
+2025-08-25 10:00:53,238 [canton-env-ec-160] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:a6a71551da0093f65a859e065585c248 - Processing event at sc=107, ts=2025-08-25T10:00:53.210926Z, messageId=31372e01-ec45-484a-b451-f9088b557933, with contents=Seq(RootHashMessage(root hash = SHA-256:c2b06f21bc58..., payload size = 0), EncryptedViewMessageV2(view hash = ViewHash(SHA-256:12cd2439f88a...), view type = TransactionViewType, size = 1659))
+2025-08-25 10:00:53,240 [canton-env-ec-160] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:a6a71551da0093f65a859e065585c248 - Phase 3: Validating Transaction request=2025-08-25T10:00:53.210926Z with 1 envelope(s)
+2025-08-25 10:00:53,251 [canton-env-ec-38] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:a6a71551da0093f65a859e065585c248 - Phase 2: Registered request=2025-08-25T10:00:53.210926Z with 1 view(s). Initial state: ViewPosition("") -> ViewState(
+  quorumsState = Seq(
+    Quorum(confirmers = Map(NewAlice::1220b845dcf0... -> 1, NewBank::1220b845dcf0... -> 1), threshold = 2),
+    Quorum(confirmers = NewBank::1220b845dcf0... -> 1, threshold = 1),
+    Quorum(confirmers = participant1::1220b845dcf0... -> 1, threshold = 1)
+  ),
+  consortiumVoting = Map(NewAlice::1220b845dcf0... -> ConsortiumVotingState(), NewBank::1220b845dcf0... -> ConsortiumVotingState(), participant1::1220b845dcf0... -> ConsortiumVotingState()),
+  rejections = Seq()
+)
+2025-08-25 10:00:53,415 [canton-env-ec-37] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:a6a71551da0093f65a859e065585c248 - Phase 4: Sending for request=2025-08-25T10:00:53.210926Z with msgId=7c1de124-b91f-47d9-9205-1196a68b649a approved=1, rejected=0
+2025-08-25 10:00:53,429 [canton-env-ec-159] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:a6a71551da0093f65a859e065585c248 - 'PAR::participant1::1220b845dcf0...' sends request with id '7c1de124-b91f-47d9-9205-1196a68b649a' of size 750 bytes with 1 envelopes.
+2025-08-25 10:00:53,456 [canton-env-ec-102] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:a6a71551da0093f65a859e065585c248 - Processing event at sc=108, ts=2025-08-25T10:00:53.434741Z, messageId=7c1de124-b91f-47d9-9205-1196a68b649a, with contents=Seq()
+2025-08-25 10:00:53,457 [canton-env-ec-162] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:a6a71551da0093f65a859e065585c248 - Phase 5: Received responses for request=RequestId(2025-08-25T10:00:53.210926Z): ParticipantResponse(sender = PAR::participant1::1220b845dcf0..., ts = 2025-08-25T10:00:53.434741Z, approved = 1)
+2025-08-25 10:00:53,497 [canton-env-ec-167] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:a6a71551da0093f65a859e065585c248 - Phase 6: Finalized request=RequestId(2025-08-25T10:00:53.210926Z) with verdict Approve
+2025-08-25 10:00:53,514 [canton-env-ec-163] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:a6a71551da0093f65a859e065585c248 - 'MED::mydomain::122060f2dea2...' sends request with id 'mmid:verdict:1756116053210926' of size 723 bytes with 1 envelopes.
+2025-08-25 10:00:53,542 [canton-env-ec-37] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:a6a71551da0093f65a859e065585c248 - Processing event at sc=109, ts=2025-08-25T10:00:53.522128Z, with contents=SignedProtocolMessage(
+  TransactionResultMessage(requestId = 2025-08-25T10:00:53.210926Z, verdict = Approve, rootHash = SHA-256:c2b06f21bc58..., domainId = mydomain::122060f2dea2...),
+  signatures = Signature(signature = 0e4f8072e058, signedBy = 1220120ea179...)
+)
+2025-08-25 10:00:53,585 [input-mapping-pool-5] INFO  c.d.c.p.i.p.ParallelIndexerSubscription:participant=participant1 tid:a6a71551da0093f65a859e065585c248 - Phase 7: Storing at offset=000000000000000021 TransactionAccepted(
+  recordTime = 2025-08-25T10:00:53.210926Z,
+  transactionId = 1220c2b06f21bc5877caa4ef69b0c24104c3797c7038e947545091e8b1f3f9742e2e,
+  transactionMeta = TransactionMeta(ledgerEffectiveTime = 2025-08-25T10:00:52.998515Z, submissionTime = 2025-08-25T10:00:52.998515Z, domainId = mydomain::122060f2dea2..., ...),
+  completion = CompletionInfo(
+    actAs = NewAlice::1220b845dcf0..., NewBank::1220b845dcf0...,
+    commandId = 33775653-26cf-45d3-ae3f-8ec18bc75abf,
+    applicationId = alice_bank_token,
+    deduplication period = (offset=Offset(Bytes(000000000000000001))),
+    submissionId = Some(242a2044-65ce-4e49-8bac-4ef01ba09d1b),
+    ...
+  ),
+  nodes = 6,
+  roots = 1,
+  ...
+)
+2025-08-25 10:00:53,604 [canton-env-ec-162] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 - Received request for transaction by ID, ledgerId -> 'participant1', transactionId -> '1220c2b06f21bc5877caa4ef69b0c24104c3797c7038e947545091e8b1f3f9742e2e', parties -> ['NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d', 'NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d'].
+2025-08-25 10:01:23,466 [canton-env-ec-167] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:a6a71551da0093f65a859e065585c248 - 'MED::mydomain::122060f2dea2...' sends request with id 'tick-e24c039f-df2c-43b5-af92-4fdfd865b3b7' of size 339 bytes with 0 envelopes.
+2025-08-25 10:01:41,299 [daml.index.db.threadpool.connection.indexer-0] INFO  c.d.c.p.i.MeteringAggregator:participant=participant1 - Aggregating transaction metering for LedgerMeteringEnd(Offset(Bytes(00000000000000001e)),2025-08-25T10:00:00Z)
+2025-08-25 10:01:41,301 [daml.index.db.threadpool.connection.indexer-0] INFO  c.d.c.p.i.MeteringAggregator:participant=participant1 - Aggregating transaction metering completed up to LedgerMeteringEnd(Offset(Bytes(00000000000000001e)),2025-08-25T10:00:00Z)
+2025-08-25 10:01:53,257 [canton-env-ec-159] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:a6a71551da0093f65a859e065585c248 - 'PAR::participant1::1220b845dcf0...' sends request with id 'tick-e8cb834e-d4a8-4b71-b205-bd1653bfac7f' of size 343 bytes with 0 envelopes.
+2025-08-25 10:27:23,416 [canton-env-ec-163] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:2dc13646f0adfb5b078e931f4512fedb - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 10:27:23,426 [canton-env-ec-36] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:7cae54d732d29fa341f7c433e6844beb - Phase 1 started: Submitting commands for interpretation: Commands(
+  commandId = 914abd7e-014e-4b26-9a0a-24133c0379de,
+  submissionId = a0154ebb-0478-428b-8a16-0064300b88a1,
+  applicationId = alice_bank_token,
+  actAs = Set(NewAlice::1220b845dcf0..., NewBank::1220b845dcf0...),
+  submittedAt = 2025-08-25T10:27:23.426228Z,
+  ledgerEffectiveTime = 2025-08-25T10:27:23.426226Z,
+  deduplicationPeriod = (duration=PT168H),
+  ...
+).
+2025-08-25 10:27:23,434 [canton-env-ec-167] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:7cae54d732d29fa341f7c433e6844beb - CONTRACT_NOT_FOUND(11,a0154ebb): Contract could not be found with id 00a2c7e6abf7f0fcc847af4783cd0fe5af3852e76fff8e03546025cbe9d3249159ca031220c3cc676676af08c8a7344c172b0b20ebe8c739a2c976a332fcb4956d404a38f8 err-context:{location=RejectionGenerators.scala:77} 
+2025-08-25 10:27:23,436 [canton-env-ec-38] INFO  c.d.c.n.g.ApiRequestLogger:participant=participant1 tid:7cae54d732d29fa341f7c433e6844beb - Request c.d.l.a.v.CommandService/SubmitAndWaitForTransactionTree by /127.0.0.1:34978: failed with NOT_FOUND/CONTRACT_NOT_FOUND(11,a0154ebb): Contract could not be found with id 00a2c7e6abf7f0fcc847af4783cd0fe5af3852e76fff8e03546025cbe9d3249159ca031220c3cc676676af08c8a7344c172b0b20ebe8c739a2c976a332fcb4956d404a38f8
+2025-08-25 10:29:21,410 [canton-env-ec-36] INFO  c.d.c.d.s.a.MemberAuthenticationServiceOld:domain=mydomain - DOM::mydomain::122060f2dea2... authenticated new token with expiry 2025-08-25T11:29:21.407920Z
+2025-08-25 10:29:21,549 [canton-env-ec-170] INFO  c.d.c.d.s.a.MemberAuthenticationServiceOld:domain=mydomain - MED::mydomain::122060f2dea2... authenticated new token with expiry 2025-08-25T11:29:21.547566Z
+2025-08-25 10:29:24,835 [canton-env-ec-162] INFO  c.d.c.d.s.a.MemberAuthenticationServiceOld:domain=mydomain - PAR::participant1::1220b845dcf0... authenticated new token with expiry 2025-08-25T11:29:24.828581Z
+2025-08-25 10:29:41,370 [canton-env-ec-162] INFO  c.d.c.s.c.t.GrpcSequencerSubscription:domain=mydomain/client=topology-manager - The sequencer subscription has been terminated by the server.
+2025-08-25 10:29:41,371 [canton-env-ec-38] INFO  c.d.c.s.c.t.GrpcSubscriptionErrorRetryPolicy:domain=mydomain/client=topology-manager - Trying to reconnect to give the sequencer the opportunity to become available again (after Connection terminated by the server.)
+2025-08-25 10:29:41,425 [canton-env-ec-162] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain - DOM::mydomain::122060f2dea2... subscribes from counter=31
+2025-08-25 10:29:41,516 [canton-env-ec-36] INFO  c.d.c.s.c.t.GrpcSequencerSubscription:domain=mydomain/client=mediator - The sequencer subscription has been terminated by the server.
+2025-08-25 10:29:41,517 [canton-env-ec-170] INFO  c.d.c.s.c.t.GrpcSubscriptionErrorRetryPolicy:domain=mydomain/client=mediator - Trying to reconnect to give the sequencer the opportunity to become available again (after Connection terminated by the server.)
+2025-08-25 10:29:41,570 [canton-env-ec-169] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain - MED::mydomain::122060f2dea2... subscribes from counter=94
+2025-08-25 10:29:44,760 [canton-env-ec-162] INFO  c.d.c.s.c.t.GrpcSequencerSubscription:participant=participant1/domainId=mydomain::122060f2dea2 - The sequencer subscription has been terminated by the server.
+2025-08-25 10:29:44,761 [canton-env-ec-159] INFO  c.d.c.s.c.t.GrpcSubscriptionErrorRetryPolicy:participant=participant1/domainId=mydomain::122060f2dea2 tid:a309fd82476cae3d9035408e7291eec8 - Trying to reconnect to give the sequencer the opportunity to become available again (after Connection terminated by the server.)
+2025-08-25 10:29:44,815 [canton-env-ec-167] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:a309fd82476cae3d9035408e7291eec8 - PAR::participant1::1220b845dcf0... subscribes from counter=110
+2025-08-25 10:38:15,102 [canton-env-ec-162] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:aa165680841d7b6a1ffab4a1f6e62bb2 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 10:38:15,126 [canton-env-ec-36] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:353f3c4ae90dda614973c0ead6505674 - Received request for transactions, startExclusive -> '000000000000000020', endInclusive -> '000000000000000021', filters -> {NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:RedeemRequest']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 10:40:56,662 [canton-env-ec-38] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:ff30780f076534c0de654e10260e6363 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 10:41:25,420 [canton-env-ec-170] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:f96e19e7ab27a6e139659cb034c6169b - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 10:41:25,445 [canton-env-ec-170] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:82f9dcc332d804f04e0e7f7129ef5551 - Received request for transactions, startExclusive -> '000000000000000020', endInclusive -> '000000000000000021', filters -> {NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:Token']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 10:42:52,334 [canton-env-ec-36] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:f87f2c4a16d1c03a6ab68aa01bc44b64 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 10:42:52,342 [canton-env-ec-38] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:bec9942a38b45671be3486f234b92a2a - Phase 1 started: Submitting commands for interpretation: Commands(
+  commandId = 634e2b00-12eb-4d71-ac5d-daf8e7ac3170,
+  submissionId = 21c4ffd0-3a78-457c-9b7f-4ef60e25eb57,
+  applicationId = bank_admin,
+  actAs = NewBank::1220b845dcf0...,
+  submittedAt = 2025-08-25T10:42:52.341381Z,
+  ledgerEffectiveTime = 2025-08-25T10:42:52.341380Z,
+  deduplicationPeriod = (duration=PT168H),
+  ...
+).
+2025-08-25 10:42:52,512 [canton-env-ec-167] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:bec9942a38b45671be3486f234b92a2a - Phase 1 completed: Submitting 3 envelopes for Transaction request, submitters NewBank::1220b845dcf0..., command-id 634e2b00-12eb-4d71-ac5d-daf8e7ac3170
+2025-08-25 10:42:52,520 [canton-env-ec-159] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:bec9942a38b45671be3486f234b92a2a - 'PAR::participant1::1220b845dcf0...' sends request with id 'afedfd43-d9c0-41a9-8952-3baf9d5f0d95' of size 2852 bytes with 3 envelopes.
+2025-08-25 10:42:52,558 [canton-env-ec-167] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:bec9942a38b45671be3486f234b92a2a - Processing event at sc=111, ts=2025-08-25T10:42:52.528538Z, messageId=afedfd43-d9c0-41a9-8952-3baf9d5f0d95, with contents=Seq(RootHashMessage(root hash = SHA-256:e0161b905370..., payload size = 0), EncryptedViewMessageV2(view hash = ViewHash(SHA-256:9cec85ab4041...), view type = TransactionViewType, size = 1440))
+2025-08-25 10:42:52,560 [canton-env-ec-159] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:bec9942a38b45671be3486f234b92a2a - Phase 3: Validating Transaction request=2025-08-25T10:42:52.528538Z with 1 envelope(s)
+2025-08-25 10:42:52,569 [canton-env-ec-167] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:bec9942a38b45671be3486f234b92a2a - Phase 2: Registered request=2025-08-25T10:42:52.528538Z with 1 view(s). Initial state: ViewPosition("") -> ViewState(
+  quorumsState = Seq(Quorum(confirmers = NewBank::1220b845dcf0... -> 1, threshold = 1), Quorum(confirmers = participant1::1220b845dcf0... -> 1, threshold = 1)),
+  consortiumVoting = Map(NewBank::1220b845dcf0... -> ConsortiumVotingState(), participant1::1220b845dcf0... -> ConsortiumVotingState()),
+  rejections = Seq()
+)
+2025-08-25 10:42:52,738 [canton-env-ec-37] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:bec9942a38b45671be3486f234b92a2a - Phase 4: Sending for request=2025-08-25T10:42:52.528538Z with msgId=527f8894-c5bb-4138-9f41-115066c5e194 approved=1, rejected=0
+2025-08-25 10:42:52,749 [canton-env-ec-163] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:bec9942a38b45671be3486f234b92a2a - 'PAR::participant1::1220b845dcf0...' sends request with id '527f8894-c5bb-4138-9f41-115066c5e194' of size 747 bytes with 1 envelopes.
+2025-08-25 10:42:52,775 [canton-env-ec-37] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:bec9942a38b45671be3486f234b92a2a - Phase 5: Received responses for request=RequestId(2025-08-25T10:42:52.528538Z): ParticipantResponse(sender = PAR::participant1::1220b845dcf0..., ts = 2025-08-25T10:42:52.756032Z, approved = 1)
+2025-08-25 10:42:52,775 [canton-env-ec-160] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:bec9942a38b45671be3486f234b92a2a - Processing event at sc=112, ts=2025-08-25T10:42:52.756032Z, messageId=527f8894-c5bb-4138-9f41-115066c5e194, with contents=Seq()
+2025-08-25 10:42:52,819 [canton-env-ec-102] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:bec9942a38b45671be3486f234b92a2a - Phase 6: Finalized request=RequestId(2025-08-25T10:42:52.528538Z) with verdict Approve
+2025-08-25 10:42:52,832 [canton-env-ec-163] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:bec9942a38b45671be3486f234b92a2a - 'MED::mydomain::122060f2dea2...' sends request with id 'mmid:verdict:1756118572528538' of size 717 bytes with 1 envelopes.
+2025-08-25 10:42:52,855 [canton-env-ec-37] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:bec9942a38b45671be3486f234b92a2a - Processing event at sc=113, ts=2025-08-25T10:42:52.839160Z, with contents=SignedProtocolMessage(
+  TransactionResultMessage(requestId = 2025-08-25T10:42:52.528538Z, verdict = Approve, rootHash = SHA-256:e0161b905370..., domainId = mydomain::122060f2dea2...),
+  signatures = Signature(signature = 3876e5bed64a, signedBy = 1220120ea179...)
+)
+2025-08-25 10:42:52,894 [input-mapping-pool-6] INFO  c.d.c.p.i.p.ParallelIndexerSubscription:participant=participant1 tid:bec9942a38b45671be3486f234b92a2a - Phase 7: Storing at offset=000000000000000022 TransactionAccepted(
+  recordTime = 2025-08-25T10:42:52.528538Z,
+  transactionId = 1220e0161b905370e382ddfe4f0afbcbe62bc38de2a91ea2ed7125211fb336de4dc3,
+  transactionMeta = TransactionMeta(ledgerEffectiveTime = 2025-08-25T10:42:52.341380Z, submissionTime = 2025-08-25T10:42:52.341380Z, domainId = mydomain::122060f2dea2..., ...),
+  completion = CompletionInfo(
+    actAs = NewBank::1220b845dcf0...,
+    commandId = 634e2b00-12eb-4d71-ac5d-daf8e7ac3170,
+    applicationId = bank_admin,
+    deduplication period = (offset=Offset(Bytes(000000000000000001))),
+    submissionId = Some(21c4ffd0-3a78-457c-9b7f-4ef60e25eb57),
+    ...
+  ),
+  nodes = 5,
+  roots = 1,
+  ...
+)
+2025-08-25 10:42:52,910 [canton-env-ec-162] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 - Received request for transaction by ID, ledgerId -> 'participant1', transactionId -> '1220e0161b905370e382ddfe4f0afbcbe62bc38de2a91ea2ed7125211fb336de4dc3', parties -> ['NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d'].
+2025-08-25 10:43:10,487 [canton-env-ec-37] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:307bc9c88a4e2e4426453bc6d60fd9c5 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 10:43:10,508 [canton-env-ec-38] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:0d764e3a999a5902c577dcdcad7d85d2 - Received request for transactions, startExclusive -> '000000000000000021', endInclusive -> '000000000000000022', filters -> {NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:RedeemRequest']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 10:43:22,785 [canton-env-ec-38] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:bec9942a38b45671be3486f234b92a2a - 'MED::mydomain::122060f2dea2...' sends request with id 'tick-2136f4e0-1e43-4349-bc90-3fdf8e1327fb' of size 339 bytes with 0 envelopes.
+2025-08-25 10:43:46,262 [canton-env-ec-102] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:ca427a9d9bc0300a01648e0057a238c2 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 10:43:46,285 [canton-env-ec-162] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:69f5ffd8493901d7aed71987f74d446a - Received request for transactions, startExclusive -> '000000000000000021', endInclusive -> '000000000000000022', filters -> {NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:Token']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 10:43:52,596 [canton-env-ec-102] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:bec9942a38b45671be3486f234b92a2a - 'PAR::participant1::1220b845dcf0...' sends request with id 'tick-b76dda17-f0b7-41a2-873e-0892c4df9d12' of size 343 bytes with 0 envelopes.
+2025-08-25 10:43:58,567 [canton-env-ec-36] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:7beb434f7f2201108d248a47498544f5 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 10:46:30,592 [canton-env-ec-36] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:072ea04fe53e3d2673b683c745cbfedf - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 10:46:47,500 [canton-env-ec-37] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:cea752b0d926eca074ee2a916b241f8b - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 10:46:47,519 [canton-env-ec-37] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:90da8876587d392a669a5acc11288946 - Received request for transactions, startExclusive -> '000000000000000020', endInclusive -> '000000000000000022', filters -> {NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 10:48:43,685 [canton-env-ec-159] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:87da505602bce159bc4466065a09d6b2 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 10:52:46,874 [canton-env-ec-102] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:12acee11eb068d0932e6e0585a71a88d - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 10:52:46,886 [canton-env-ec-37] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:5550b44cd079ba22a9f1354dce407476 - Phase 1 started: Submitting commands for interpretation: Commands(
+  commandId = 0ecafc9f-c47d-4821-9142-0a880d1ade4f,
+  submissionId = 3ad99d07-c586-40c7-a82a-3682681881d3,
+  applicationId = alice_bank_token,
+  actAs = Set(NewAlice::1220b845dcf0..., NewBank::1220b845dcf0...),
+  submittedAt = 2025-08-25T10:52:46.885165Z,
+  ledgerEffectiveTime = 2025-08-25T10:52:46.885162Z,
+  deduplicationPeriod = (duration=PT168H),
+  ...
+).
+2025-08-25 10:52:46,962 [canton-env-ec-167] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:5550b44cd079ba22a9f1354dce407476 - Phase 1 completed: Submitting 3 envelopes for Transaction request, submitters Seq(NewAlice::1220b845dcf0..., NewBank::1220b845dcf0...), command-id 0ecafc9f-c47d-4821-9142-0a880d1ade4f
+2025-08-25 10:52:46,970 [canton-env-ec-162] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:5550b44cd079ba22a9f1354dce407476 - 'PAR::participant1::1220b845dcf0...' sends request with id 'd811ba8f-2c09-467a-8ab4-edc2b5e58f33' of size 3080 bytes with 3 envelopes.
+2025-08-25 10:52:47,008 [canton-env-ec-38] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:5550b44cd079ba22a9f1354dce407476 - Processing event at sc=115, ts=2025-08-25T10:52:46.977921Z, messageId=d811ba8f-2c09-467a-8ab4-edc2b5e58f33, with contents=Seq(RootHashMessage(root hash = SHA-256:377d0a5f4ee2..., payload size = 0), EncryptedViewMessageV2(view hash = ViewHash(SHA-256:7c9e2e37b63b...), view type = TransactionViewType, size = 1654))
+2025-08-25 10:52:47,011 [canton-env-ec-36] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:5550b44cd079ba22a9f1354dce407476 - Phase 3: Validating Transaction request=2025-08-25T10:52:46.977921Z with 1 envelope(s)
+2025-08-25 10:52:47,021 [canton-env-ec-36] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:5550b44cd079ba22a9f1354dce407476 - Phase 2: Registered request=2025-08-25T10:52:46.977921Z with 1 view(s). Initial state: ViewPosition("") -> ViewState(
+  quorumsState = Seq(
+    Quorum(confirmers = Map(NewAlice::1220b845dcf0... -> 1, NewBank::1220b845dcf0... -> 1), threshold = 2),
+    Quorum(confirmers = NewBank::1220b845dcf0... -> 1, threshold = 1),
+    Quorum(confirmers = participant1::1220b845dcf0... -> 1, threshold = 1)
+  ),
+  consortiumVoting = Map(NewAlice::1220b845dcf0... -> ConsortiumVotingState(), NewBank::1220b845dcf0... -> ConsortiumVotingState(), participant1::1220b845dcf0... -> ConsortiumVotingState()),
+  rejections = Seq()
+)
+2025-08-25 10:52:47,054 [canton-env-ec-37] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:5550b44cd079ba22a9f1354dce407476 - Phase 4: Sending for request=2025-08-25T10:52:46.977921Z with msgId=cc641110-aa45-4d5e-80c7-30e074277eec approved=1, rejected=0
+2025-08-25 10:52:47,059 [canton-env-ec-169] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:5550b44cd079ba22a9f1354dce407476 - 'PAR::participant1::1220b845dcf0...' sends request with id 'cc641110-aa45-4d5e-80c7-30e074277eec' of size 756 bytes with 1 envelopes.
+2025-08-25 10:52:47,080 [canton-env-ec-170] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:5550b44cd079ba22a9f1354dce407476 - Processing event at sc=116, ts=2025-08-25T10:52:47.065753Z, messageId=cc641110-aa45-4d5e-80c7-30e074277eec, with contents=Seq()
+2025-08-25 10:52:47,081 [canton-env-ec-167] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:5550b44cd079ba22a9f1354dce407476 - Phase 5: Received responses for request=RequestId(2025-08-25T10:52:46.977921Z): ParticipantResponse(sender = PAR::participant1::1220b845dcf0..., ts = 2025-08-25T10:52:47.065753Z, approved = 1)
+2025-08-25 10:52:47,089 [canton-env-ec-37] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:5550b44cd079ba22a9f1354dce407476 - Phase 6: Finalized request=RequestId(2025-08-25T10:52:46.977921Z) with verdict Approve
+2025-08-25 10:52:47,098 [canton-env-ec-38] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:5550b44cd079ba22a9f1354dce407476 - 'MED::mydomain::122060f2dea2...' sends request with id 'mmid:verdict:1756119166977921' of size 717 bytes with 1 envelopes.
+2025-08-25 10:52:47,119 [canton-env-ec-170] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:5550b44cd079ba22a9f1354dce407476 - Processing event at sc=117, ts=2025-08-25T10:52:47.104094Z, with contents=SignedProtocolMessage(
+  TransactionResultMessage(requestId = 2025-08-25T10:52:46.977921Z, verdict = Approve, rootHash = SHA-256:377d0a5f4ee2..., domainId = mydomain::122060f2dea2...),
+  signatures = Signature(signature = 9bf340dd875c, signedBy = 1220120ea179...)
+)
+2025-08-25 10:52:47,164 [input-mapping-pool-7] INFO  c.d.c.p.i.p.ParallelIndexerSubscription:participant=participant1 tid:5550b44cd079ba22a9f1354dce407476 - Phase 7: Storing at offset=000000000000000023 TransactionAccepted(
+  recordTime = 2025-08-25T10:52:46.977921Z,
+  transactionId = 1220377d0a5f4ee289a7ee83b9c71ee969a2dbdf9f6772afae444ee1fb9226d56a24,
+  transactionMeta = TransactionMeta(ledgerEffectiveTime = 2025-08-25T10:52:46.885162Z, submissionTime = 2025-08-25T10:52:46.885162Z, domainId = mydomain::122060f2dea2..., ...),
+  completion = CompletionInfo(
+    actAs = NewAlice::1220b845dcf0..., NewBank::1220b845dcf0...,
+    commandId = 0ecafc9f-c47d-4821-9142-0a880d1ade4f,
+    applicationId = alice_bank_token,
+    deduplication period = (offset=Offset(Bytes(000000000000000001))),
+    submissionId = Some(3ad99d07-c586-40c7-a82a-3682681881d3),
+    ...
+  ),
+  nodes = 6,
+  roots = 1,
+  ...
+)
+2025-08-25 10:52:47,180 [canton-env-ec-167] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 - Received request for transaction by ID, ledgerId -> 'participant1', transactionId -> '1220377d0a5f4ee289a7ee83b9c71ee969a2dbdf9f6772afae444ee1fb9226d56a24', parties -> ['NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d', 'NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d'].
+2025-08-25 10:53:17,233 [canton-env-ec-169] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:5550b44cd079ba22a9f1354dce407476 - 'MED::mydomain::122060f2dea2...' sends request with id 'tick-df90f240-766b-48c6-a5e3-63604ad71cb6' of size 338 bytes with 0 envelopes.
+2025-08-25 10:53:47,141 [canton-env-ec-36] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:5550b44cd079ba22a9f1354dce407476 - 'PAR::participant1::1220b845dcf0...' sends request with id 'tick-946ffb2e-5bb8-47bd-93e5-d39e7f7c9f9e' of size 342 bytes with 0 envelopes.
+2025-08-25 10:54:09,412 [canton-env-ec-162] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:18b7b01662edc0cb1bc7ad43aee9afc0 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 10:54:09,421 [canton-env-ec-167] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:305ed1c97214087b371ad54feb41fb5f - Phase 1 started: Submitting commands for interpretation: Commands(
+  commandId = 8f3a7af7-87e2-4982-ba6a-aace1c5d2463,
+  submissionId = 3f981c4c-ef64-4a52-af36-ef0ad7866361,
+  applicationId = bank_admin,
+  actAs = NewBank::1220b845dcf0...,
+  submittedAt = 2025-08-25T10:54:09.420224Z,
+  ledgerEffectiveTime = 2025-08-25T10:54:09.420222Z,
+  deduplicationPeriod = (duration=PT168H),
+  ...
+).
+2025-08-25 10:54:09,423 [canton-env-ec-167] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:305ed1c97214087b371ad54feb41fb5f - CONTRACT_NOT_FOUND(11,3f981c4c): Contract could not be found with id 003c90a39d7c91b80296853f2be9fa13797516a0c44abd93d2a39b82f181ea7b93ca031220d3efc6c43395d29d3922d586d0ad51abbd279058d0be2d33dd341ba1ef7b8d23 err-context:{location=RejectionGenerators.scala:77} 
+2025-08-25 10:54:09,425 [canton-env-ec-167] INFO  c.d.c.n.g.ApiRequestLogger:participant=participant1 tid:305ed1c97214087b371ad54feb41fb5f - Request c.d.l.a.v.CommandService/SubmitAndWaitForTransactionTree by /127.0.0.1:34978: failed with NOT_FOUND/CONTRACT_NOT_FOUND(11,3f981c4c): Contract could not be found with id 003c90a39d7c91b80296853f2be9fa13797516a0c44abd93d2a39b82f181ea7b93ca031220d3efc6c43395d29d3922d586d0ad51abbd279058d0be2d33dd341ba1ef7b8d23
+2025-08-25 10:54:51,138 [canton-env-ec-162] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:bb3966c16a38363c5fe37c343de0aebe - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 10:54:51,147 [canton-env-ec-38] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:3c056993f47bc0275063f6515ff7cef8 - Phase 1 started: Submitting commands for interpretation: Commands(
+  commandId = 33cc65d3-4eea-40f0-8436-d1665b554a8a,
+  submissionId = ca5407b0-5d6c-417a-bff5-9786b4b2bf30,
+  applicationId = bank_admin,
+  actAs = NewBank::1220b845dcf0...,
+  submittedAt = 2025-08-25T10:54:51.146408Z,
+  ledgerEffectiveTime = 2025-08-25T10:54:51.146405Z,
+  deduplicationPeriod = (duration=PT168H),
+  ...
+).
+2025-08-25 10:54:51,151 [canton-env-ec-167] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:3c056993f47bc0275063f6515ff7cef8 - WRONGLY_TYPED_CONTRACT(9,ca5407b0): Interpretation error: Error: Update failed due to wrongly typed contract id 000ea9c074d4a1b8d539b5e3a0f21a8c7969da32cf0f81174ee0c210c34c59c08bca0312209161ca4f9f6ea7821c32ed296826bd1a57a08a337cb158d146edc2e803aed82b
+Expected contract of type TokenExample:RedeemRequest@323be96a but got TokenExample:AssetRegistry@323be96a err-context:{location=RejectionGenerators.scala:121} 
+2025-08-25 10:54:51,152 [canton-env-ec-37] INFO  c.d.c.n.g.ApiRequestLogger:participant=participant1 tid:3c056993f47bc0275063f6515ff7cef8 - Request c.d.l.a.v.CommandService/SubmitAndWaitForTransactionTree by /127.0.0.1:34978: failed with FAILED_PRECONDITION/WRONGLY_TYPED_CONTRACT(9,ca5407b0): Interpretation error: Error: Update failed due to wrongly typed contract id 000ea9c074d4a1b8d539b5e3a0f21a8c7969da32cf0f81174ee0c210c34c59c08bca0312209161ca4f9f6ea7821c32ed296826bd1a57a08a337cb158d146edc2e803aed82b
+Expected contract of type TokenExample:RedeemRequest@323be96a but got TokenExample:AssetRegistry@323be96a
+2025-08-25 11:01:41,303 [daml.index.db.threadpool.connection.indexer-10] INFO  c.d.c.p.i.MeteringAggregator:participant=participant1 - Aggregating transaction metering for LedgerMeteringEnd(Offset(Bytes(000000000000000023)),2025-08-25T11:00:00Z)
+2025-08-25 11:01:41,310 [daml.index.db.threadpool.connection.indexer-10] INFO  c.d.c.p.i.MeteringAggregator:participant=participant1 - Aggregating transaction metering completed up to LedgerMeteringEnd(Offset(Bytes(000000000000000023)),2025-08-25T11:00:00Z)
+2025-08-25 11:03:27,849 [canton-env-ec-38] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:312e7264d88f1c33ce933182b12366ec - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 11:05:22,923 [canton-env-ec-38] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:1ad449a8a2c139e60e57ef218bdf1ba1 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 11:05:22,953 [canton-env-ec-162] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:ad568d9f33256dc1f3a3a3d1ccf5395b - Received request for transactions, startExclusive -> '000000000000000022', endInclusive -> '000000000000000023', filters -> {NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 11:09:46,647 [canton-env-ec-170] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:ea5db5f74d70f75bf990999cdcaf16f2 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 11:09:46,657 [canton-env-ec-159] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:c52c75cdb12d34c1f43ad5083ae05c4e - Phase 1 started: Submitting commands for interpretation: Commands(
+  commandId = 04c89e35-f8ed-49f6-af51-f4c706cac162,
+  submissionId = 16868d76-e242-41ce-a1d3-3b61db726c8c,
+  applicationId = alice_bank_token,
+  actAs = Set(NewAlice::1220b845dcf0..., NewBank::1220b845dcf0...),
+  submittedAt = 2025-08-25T11:09:46.656797Z,
+  ledgerEffectiveTime = 2025-08-25T11:09:46.656795Z,
+  deduplicationPeriod = (duration=PT168H),
+  ...
+).
+2025-08-25 11:09:46,673 [canton-env-ec-170] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:c52c75cdb12d34c1f43ad5083ae05c4e - UNHANDLED_EXCEPTION(9,16868d76): Interpretation error: Error: Unhandled Daml exception: DA.Exception.GeneralError:GeneralError@86828b98{ message = "redemption already requested" }
+    in choice 323be96a:TokenExample:AssetRegistry:RequestRedemption on contract 000ea9c074 (#0)
+    in exercise command 323be96a:TokenExample:AssetRegistry:RequestRedemption on contract 000ea9c074.
+. err-context:{location=RejectionGenerators.scala:103} 
+2025-08-25 11:09:46,678 [canton-env-ec-167] INFO  c.d.c.n.g.ApiRequestLogger:participant=participant1 tid:c52c75cdb12d34c1f43ad5083ae05c4e - Request c.d.l.a.v.CommandService/SubmitAndWaitForTransactionTree by /127.0.0.1:34978: failed with FAILED_PRECONDITION/UNHANDLED_EXCEPTION(9,16868d76): Interpretation error: Error: Unhandled Daml exception: DA.Exception.GeneralError:GeneralError@86828b98{ message = "redemption already requested" }
+    in choice 323be96a:TokenExample:AssetRegistry:RequestRedemption on contract 000ea9c074 (#0)
+    in exercise command 323be96a:TokenExample:AssetRegistry:RequestRedemption on contract 000ea9c074.
+.
+2025-08-25 11:10:28,877 [canton-env-ec-37] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:8d96f12f985f2c5d35a6377be0ad5a52 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 11:10:28,901 [canton-env-ec-37] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:6cf96fac77a522be48cd9d657c2d3184 - Received request for transactions, startExclusive -> '000000000000000022', endInclusive -> '000000000000000023', filters -> {NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:RedeemRequest']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 11:11:19,208 [canton-env-ec-167] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:d3682abb69b227827ecadfc37e5ba8cf - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 11:11:19,218 [canton-env-ec-159] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:40df1c4b79ad582d52b548ef6b676b24 - Phase 1 started: Submitting commands for interpretation: Commands(
+  commandId = e40d7bc9-9065-4da0-8ffb-9194cd3fc344,
+  submissionId = 4aafdc56-a314-4b51-8f89-ee16374b2056,
+  applicationId = bank_admin,
+  actAs = NewBank::1220b845dcf0...,
+  submittedAt = 2025-08-25T11:11:19.217492Z,
+  ledgerEffectiveTime = 2025-08-25T11:11:19.217489Z,
+  deduplicationPeriod = (duration=PT168H),
+  ...
+).
+2025-08-25 11:11:19,368 [canton-env-ec-170] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:40df1c4b79ad582d52b548ef6b676b24 - Phase 1 completed: Submitting 3 envelopes for Transaction request, submitters NewBank::1220b845dcf0..., command-id e40d7bc9-9065-4da0-8ffb-9194cd3fc344
+2025-08-25 11:11:19,381 [canton-env-ec-162] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:40df1c4b79ad582d52b548ef6b676b24 - 'PAR::participant1::1220b845dcf0...' sends request with id '2b47e861-46ea-4207-9f26-d506c223dbd4' of size 2502 bytes with 3 envelopes.
+2025-08-25 11:11:19,426 [canton-env-ec-102] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:40df1c4b79ad582d52b548ef6b676b24 - Processing event at sc=119, ts=2025-08-25T11:11:19.389794Z, messageId=2b47e861-46ea-4207-9f26-d506c223dbd4, with contents=Seq(RootHashMessage(root hash = SHA-256:2fb69cd2099e..., payload size = 0), EncryptedViewMessageV2(view hash = ViewHash(SHA-256:e3700d577931...), view type = TransactionViewType, size = 1095))
+2025-08-25 11:11:19,428 [canton-env-ec-106] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:40df1c4b79ad582d52b548ef6b676b24 - Phase 3: Validating Transaction request=2025-08-25T11:11:19.389794Z with 1 envelope(s)
+2025-08-25 11:11:19,438 [canton-env-ec-37] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:40df1c4b79ad582d52b548ef6b676b24 - Phase 2: Registered request=2025-08-25T11:11:19.389794Z with 1 view(s). Initial state: ViewPosition("") -> ViewState(
+  quorumsState = Seq(Quorum(confirmers = NewBank::1220b845dcf0... -> 1, threshold = 1), Quorum(confirmers = participant1::1220b845dcf0... -> 1, threshold = 1)),
+  consortiumVoting = Map(NewBank::1220b845dcf0... -> ConsortiumVotingState(), participant1::1220b845dcf0... -> ConsortiumVotingState()),
+  rejections = Seq()
+)
+2025-08-25 11:11:19,620 [canton-env-ec-37] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:40df1c4b79ad582d52b548ef6b676b24 - Phase 4: Sending for request=2025-08-25T11:11:19.389794Z with msgId=ce235cab-78fd-4b3e-b712-f8480d560011 approved=1, rejected=0
+2025-08-25 11:11:19,633 [canton-env-ec-159] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:40df1c4b79ad582d52b548ef6b676b24 - 'PAR::participant1::1220b845dcf0...' sends request with id 'ce235cab-78fd-4b3e-b712-f8480d560011' of size 750 bytes with 1 envelopes.
+2025-08-25 11:11:19,700 [canton-env-ec-38] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:40df1c4b79ad582d52b548ef6b676b24 - Processing event at sc=120, ts=2025-08-25T11:11:19.638734Z, messageId=ce235cab-78fd-4b3e-b712-f8480d560011, with contents=Seq()
+2025-08-25 11:11:19,700 [canton-env-ec-169] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:40df1c4b79ad582d52b548ef6b676b24 - Phase 5: Received responses for request=RequestId(2025-08-25T11:11:19.389794Z): ParticipantResponse(sender = PAR::participant1::1220b845dcf0..., ts = 2025-08-25T11:11:19.638734Z, approved = 1)
+2025-08-25 11:11:19,711 [canton-env-ec-170] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:40df1c4b79ad582d52b548ef6b676b24 - Phase 6: Finalized request=RequestId(2025-08-25T11:11:19.389794Z) with verdict Approve
+2025-08-25 11:11:19,723 [canton-env-ec-167] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:40df1c4b79ad582d52b548ef6b676b24 - 'MED::mydomain::122060f2dea2...' sends request with id 'mmid:verdict:1756120279389794' of size 719 bytes with 1 envelopes.
+2025-08-25 11:11:19,747 [canton-env-ec-169] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:40df1c4b79ad582d52b548ef6b676b24 - Processing event at sc=121, ts=2025-08-25T11:11:19.729401Z, with contents=SignedProtocolMessage(
+  TransactionResultMessage(requestId = 2025-08-25T11:11:19.389794Z, verdict = Approve, rootHash = SHA-256:2fb69cd2099e..., domainId = mydomain::122060f2dea2...),
+  signatures = Signature(signature = ed52b3380d46, signedBy = 1220120ea179...)
+)
+2025-08-25 11:11:19,775 [input-mapping-pool-8] INFO  c.d.c.p.i.p.ParallelIndexerSubscription:participant=participant1 tid:40df1c4b79ad582d52b548ef6b676b24 - Phase 7: Storing at offset=000000000000000024 TransactionAccepted(
+  recordTime = 2025-08-25T11:11:19.389794Z,
+  transactionId = 12202fb69cd2099ea844d02ccfe372ac479359dd68cd46a42601a86e084eb6dc8545,
+  transactionMeta = TransactionMeta(ledgerEffectiveTime = 2025-08-25T11:11:19.217489Z, submissionTime = 2025-08-25T11:11:19.217489Z, domainId = mydomain::122060f2dea2..., ...),
+  completion = CompletionInfo(
+    actAs = NewBank::1220b845dcf0...,
+    commandId = e40d7bc9-9065-4da0-8ffb-9194cd3fc344,
+    applicationId = bank_admin,
+    deduplication period = (offset=Offset(Bytes(000000000000000001))),
+    submissionId = Some(4aafdc56-a314-4b51-8f89-ee16374b2056),
+    ...
+  ),
+  nodes = 1,
+  roots = 1,
+  ...
+)
+2025-08-25 11:11:19,789 [canton-env-ec-169] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 - Received request for transaction by ID, ledgerId -> 'participant1', transactionId -> '12202fb69cd2099ea844d02ccfe372ac479359dd68cd46a42601a86e084eb6dc8545', parties -> ['NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d'].
+2025-08-25 11:11:49,647 [canton-env-ec-169] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:40df1c4b79ad582d52b548ef6b676b24 - 'MED::mydomain::122060f2dea2...' sends request with id 'tick-b84c83fe-cf96-4b2f-bab3-2e6f16bdb3be' of size 339 bytes with 0 envelopes.
+2025-08-25 11:12:07,325 [canton-env-ec-162] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:ced68e1c25bc9269aec7fe8f951e15f8 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 11:12:07,348 [canton-env-ec-170] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:b055f10d268a9b3bb17cf4fdd1dbbd97 - Received request for transactions, startExclusive -> '000000000000000022', endInclusive -> '000000000000000024', filters -> {NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:Token']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 11:12:19,473 [canton-env-ec-167] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:40df1c4b79ad582d52b548ef6b676b24 - 'PAR::participant1::1220b845dcf0...' sends request with id 'tick-1315180f-0c6d-4f56-b040-b835d90894d5' of size 343 bytes with 0 envelopes.
+2025-08-25 11:12:38,110 [canton-env-ec-102] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:77910970f0a9d4b998ece2016be963a3 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 11:12:38,121 [canton-env-ec-106] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:6b37ce4366d47363cc99ddc02c13840d - Phase 1 started: Submitting commands for interpretation: Commands(
+  commandId = 40c831ea-6442-4a96-bfa8-6985fd03bf18,
+  submissionId = 962bc22a-1cb8-4d08-b179-2c4429e0c377,
+  applicationId = alice_bank_token,
+  actAs = Set(NewAlice::1220b845dcf0..., NewBank::1220b845dcf0...),
+  submittedAt = 2025-08-25T11:12:38.120894Z,
+  ledgerEffectiveTime = 2025-08-25T11:12:38.120891Z,
+  deduplicationPeriod = (duration=PT168H),
+  ...
+).
+2025-08-25 11:12:38,187 [canton-env-ec-169] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:6b37ce4366d47363cc99ddc02c13840d - Phase 1 completed: Submitting 3 envelopes for Transaction request, submitters Seq(NewAlice::1220b845dcf0..., NewBank::1220b845dcf0...), command-id 40c831ea-6442-4a96-bfa8-6985fd03bf18
+2025-08-25 11:12:38,195 [canton-env-ec-162] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:6b37ce4366d47363cc99ddc02c13840d - 'PAR::participant1::1220b845dcf0...' sends request with id 'dc83621a-9bb3-4b81-bf3c-c0fddec34b4b' of size 3077 bytes with 3 envelopes.
+2025-08-25 11:12:38,225 [canton-env-ec-167] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:6b37ce4366d47363cc99ddc02c13840d - Processing event at sc=123, ts=2025-08-25T11:12:38.201128Z, messageId=dc83621a-9bb3-4b81-bf3c-c0fddec34b4b, with contents=Seq(RootHashMessage(root hash = SHA-256:7e9543b6acd4..., payload size = 0), EncryptedViewMessageV2(view hash = ViewHash(SHA-256:65bc6f12f3e0...), view type = TransactionViewType, size = 1649))
+2025-08-25 11:12:38,228 [canton-env-ec-160] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:6b37ce4366d47363cc99ddc02c13840d - Phase 3: Validating Transaction request=2025-08-25T11:12:38.201128Z with 1 envelope(s)
+2025-08-25 11:12:38,234 [canton-env-ec-102] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:6b37ce4366d47363cc99ddc02c13840d - Phase 2: Registered request=2025-08-25T11:12:38.201128Z with 1 view(s). Initial state: ViewPosition("") -> ViewState(
+  quorumsState = Seq(
+    Quorum(confirmers = Map(NewAlice::1220b845dcf0... -> 1, NewBank::1220b845dcf0... -> 1), threshold = 2),
+    Quorum(confirmers = NewBank::1220b845dcf0... -> 1, threshold = 1),
+    Quorum(confirmers = participant1::1220b845dcf0... -> 1, threshold = 1)
+  ),
+  consortiumVoting = Map(NewAlice::1220b845dcf0... -> ConsortiumVotingState(), NewBank::1220b845dcf0... -> ConsortiumVotingState(), participant1::1220b845dcf0... -> ConsortiumVotingState()),
+  rejections = Seq()
+)
+2025-08-25 11:12:38,282 [canton-env-ec-169] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:6b37ce4366d47363cc99ddc02c13840d - Phase 4: Sending for request=2025-08-25T11:12:38.201128Z with msgId=c1e27fa6-e506-423a-86a8-73c6214af881 approved=1, rejected=0
+2025-08-25 11:12:38,289 [canton-env-ec-169] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:6b37ce4366d47363cc99ddc02c13840d - 'PAR::participant1::1220b845dcf0...' sends request with id 'c1e27fa6-e506-423a-86a8-73c6214af881' of size 754 bytes with 1 envelopes.
+2025-08-25 11:12:38,310 [canton-env-ec-162] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:6b37ce4366d47363cc99ddc02c13840d - Phase 5: Received responses for request=RequestId(2025-08-25T11:12:38.201128Z): ParticipantResponse(sender = PAR::participant1::1220b845dcf0..., ts = 2025-08-25T11:12:38.293723Z, approved = 1)
+2025-08-25 11:12:38,311 [canton-env-ec-163] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:6b37ce4366d47363cc99ddc02c13840d - Processing event at sc=124, ts=2025-08-25T11:12:38.293723Z, messageId=c1e27fa6-e506-423a-86a8-73c6214af881, with contents=Seq()
+2025-08-25 11:12:38,315 [canton-env-ec-163] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:6b37ce4366d47363cc99ddc02c13840d - Phase 6: Finalized request=RequestId(2025-08-25T11:12:38.201128Z) with verdict Approve
+2025-08-25 11:12:38,323 [canton-env-ec-106] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:6b37ce4366d47363cc99ddc02c13840d - 'MED::mydomain::122060f2dea2...' sends request with id 'mmid:verdict:1756120358201128' of size 723 bytes with 1 envelopes.
+2025-08-25 11:12:38,349 [canton-env-ec-169] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:6b37ce4366d47363cc99ddc02c13840d - Processing event at sc=125, ts=2025-08-25T11:12:38.328645Z, with contents=SignedProtocolMessage(
+  TransactionResultMessage(requestId = 2025-08-25T11:12:38.201128Z, verdict = Approve, rootHash = SHA-256:7e9543b6acd4..., domainId = mydomain::122060f2dea2...),
+  signatures = Signature(signature = 378e200183a1, signedBy = 1220120ea179...)
+)
+2025-08-25 11:12:38,397 [input-mapping-pool-9] INFO  c.d.c.p.i.p.ParallelIndexerSubscription:participant=participant1 tid:6b37ce4366d47363cc99ddc02c13840d - Phase 7: Storing at offset=000000000000000025 TransactionAccepted(
+  recordTime = 2025-08-25T11:12:38.201128Z,
+  transactionId = 12207e9543b6acd4fb1b886bd7459ee095ce02d888b9e3b68729dea96ed006b7f700,
+  transactionMeta = TransactionMeta(ledgerEffectiveTime = 2025-08-25T11:12:38.120891Z, submissionTime = 2025-08-25T11:12:38.120891Z, domainId = mydomain::122060f2dea2..., ...),
+  completion = CompletionInfo(
+    actAs = NewAlice::1220b845dcf0..., NewBank::1220b845dcf0...,
+    commandId = 40c831ea-6442-4a96-bfa8-6985fd03bf18,
+    applicationId = alice_bank_token,
+    deduplication period = (offset=Offset(Bytes(000000000000000001))),
+    submissionId = Some(962bc22a-1cb8-4d08-b179-2c4429e0c377),
+    ...
+  ),
+  nodes = 6,
+  roots = 1,
+  ...
+)
+2025-08-25 11:12:38,410 [canton-env-ec-170] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 - Received request for transaction by ID, ledgerId -> 'participant1', transactionId -> '12207e9543b6acd4fb1b886bd7459ee095ce02d888b9e3b68729dea96ed006b7f700', parties -> ['NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d', 'NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d'].
+2025-08-25 11:12:46,166 [canton-env-ec-38] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:e6edba519a26a4c77d8f00cfd1d40e42 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 11:12:46,190 [canton-env-ec-38] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:3fc0efd1f4ff3db53665da691968e815 - Received request for transactions, startExclusive -> '000000000000000023', endInclusive -> '000000000000000025', filters -> {NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 11:13:08,456 [canton-env-ec-36] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:6b37ce4366d47363cc99ddc02c13840d - 'MED::mydomain::122060f2dea2...' sends request with id 'tick-d6c4f4d3-7b86-41b0-84d5-675c1c4f1bea' of size 339 bytes with 0 envelopes.
+2025-08-25 11:13:38,378 [canton-env-ec-169] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:6b37ce4366d47363cc99ddc02c13840d - 'PAR::participant1::1220b845dcf0...' sends request with id 'tick-163455f0-e9ea-4afa-a12f-de13c87fdfc4' of size 343 bytes with 0 envelopes.
+2025-08-25 11:14:25,880 [canton-env-ec-170] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:87ec39844727dcc80d199939a0aac74f - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 11:14:25,891 [canton-env-ec-169] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:374b3949eaf7c2c468291f085d00bcd7 - Phase 1 started: Submitting commands for interpretation: Commands(
+  commandId = 2bda6b70-7fff-4c52-a8d1-8b8c63220a3d,
+  submissionId = 401d9d62-df3d-454c-ba45-8f07163c3da4,
+  applicationId = alice_bank_token,
+  actAs = Set(NewAlice::1220b845dcf0..., NewBank::1220b845dcf0...),
+  submittedAt = 2025-08-25T11:14:25.890338Z,
+  ledgerEffectiveTime = 2025-08-25T11:14:25.890336Z,
+  deduplicationPeriod = (duration=PT168H),
+  ...
+).
+2025-08-25 11:14:25,896 [canton-env-ec-163] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:374b3949eaf7c2c468291f085d00bcd7 - UNHANDLED_EXCEPTION(9,401d9d62): Interpretation error: Error: Unhandled Daml exception: DA.Exception.GeneralError:GeneralError@86828b98{ message = "redemption already requested" }
+    in choice 323be96a:TokenExample:AssetRegistry:RequestRedemption on contract 000ea9c074 (#0)
+    in exercise command 323be96a:TokenExample:AssetRegistry:RequestRedemption on contract 000ea9c074.
+. err-context:{location=RejectionGenerators.scala:103} 
+2025-08-25 11:14:25,897 [canton-env-ec-38] INFO  c.d.c.n.g.ApiRequestLogger:participant=participant1 tid:374b3949eaf7c2c468291f085d00bcd7 - Request c.d.l.a.v.CommandService/SubmitAndWaitForTransactionTree by /127.0.0.1:34978: failed with FAILED_PRECONDITION/UNHANDLED_EXCEPTION(9,401d9d62): Interpretation error: Error: Unhandled Daml exception: DA.Exception.GeneralError:GeneralError@86828b98{ message = "redemption already requested" }
+    in choice 323be96a:TokenExample:AssetRegistry:RequestRedemption on contract 000ea9c074 (#0)
+    in exercise command 323be96a:TokenExample:AssetRegistry:RequestRedemption on contract 000ea9c074.
+.
+2025-08-25 11:15:01,164 [canton-env-ec-162] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:8d8fcdfccfd8e581c4f04b27a557d6e4 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 11:15:01,187 [canton-env-ec-36] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:0d060f09ecf1116b96f216da91a237c0 - Received request for transactions, startExclusive -> '000000000000000023', endInclusive -> '000000000000000025', filters -> {NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:RedeemRequest']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 11:15:28,188 [canton-env-ec-162] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:884a4fa7029ffdfd34d8281de58b3f58 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 11:15:28,199 [canton-env-ec-169] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:0398a727ecddb28a8e30e9ee4dff4437 - Phase 1 started: Submitting commands for interpretation: Commands(
+  commandId = a8bab1f9-ab8b-4302-bc6c-b803d655b77d,
+  submissionId = 8ae23bfe-833c-4442-a456-438a8749c554,
+  applicationId = bank_admin,
+  actAs = NewBank::1220b845dcf0...,
+  submittedAt = 2025-08-25T11:15:28.197942Z,
+  ledgerEffectiveTime = 2025-08-25T11:15:28.197940Z,
+  deduplicationPeriod = (duration=PT168H),
+  ...
+).
+2025-08-25 11:15:28,258 [canton-env-ec-36] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:0398a727ecddb28a8e30e9ee4dff4437 - Phase 1 completed: Submitting 3 envelopes for Transaction request, submitters NewBank::1220b845dcf0..., command-id a8bab1f9-ab8b-4302-bc6c-b803d655b77d
+2025-08-25 11:15:28,268 [canton-env-ec-36] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:0398a727ecddb28a8e30e9ee4dff4437 - 'PAR::participant1::1220b845dcf0...' sends request with id '6a6eeb03-0d27-4244-9ba4-6d5ba2dd7806' of size 2509 bytes with 3 envelopes.
+2025-08-25 11:15:28,308 [canton-env-ec-38] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:0398a727ecddb28a8e30e9ee4dff4437 - Processing event at sc=127, ts=2025-08-25T11:15:28.276746Z, messageId=6a6eeb03-0d27-4244-9ba4-6d5ba2dd7806, with contents=Seq(RootHashMessage(root hash = SHA-256:3c56f0298c79..., payload size = 0), EncryptedViewMessageV2(view hash = ViewHash(SHA-256:69987d7ebf26...), view type = TransactionViewType, size = 1101))
+2025-08-25 11:15:28,310 [canton-env-ec-170] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:0398a727ecddb28a8e30e9ee4dff4437 - Phase 3: Validating Transaction request=2025-08-25T11:15:28.276746Z with 1 envelope(s)
+2025-08-25 11:15:28,319 [canton-env-ec-163] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:0398a727ecddb28a8e30e9ee4dff4437 - Phase 2: Registered request=2025-08-25T11:15:28.276746Z with 1 view(s). Initial state: ViewPosition("") -> ViewState(
+  quorumsState = Seq(Quorum(confirmers = NewBank::1220b845dcf0... -> 1, threshold = 1), Quorum(confirmers = participant1::1220b845dcf0... -> 1, threshold = 1)),
+  consortiumVoting = Map(NewBank::1220b845dcf0... -> ConsortiumVotingState(), participant1::1220b845dcf0... -> ConsortiumVotingState()),
+  rejections = Seq()
+)
+2025-08-25 11:15:28,346 [canton-env-ec-163] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:0398a727ecddb28a8e30e9ee4dff4437 - Phase 4: Sending for request=2025-08-25T11:15:28.276746Z with msgId=29a99162-e9d1-406e-a9fd-cca103c1b2cd approved=1, rejected=0
+2025-08-25 11:15:28,351 [canton-env-ec-37] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:0398a727ecddb28a8e30e9ee4dff4437 - 'PAR::participant1::1220b845dcf0...' sends request with id '29a99162-e9d1-406e-a9fd-cca103c1b2cd' of size 745 bytes with 1 envelopes.
+2025-08-25 11:15:28,372 [canton-env-ec-106] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:0398a727ecddb28a8e30e9ee4dff4437 - Processing event at sc=128, ts=2025-08-25T11:15:28.355876Z, messageId=29a99162-e9d1-406e-a9fd-cca103c1b2cd, with contents=Seq()
+2025-08-25 11:15:28,374 [canton-env-ec-102] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:0398a727ecddb28a8e30e9ee4dff4437 - Phase 5: Received responses for request=RequestId(2025-08-25T11:15:28.276746Z): ParticipantResponse(sender = PAR::participant1::1220b845dcf0..., ts = 2025-08-25T11:15:28.355876Z, approved = 1)
+2025-08-25 11:15:28,386 [canton-env-ec-159] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:0398a727ecddb28a8e30e9ee4dff4437 - Phase 6: Finalized request=RequestId(2025-08-25T11:15:28.276746Z) with verdict Approve
+2025-08-25 11:15:28,393 [canton-env-ec-159] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:0398a727ecddb28a8e30e9ee4dff4437 - 'MED::mydomain::122060f2dea2...' sends request with id 'mmid:verdict:1756120528276746' of size 725 bytes with 1 envelopes.
+2025-08-25 11:15:28,413 [canton-env-ec-170] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:0398a727ecddb28a8e30e9ee4dff4437 - Processing event at sc=129, ts=2025-08-25T11:15:28.398396Z, with contents=SignedProtocolMessage(
+  TransactionResultMessage(requestId = 2025-08-25T11:15:28.276746Z, verdict = Approve, rootHash = SHA-256:3c56f0298c79..., domainId = mydomain::122060f2dea2...),
+  signatures = Signature(signature = 33a85b9dbd47, signedBy = 1220120ea179...)
+)
+2025-08-25 11:15:28,420 [participant1-wallclock-0] INFO  c.d.c.d.TaskScheduler:participant=participant1/domain-alias=mydomain/RecordOrderPublisher - Task scheduler waits for tick of sc=127. The tick with sc=126 occurred at 2025-08-25T11:13:38.406620Z. Blocked trace ids: 0398a727ecddb28a8e30e9ee4dff4437
+2025-08-25 11:15:28,442 [input-mapping-pool-10] INFO  c.d.c.p.i.p.ParallelIndexerSubscription:participant=participant1 tid:0398a727ecddb28a8e30e9ee4dff4437 - Phase 7: Storing at offset=000000000000000026 TransactionAccepted(
+  recordTime = 2025-08-25T11:15:28.276746Z,
+  transactionId = 12203c56f0298c798c69f6f5499218f299cd27d1648a44403637a59481cf977cf85b,
+  transactionMeta = TransactionMeta(ledgerEffectiveTime = 2025-08-25T11:15:28.197940Z, submissionTime = 2025-08-25T11:15:28.197940Z, domainId = mydomain::122060f2dea2..., ...),
+  completion = CompletionInfo(
+    actAs = NewBank::1220b845dcf0...,
+    commandId = a8bab1f9-ab8b-4302-bc6c-b803d655b77d,
+    applicationId = bank_admin,
+    deduplication period = (offset=Offset(Bytes(000000000000000001))),
+    submissionId = Some(8ae23bfe-833c-4442-a456-438a8749c554),
+    ...
+  ),
+  nodes = 1,
+  roots = 1,
+  ...
+)
+2025-08-25 11:15:28,452 [canton-env-ec-37] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 - Received request for transaction by ID, ledgerId -> 'participant1', transactionId -> '12203c56f0298c798c69f6f5499218f299cd27d1648a44403637a59481cf977cf85b', parties -> ['NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d'].
+2025-08-25 11:15:41,073 [canton-env-ec-38] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:c0ec59d459a4a7f661da943a97a638ca - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 11:15:41,096 [canton-env-ec-37] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:a0a25e81b5561afa60980491339a63fe - Received request for transactions, startExclusive -> '000000000000000024', endInclusive -> '000000000000000026', filters -> {NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:Token']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 11:15:53,404 [canton-env-ec-162] INFO  c.d.c.p.a.s.a.ApiPartyManagementService:participant=participant1 tid:445b01e030258b68732c944d062938c4 - Allocating party, parties -> ['vivek'], submissionId -> 'vivek-49000ee3-f814-466e-9f63-1917f0826f11'.
+2025-08-25 11:15:53,414 [canton-env-ec-37] INFO  c.d.c.p.t.ParticipantTopologyManager:participant=participant1 tid:445b01e030258b68732c944d062938c4 - Applied topology transaction Add PartyToParticipant(Both, vivek::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission) at 2025-08-25T11:15:53.414577Z
+2025-08-25 11:15:53,428 [canton-env-ec-38] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:24d4acc2a5475986bf4828b73f8ca1cd - 'PAR::participant1::1220b845dcf0...' sends request with id '72903b03-4676-4616-bb12-6cb255ca65ed' of size 831 bytes with 1 envelopes.
+2025-08-25 11:15:53,453 [canton-env-ec-162] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:24d4acc2a5475986bf4828b73f8ca1cd - Processing event at sc=130, ts=2025-08-25T11:15:53.435402Z, messageId=72903b03-4676-4616-bb12-6cb255ca65ed, with contents=Seq()
+2025-08-25 11:15:53,458 [canton-env-ec-38] INFO  c.d.c.d.t.DomainTopologyManager:domain=mydomain tid:24d4acc2a5475986bf4828b73f8ca1cd - Applied topology transaction Add PartyToParticipant(Both, vivek::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission) at 2025-08-25T11:15:53.457980Z
+2025-08-25 11:15:53,460 [canton-env-ec-163] INFO  c.d.c.d.t.DomainTopologyManagerRequestService:domain=mydomain tid:24d4acc2a5475986bf4828b73f8ca1cd - Register topology request by PAR::participant1::1220b845dcf0... for PAR::participant1::1220b845dcf0... yielded
+  Accepted -> Add PartyToParticipant(Both, vivek::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission)
+2025-08-25 11:15:53,466 [canton-env-ec-167] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:24d4acc2a5475986bf4828b73f8ca1cd - 'DOM::mydomain::122060f2dea2...' sends request with id '6b9f1565-59f4-4d67-9633-a810946259ea' of size 536 bytes with 1 envelopes.
+2025-08-25 11:15:53,467 [canton-env-ec-160] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:24d4acc2a5475986bf4828b73f8ca1cd - 'DOM::mydomain::122060f2dea2...' sends request with id '68c23c97-df63-4078-9778-1b8bb635fbdd' of size 948 bytes with 1 envelopes.
+2025-08-25 11:15:53,483 [canton-env-ec-167] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:24d4acc2a5475986bf4828b73f8ca1cd - Processing event at sc=131, ts=2025-08-25T11:15:53.470425Z, with contents=RegisterTopologyTransactionResponse
+2025-08-25 11:15:53,488 [canton-env-ec-160] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:24d4acc2a5475986bf4828b73f8ca1cd - Processing event at sc=132, ts=2025-08-25T11:15:53.472173Z, with contents=DomainTopologyTransactionMessage
+2025-08-25 11:15:53,491 [canton-env-ec-36] INFO  c.d.c.t.p.TopologyTransactionProcessor:domain=mydomain/node=mediator/client=mediator tid:24d4acc2a5475986bf4828b73f8ca1cd - Storing topology transaction 1/1 Add PartyToParticipant(Both, vivek::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission) with ts=EffectiveTime(2025-08-25T11:15:53.722173Z) (epsilon=250 ms)
+2025-08-25 11:15:53,491 [canton-env-ec-37] INFO  c.d.c.t.p.TopologyTransactionProcessor:participant=participant1 tid:24d4acc2a5475986bf4828b73f8ca1cd - Storing topology transaction 1/1 Add PartyToParticipant(Both, vivek::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission) with ts=EffectiveTime(2025-08-25T11:15:53.722173Z) (epsilon=250 ms)
+2025-08-25 11:15:53,492 [canton-env-ec-102] INFO  c.d.c.t.p.TopologyTransactionProcessor:domain=mydomain/client=topology-manager tid:24d4acc2a5475986bf4828b73f8ca1cd - Storing topology transaction 1/1 Add PartyToParticipant(Both, vivek::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission) with ts=EffectiveTime(2025-08-25T11:15:53.722173Z) (epsilon=250 ms)
+2025-08-25 11:15:53,791 [input-mapping-pool-11] INFO  c.d.c.p.i.p.ParallelIndexerSubscription:participant=participant1 tid:24d4acc2a5475986bf4828b73f8ca1cd - Storing at offset=000000000000000027 PartyAddedToParticipant(recordTime = 2025-08-25T11:15:53.749779Z, party = vivek::1220b845dcf0..., displayName = 'vivek', participantId = participant1::1220b845dcf0..., ...)
+2025-08-25 11:15:53,824 [daml.index.db.threadpool.connection.api-server-0] INFO  c.d.c.p.l.PersistentPartyRecordStore:participant=participant1 tid:445b01e030258b68732c944d062938c4 - Created new party record in participant local store: PartyRecord(party=vivek::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d, metadata=ObjectMeta(None,Map()), identityProviderId=Default)
+2025-08-25 11:15:58,543 [canton-env-ec-36] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:0398a727ecddb28a8e30e9ee4dff4437 - 'MED::mydomain::122060f2dea2...' sends request with id 'tick-5e4ba8ed-0814-41d8-8f78-c69beb03a615' of size 339 bytes with 0 envelopes.
+2025-08-25 11:16:28,459 [canton-env-ec-36] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:0398a727ecddb28a8e30e9ee4dff4437 - 'PAR::participant1::1220b845dcf0...' sends request with id 'tick-2a9582af-bb2f-4458-a260-c940fec79316' of size 343 bytes with 0 envelopes.
+2025-08-25 11:17:11,606 [canton-env-ec-36] INFO  c.d.c.p.a.s.a.ApiPartyManagementService:participant=participant1 tid:61d0ad9f311fecc0e42cad4588047a18 - Allocating party, parties -> ['vivek'], submissionId -> 'vivek-a49ec1b0-bc1a-414c-b628-90602e58a61a'.
+2025-08-25 11:17:11,617 [canton-env-ec-169] INFO  c.d.c.p.t.ParticipantTopologyManager:participant=participant1 tid:61d0ad9f311fecc0e42cad4588047a18 - TOPOLOGY_MAPPING_ALREADY_EXISTS(10,61d0ad9f): A matching topology mapping authorized with the same key already exists in this state err-context:{authKey=1220b845dcf0..., existing=TopologyStateUpdateElement(id = vivek-a49ec1b0-bc1a-414c-b628-90602e58a61a, mapping = PartyToParticipant(Both, vivek::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission)), location=TopologyManager.scala:298} 
+2025-08-25 11:17:11,618 [canton-env-ec-102] INFO  c.d.c.p.s.PartyAllocation:participant=participant1 tid:61d0ad9f311fecc0e42cad4588047a18 - Failed to allocate party vivek::1220b845dcf0...: Acknowledged
+2025-08-25 11:17:11,643 [input-mapping-pool-12] INFO  c.d.c.p.i.p.ParallelIndexerSubscription:participant=participant1 tid:61d0ad9f311fecc0e42cad4588047a18 - Storing at offset=000000000000000028 PartyAllocationRejected(
+  recordTime = 2025-08-25T11:17:11.618426Z,
+  participantId = participant1::1220b845dcf0...,
+  rejectionReason = 'Party already exists: party vivek::1220b845dcf0... is already allocated on this node'
+)
+2025-08-25 11:17:11,657 [canton-env-ec-169] INFO  c.d.c.p.a.s.a.ApiPartyManagementService$SynchronousResponseStrategy:participant=participant1 tid:61d0ad9f311fecc0e42cad4588047a18 - INVALID_ARGUMENT(8,vivek-a4): The submitted command has invalid arguments: Party already exists: party vivek::1220b845dcf0... is already allocated on this node err-context:{location=ValidationErrors.scala:23} 
+2025-08-25 11:17:11,658 [canton-env-ec-162] INFO  c.d.c.n.g.ApiRequestLogger:participant=participant1 tid:61d0ad9f311fecc0e42cad4588047a18 - Request c.d.l.a.v.a.PartyManagementService/AllocateParty by /127.0.0.1:34978: failed with INVALID_ARGUMENT/INVALID_ARGUMENT(8,vivek-a4): The submitted command has invalid arguments: Party already exists: party vivek::1220b845dcf0... is already allocated on this node
+2025-08-25 11:19:36,785 [canton-env-ec-102] INFO  c.d.c.p.a.s.a.ApiPartyManagementService:participant=participant1 tid:31403d14013527ee4ea73ee4b6b55526 - Allocating party, parties -> ['vivek'], submissionId -> 'vivek-e4241ad4-ec91-4558-8908-d6738029788e'.
+2025-08-25 11:19:36,796 [canton-env-ec-159] INFO  c.d.c.p.t.ParticipantTopologyManager:participant=participant1 tid:31403d14013527ee4ea73ee4b6b55526 - TOPOLOGY_MAPPING_ALREADY_EXISTS(10,31403d14): A matching topology mapping authorized with the same key already exists in this state err-context:{authKey=1220b845dcf0..., existing=TopologyStateUpdateElement(id = vivek-e4241ad4-ec91-4558-8908-d6738029788e, mapping = PartyToParticipant(Both, vivek::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission)), location=TopologyManager.scala:298} 
+2025-08-25 11:19:36,797 [canton-env-ec-162] INFO  c.d.c.p.s.PartyAllocation:participant=participant1 tid:31403d14013527ee4ea73ee4b6b55526 - Failed to allocate party vivek::1220b845dcf0...: Acknowledged
+2025-08-25 11:19:36,822 [input-mapping-pool-13] INFO  c.d.c.p.i.p.ParallelIndexerSubscription:participant=participant1 tid:31403d14013527ee4ea73ee4b6b55526 - Storing at offset=000000000000000029 PartyAllocationRejected(
+  recordTime = 2025-08-25T11:19:36.797394Z,
+  participantId = participant1::1220b845dcf0...,
+  rejectionReason = 'Party already exists: party vivek::1220b845dcf0... is already allocated on this node'
+)
+2025-08-25 11:19:36,831 [canton-env-ec-36] INFO  c.d.c.p.a.s.a.ApiPartyManagementService$SynchronousResponseStrategy:participant=participant1 tid:31403d14013527ee4ea73ee4b6b55526 - INVALID_ARGUMENT(8,vivek-e4): The submitted command has invalid arguments: Party already exists: party vivek::1220b845dcf0... is already allocated on this node err-context:{location=ValidationErrors.scala:23} 
+2025-08-25 11:19:36,832 [canton-env-ec-159] INFO  c.d.c.n.g.ApiRequestLogger:participant=participant1 tid:31403d14013527ee4ea73ee4b6b55526 - Request c.d.l.a.v.a.PartyManagementService/AllocateParty by /127.0.0.1:34978: failed with INVALID_ARGUMENT/INVALID_ARGUMENT(8,vivek-e4): The submitted command has invalid arguments: Party already exists: party vivek::1220b845dcf0... is already allocated on this node
+2025-08-25 11:25:38,885 [canton-env-ec-170] INFO  c.d.c.p.a.s.ApiActiveContractsService:participant=participant1 tid:41a59b7452c568abe9ec384a1387b2c6 - Received request for active contracts: GetActiveContractsRequest(,Some(TransactionFilter(Map(NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d -> Filters(None)))),true,), filters -> {NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: 'all-templates'}.
+2025-08-25 11:28:19,852 [canton-env-ec-170] INFO  c.d.c.p.a.s.a.ApiPartyManagementService:participant=participant1 tid:09a7a7b2c3298ad7a76db692d5412b11 - Allocating party, parties -> ['vivek11'], submissionId -> 'vivek11-574294eb-89a3-4ef7-acfa-6b2f862ae4c0'.
+2025-08-25 11:28:19,867 [canton-env-ec-37] INFO  c.d.c.p.t.ParticipantTopologyManager:participant=participant1 tid:09a7a7b2c3298ad7a76db692d5412b11 - Applied topology transaction Add PartyToParticipant(Both, vivek11::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission) at 2025-08-25T11:28:19.866792Z
+2025-08-25 11:28:19,888 [canton-env-ec-160] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:6d3c5319a87cc00cd13d8703b5ee01e0 - 'PAR::participant1::1220b845dcf0...' sends request with id '434ee1be-e2ba-4675-bd0a-66b42fe772c2' of size 839 bytes with 1 envelopes.
+2025-08-25 11:28:19,921 [canton-env-ec-102] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:6d3c5319a87cc00cd13d8703b5ee01e0 - Processing event at sc=134, ts=2025-08-25T11:28:19.895419Z, messageId=434ee1be-e2ba-4675-bd0a-66b42fe772c2, with contents=Seq()
+2025-08-25 11:28:19,926 [canton-env-ec-38] INFO  c.d.c.d.t.DomainTopologyManager:domain=mydomain tid:6d3c5319a87cc00cd13d8703b5ee01e0 - Applied topology transaction Add PartyToParticipant(Both, vivek11::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission) at 2025-08-25T11:28:19.926477Z
+2025-08-25 11:28:19,931 [canton-env-ec-162] INFO  c.d.c.d.t.DomainTopologyManagerRequestService:domain=mydomain tid:6d3c5319a87cc00cd13d8703b5ee01e0 - Register topology request by PAR::participant1::1220b845dcf0... for PAR::participant1::1220b845dcf0... yielded
+  Accepted -> Add PartyToParticipant(Both, vivek11::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission)
+2025-08-25 11:28:19,940 [canton-env-ec-162] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:6d3c5319a87cc00cd13d8703b5ee01e0 - 'DOM::mydomain::122060f2dea2...' sends request with id '8e2bb873-1905-4a76-ade8-8643d7f95170' of size 536 bytes with 1 envelopes.
+2025-08-25 11:28:19,940 [canton-env-ec-102] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:6d3c5319a87cc00cd13d8703b5ee01e0 - 'DOM::mydomain::122060f2dea2...' sends request with id '3412d28c-c1c9-4c62-8c20-c9da24ab14d4' of size 955 bytes with 1 envelopes.
+2025-08-25 11:28:19,964 [canton-env-ec-167] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:6d3c5319a87cc00cd13d8703b5ee01e0 - Processing event at sc=135, ts=2025-08-25T11:28:19.945359Z, with contents=DomainTopologyTransactionMessage
+2025-08-25 11:28:19,970 [canton-env-ec-173] INFO  c.d.c.t.p.TopologyTransactionProcessor:domain=mydomain/client=topology-manager tid:6d3c5319a87cc00cd13d8703b5ee01e0 - Storing topology transaction 1/1 Add PartyToParticipant(Both, vivek11::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission) with ts=EffectiveTime(2025-08-25T11:28:20.195359Z) (epsilon=250 ms)
+2025-08-25 11:28:19,970 [canton-env-ec-37] INFO  c.d.c.t.p.TopologyTransactionProcessor:participant=participant1 tid:6d3c5319a87cc00cd13d8703b5ee01e0 - Storing topology transaction 1/1 Add PartyToParticipant(Both, vivek11::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission) with ts=EffectiveTime(2025-08-25T11:28:20.195359Z) (epsilon=250 ms)
+2025-08-25 11:28:19,975 [canton-env-ec-169] INFO  c.d.c.t.p.TopologyTransactionProcessor:domain=mydomain/node=mediator/client=mediator tid:6d3c5319a87cc00cd13d8703b5ee01e0 - Storing topology transaction 1/1 Add PartyToParticipant(Both, vivek11::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission) with ts=EffectiveTime(2025-08-25T11:28:20.195359Z) (epsilon=250 ms)
+2025-08-25 11:28:19,982 [canton-env-ec-173] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:6d3c5319a87cc00cd13d8703b5ee01e0 - Processing event at sc=136, ts=2025-08-25T11:28:19.947304Z, with contents=RegisterTopologyTransactionResponse
+2025-08-25 11:28:20,274 [input-mapping-pool-14] INFO  c.d.c.p.i.p.ParallelIndexerSubscription:participant=participant1 tid:6d3c5319a87cc00cd13d8703b5ee01e0 - Storing at offset=00000000000000002a PartyAddedToParticipant(recordTime = 2025-08-25T11:28:20.229445Z, party = vivek11::1220b845dcf0..., displayName = 'vivek11', participantId = participant1::1220b845dcf0..., ...)
+2025-08-25 11:28:20,301 [daml.index.db.threadpool.connection.api-server-3] INFO  c.d.c.p.l.PersistentPartyRecordStore:participant=participant1 tid:09a7a7b2c3298ad7a76db692d5412b11 - Created new party record in participant local store: PartyRecord(party=vivek11::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d, metadata=ObjectMeta(None,Map()), identityProviderId=Default)
+2025-08-25 11:28:20,566 [daml.index.db.threadpool.connection.api-server-1] INFO  c.d.c.p.l.PersistentUserManagementStore:participant=participant1 tid:c799da167c005eb00f10d00b489eaece - Created new user: User(id=vivek11, primaryParty=Some(vivek11::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d), isDeactivated=false, metadata=ObjectMeta(None,Map()), identityProviderId=) with 2 rights: CanActAs(vivek11::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d), CanReadAs(vivek11::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d), submissionId -> 'e8ebd624-35d2-403b-920d-505f21b6429e'.
+2025-08-25 11:29:01,446 [canton-env-ec-173] INFO  c.d.c.d.s.a.MemberAuthenticationServiceOld:domain=mydomain - DOM::mydomain::122060f2dea2... authenticated new token with expiry 2025-08-25T12:29:01.444446Z
+2025-08-25 11:29:01,582 [canton-env-ec-173] INFO  c.d.c.d.s.a.MemberAuthenticationServiceOld:domain=mydomain - MED::mydomain::122060f2dea2... authenticated new token with expiry 2025-08-25T12:29:01.580266Z
+2025-08-25 11:29:04,866 [canton-env-ec-64] INFO  c.d.c.d.s.a.MemberAuthenticationServiceOld:domain=mydomain - PAR::participant1::1220b845dcf0... authenticated new token with expiry 2025-08-25T12:29:04.863931Z
+2025-08-25 11:29:21,410 [canton-env-ec-102] INFO  c.d.c.s.c.t.GrpcSequencerSubscription:domain=mydomain/client=topology-manager - The sequencer subscription has been terminated by the server.
+2025-08-25 11:29:21,411 [canton-env-ec-167] INFO  c.d.c.s.c.t.GrpcSubscriptionErrorRetryPolicy:domain=mydomain/client=topology-manager - Trying to reconnect to give the sequencer the opportunity to become available again (after Connection terminated by the server.)
+2025-08-25 11:29:21,465 [canton-env-ec-36] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain - DOM::mydomain::122060f2dea2... subscribes from counter=37
+2025-08-25 11:29:21,550 [canton-env-ec-159] INFO  c.d.c.s.c.t.GrpcSequencerSubscription:domain=mydomain/client=mediator - The sequencer subscription has been terminated by the server.
+2025-08-25 11:29:21,550 [canton-env-ec-173] INFO  c.d.c.s.c.t.GrpcSubscriptionErrorRetryPolicy:domain=mydomain/client=mediator - Trying to reconnect to give the sequencer the opportunity to become available again (after Connection terminated by the server.)
+2025-08-25 11:29:21,604 [canton-env-ec-159] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain - MED::mydomain::122060f2dea2... subscribes from counter=116
+2025-08-25 11:29:24,831 [canton-env-ec-159] INFO  c.d.c.s.c.t.GrpcSequencerSubscription:participant=participant1/domainId=mydomain::122060f2dea2 - The sequencer subscription has been terminated by the server.
+2025-08-25 11:29:24,831 [canton-env-ec-167] INFO  c.d.c.s.c.t.GrpcSubscriptionErrorRetryPolicy:participant=participant1/domainId=mydomain::122060f2dea2 tid:a309fd82476cae3d9035408e7291eec8 - Trying to reconnect to give the sequencer the opportunity to become available again (after Connection terminated by the server.)
+2025-08-25 11:29:24,886 [canton-env-ec-38] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:a309fd82476cae3d9035408e7291eec8 - PAR::participant1::1220b845dcf0... subscribes from counter=136
+2025-08-25 12:01:41,295 [daml.index.db.threadpool.connection.indexer-9] INFO  c.d.c.p.i.MeteringAggregator:participant=participant1 - Aggregating transaction metering for LedgerMeteringEnd(Offset(Bytes(000000000000000026)),2025-08-25T12:00:00Z)
+2025-08-25 12:01:41,300 [daml.index.db.threadpool.connection.indexer-9] INFO  c.d.c.p.i.MeteringAggregator:participant=participant1 - Aggregating transaction metering completed up to LedgerMeteringEnd(Offset(Bytes(000000000000000026)),2025-08-25T12:00:00Z)
+2025-08-25 12:28:41,503 [canton-env-ec-106] INFO  c.d.c.d.s.a.MemberAuthenticationServiceOld:domain=mydomain - DOM::mydomain::122060f2dea2... authenticated new token with expiry 2025-08-25T13:28:41.500778Z
+2025-08-25 12:28:41,617 [canton-env-ec-106] INFO  c.d.c.d.s.a.MemberAuthenticationServiceOld:domain=mydomain - MED::mydomain::122060f2dea2... authenticated new token with expiry 2025-08-25T13:28:41.615990Z
+2025-08-25 12:28:44,893 [canton-env-ec-167] INFO  c.d.c.d.s.a.MemberAuthenticationServiceOld:domain=mydomain - PAR::participant1::1220b845dcf0... authenticated new token with expiry 2025-08-25T13:28:44.891393Z
+2025-08-25 12:29:01,446 [canton-env-ec-159] INFO  c.d.c.s.c.t.GrpcSequencerSubscription:domain=mydomain/client=topology-manager - The sequencer subscription has been terminated by the server.
+2025-08-25 12:29:01,447 [canton-env-ec-102] INFO  c.d.c.s.c.t.GrpcSubscriptionErrorRetryPolicy:domain=mydomain/client=topology-manager - Trying to reconnect to give the sequencer the opportunity to become available again (after Connection terminated by the server.)
+2025-08-25 12:29:01,500 [canton-env-ec-159] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain - DOM::mydomain::122060f2dea2... subscribes from counter=37
+2025-08-25 12:29:01,582 [canton-env-ec-169] INFO  c.d.c.s.c.t.GrpcSequencerSubscription:domain=mydomain/client=mediator - The sequencer subscription has been terminated by the server.
+2025-08-25 12:29:01,582 [canton-env-ec-167] INFO  c.d.c.s.c.t.GrpcSubscriptionErrorRetryPolicy:domain=mydomain/client=mediator - Trying to reconnect to give the sequencer the opportunity to become available again (after Connection terminated by the server.)
+2025-08-25 12:29:01,636 [canton-env-ec-64] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain - MED::mydomain::122060f2dea2... subscribes from counter=116
+2025-08-25 12:29:04,866 [canton-env-ec-106] INFO  c.d.c.s.c.t.GrpcSequencerSubscription:participant=participant1/domainId=mydomain::122060f2dea2 - The sequencer subscription has been terminated by the server.
+2025-08-25 12:29:04,867 [canton-env-ec-64] INFO  c.d.c.s.c.t.GrpcSubscriptionErrorRetryPolicy:participant=participant1/domainId=mydomain::122060f2dea2 tid:a309fd82476cae3d9035408e7291eec8 - Trying to reconnect to give the sequencer the opportunity to become available again (after Connection terminated by the server.)
+2025-08-25 12:29:04,921 [canton-env-ec-106] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:a309fd82476cae3d9035408e7291eec8 - PAR::participant1::1220b845dcf0... subscribes from counter=136
+2025-08-25 12:37:28,782 [canton-env-ec-38] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:f7a095ab12bb85130e96c546f43a8190 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 12:37:28,808 [canton-env-ec-159] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:6479ff5b08c29c2d18fabf1afcf44dd7 - Received request for transactions, startExclusive -> '000000000000000025', endInclusive -> '00000000000000002a', filters -> {NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 12:37:39,963 [canton-env-ec-169] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:fb78d32c164799bf9cb025a9c052d3b1 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 12:37:39,986 [canton-env-ec-173] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:18be0541886bab3036edca58abf57105 - Received request for transactions, startExclusive -> '000000000000000026', endInclusive -> '00000000000000002a', filters -> {NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:Token']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 12:48:19,728 [canton-env-ec-106] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:c494a022373fbba5afeb1866c6e4aff2 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 12:48:19,739 [canton-env-ec-64] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:5d6029724a0470a89346e9d82cb8d9b3 - Phase 1 started: Submitting commands for interpretation: Commands(
+  commandId = fd72ebfb-8ae6-4be4-b078-77edba8c196d,
+  submissionId = 3fba058f-be72-4330-930d-b1c7963e86f0,
+  applicationId = bank_admin,
+  actAs = NewBank::1220b845dcf0...,
+  submittedAt = 2025-08-25T12:48:19.737932Z,
+  ledgerEffectiveTime = 2025-08-25T12:48:19.737929Z,
+  deduplicationPeriod = (duration=PT168H),
+  ...
+).
+2025-08-25 12:48:19,924 [canton-env-ec-162] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:5d6029724a0470a89346e9d82cb8d9b3 - Phase 1 completed: Submitting 3 envelopes for Transaction request, submitters NewBank::1220b845dcf0..., command-id fd72ebfb-8ae6-4be4-b078-77edba8c196d
+2025-08-25 12:48:19,935 [canton-env-ec-38] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:5d6029724a0470a89346e9d82cb8d9b3 - 'PAR::participant1::1220b845dcf0...' sends request with id 'd788719b-fa31-4797-b4c7-3cc321334791' of size 2834 bytes with 3 envelopes.
+2025-08-25 12:48:19,983 [canton-env-ec-102] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:5d6029724a0470a89346e9d82cb8d9b3 - Processing event at sc=137, ts=2025-08-25T12:48:19.943012Z, messageId=d788719b-fa31-4797-b4c7-3cc321334791, with contents=Seq(RootHashMessage(root hash = SHA-256:7701d7084ea0..., payload size = 0), EncryptedViewMessageV2(view hash = ViewHash(SHA-256:1498beb64337...), view type = TransactionViewType, size = 1422))
+2025-08-25 12:48:19,985 [canton-env-ec-169] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:5d6029724a0470a89346e9d82cb8d9b3 - Phase 3: Validating Transaction request=2025-08-25T12:48:19.943012Z with 1 envelope(s)
+2025-08-25 12:48:19,990 [canton-env-ec-102] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:5d6029724a0470a89346e9d82cb8d9b3 - Phase 2: Registered request=2025-08-25T12:48:19.943012Z with 1 view(s). Initial state: ViewPosition("") -> ViewState(
+  quorumsState = Seq(Quorum(confirmers = NewBank::1220b845dcf0... -> 1, threshold = 1), Quorum(confirmers = participant1::1220b845dcf0... -> 1, threshold = 1)),
+  consortiumVoting = Map(NewBank::1220b845dcf0... -> ConsortiumVotingState(), participant1::1220b845dcf0... -> ConsortiumVotingState()),
+  rejections = Seq()
+)
+2025-08-25 12:48:20,122 [canton-env-ec-64] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:5d6029724a0470a89346e9d82cb8d9b3 - Phase 4: Sending for request=2025-08-25T12:48:19.943012Z with msgId=a5ab5eb4-d056-4f8e-8024-0848bbb87d6d approved=1, rejected=0
+2025-08-25 12:48:20,128 [canton-env-ec-102] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:5d6029724a0470a89346e9d82cb8d9b3 - 'PAR::participant1::1220b845dcf0...' sends request with id 'a5ab5eb4-d056-4f8e-8024-0848bbb87d6d' of size 748 bytes with 1 envelopes.
+2025-08-25 12:48:20,150 [canton-env-ec-102] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:5d6029724a0470a89346e9d82cb8d9b3 - Processing event at sc=138, ts=2025-08-25T12:48:20.132040Z, messageId=a5ab5eb4-d056-4f8e-8024-0848bbb87d6d, with contents=Seq()
+2025-08-25 12:48:20,151 [canton-env-ec-38] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:5d6029724a0470a89346e9d82cb8d9b3 - Phase 5: Received responses for request=RequestId(2025-08-25T12:48:19.943012Z): ParticipantResponse(sender = PAR::participant1::1220b845dcf0..., ts = 2025-08-25T12:48:20.132040Z, approved = 1)
+2025-08-25 12:48:20,159 [canton-env-ec-162] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:5d6029724a0470a89346e9d82cb8d9b3 - Phase 6: Finalized request=RequestId(2025-08-25T12:48:19.943012Z) with verdict Approve
+2025-08-25 12:48:20,167 [canton-env-ec-173] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:5d6029724a0470a89346e9d82cb8d9b3 - 'MED::mydomain::122060f2dea2...' sends request with id 'mmid:verdict:1756126099943012' of size 717 bytes with 1 envelopes.
+2025-08-25 12:48:20,193 [canton-env-ec-159] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:5d6029724a0470a89346e9d82cb8d9b3 - Processing event at sc=139, ts=2025-08-25T12:48:20.174126Z, with contents=SignedProtocolMessage(
+  TransactionResultMessage(requestId = 2025-08-25T12:48:19.943012Z, verdict = Approve, rootHash = SHA-256:7701d7084ea0..., domainId = mydomain::122060f2dea2...),
+  signatures = Signature(signature = 65d5d242d589, signedBy = 1220120ea179...)
+)
+2025-08-25 12:48:20,240 [input-mapping-pool-15] INFO  c.d.c.p.i.p.ParallelIndexerSubscription:participant=participant1 tid:5d6029724a0470a89346e9d82cb8d9b3 - Phase 7: Storing at offset=00000000000000002b TransactionAccepted(
+  recordTime = 2025-08-25T12:48:19.943012Z,
+  transactionId = 12207701d7084ea02b2e4133e317113cadf66b4449301ccbee6154191723916bdcd5,
+  transactionMeta = TransactionMeta(ledgerEffectiveTime = 2025-08-25T12:48:19.737929Z, submissionTime = 2025-08-25T12:48:19.737929Z, domainId = mydomain::122060f2dea2..., ...),
+  completion = CompletionInfo(
+    actAs = NewBank::1220b845dcf0...,
+    commandId = fd72ebfb-8ae6-4be4-b078-77edba8c196d,
+    applicationId = bank_admin,
+    deduplication period = (offset=Offset(Bytes(000000000000000001))),
+    submissionId = Some(3fba058f-be72-4330-930d-b1c7963e86f0),
+    ...
+  ),
+  nodes = 5,
+  roots = 1,
+  ...
+)
+2025-08-25 12:48:20,262 [canton-env-ec-64] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 - Received request for transaction by ID, ledgerId -> 'participant1', transactionId -> '12207701d7084ea02b2e4133e317113cadf66b4449301ccbee6154191723916bdcd5', parties -> ['NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d'].
+2025-08-25 12:48:50,201 [canton-env-ec-159] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:5d6029724a0470a89346e9d82cb8d9b3 - 'MED::mydomain::122060f2dea2...' sends request with id 'tick-3aef1e65-fd45-40ca-bd6b-eba6208ee81b' of size 338 bytes with 0 envelopes.
+2025-08-25 12:49:19,994 [canton-env-ec-38] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:5d6029724a0470a89346e9d82cb8d9b3 - 'PAR::participant1::1220b845dcf0...' sends request with id 'tick-183aac69-4594-412e-abc2-06e339ef445a' of size 342 bytes with 0 envelopes.
+2025-08-25 12:51:03,887 [canton-env-ec-38] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:06fd26fd7543137be78e1224d7dae509 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 12:51:03,895 [canton-env-ec-64] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:62469001f1edcea4748efc5a921f9374 - Phase 1 started: Submitting commands for interpretation: Commands(
+  commandId = 93c46fba-3b95-49a0-bec3-273d362e0442,
+  submissionId = 79a0851b-9665-44bb-a4e4-5c550054aa43,
+  applicationId = bank_admin,
+  actAs = NewBank::1220b845dcf0...,
+  submittedAt = 2025-08-25T12:51:03.895309Z,
+  ledgerEffectiveTime = 2025-08-25T12:51:03.895308Z,
+  deduplicationPeriod = (duration=PT168H),
+  ...
+).
+2025-08-25 12:51:03,957 [canton-env-ec-167] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:62469001f1edcea4748efc5a921f9374 - Phase 1 completed: Submitting 3 envelopes for Transaction request, submitters NewBank::1220b845dcf0..., command-id 93c46fba-3b95-49a0-bec3-273d362e0442
+2025-08-25 12:51:03,966 [canton-env-ec-64] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:62469001f1edcea4748efc5a921f9374 - 'PAR::participant1::1220b845dcf0...' sends request with id '709e621f-22cf-4b5f-ba96-4f52e2f34f90' of size 2836 bytes with 3 envelopes.
+2025-08-25 12:51:03,998 [canton-env-ec-106] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:62469001f1edcea4748efc5a921f9374 - Processing event at sc=141, ts=2025-08-25T12:51:03.971033Z, messageId=709e621f-22cf-4b5f-ba96-4f52e2f34f90, with contents=Seq(RootHashMessage(root hash = SHA-256:017569548247..., payload size = 0), EncryptedViewMessageV2(view hash = ViewHash(SHA-256:60159401586c...), view type = TransactionViewType, size = 1425))
+2025-08-25 12:51:04,000 [canton-env-ec-106] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:62469001f1edcea4748efc5a921f9374 - Phase 3: Validating Transaction request=2025-08-25T12:51:03.971033Z with 1 envelope(s)
+2025-08-25 12:51:04,006 [canton-env-ec-173] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:62469001f1edcea4748efc5a921f9374 - Phase 2: Registered request=2025-08-25T12:51:03.971033Z with 1 view(s). Initial state: ViewPosition("") -> ViewState(
+  quorumsState = Seq(Quorum(confirmers = NewBank::1220b845dcf0... -> 1, threshold = 1), Quorum(confirmers = participant1::1220b845dcf0... -> 1, threshold = 1)),
+  consortiumVoting = Map(NewBank::1220b845dcf0... -> ConsortiumVotingState(), participant1::1220b845dcf0... -> ConsortiumVotingState()),
+  rejections = Seq()
+)
+2025-08-25 12:51:04,049 [canton-env-ec-162] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:62469001f1edcea4748efc5a921f9374 - Phase 4: Sending for request=2025-08-25T12:51:03.971033Z with msgId=8f0a7378-f29e-49f4-bc7c-8e74e84df2be approved=1, rejected=0
+2025-08-25 12:51:04,053 [canton-env-ec-36] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:62469001f1edcea4748efc5a921f9374 - 'PAR::participant1::1220b845dcf0...' sends request with id '8f0a7378-f29e-49f4-bc7c-8e74e84df2be' of size 747 bytes with 1 envelopes.
+2025-08-25 12:51:04,075 [canton-env-ec-173] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:62469001f1edcea4748efc5a921f9374 - Processing event at sc=142, ts=2025-08-25T12:51:04.058556Z, messageId=8f0a7378-f29e-49f4-bc7c-8e74e84df2be, with contents=Seq()
+2025-08-25 12:51:04,076 [canton-env-ec-106] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:62469001f1edcea4748efc5a921f9374 - Phase 5: Received responses for request=RequestId(2025-08-25T12:51:03.971033Z): ParticipantResponse(sender = PAR::participant1::1220b845dcf0..., ts = 2025-08-25T12:51:04.058556Z, approved = 1)
+2025-08-25 12:51:04,082 [canton-env-ec-64] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:62469001f1edcea4748efc5a921f9374 - Phase 6: Finalized request=RequestId(2025-08-25T12:51:03.971033Z) with verdict Approve
+2025-08-25 12:51:04,089 [canton-env-ec-106] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:62469001f1edcea4748efc5a921f9374 - 'MED::mydomain::122060f2dea2...' sends request with id 'mmid:verdict:1756126263971033' of size 721 bytes with 1 envelopes.
+2025-08-25 12:51:04,107 [canton-env-ec-159] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:62469001f1edcea4748efc5a921f9374 - Processing event at sc=143, ts=2025-08-25T12:51:04.093383Z, with contents=SignedProtocolMessage(
+  TransactionResultMessage(requestId = 2025-08-25T12:51:03.971033Z, verdict = Approve, rootHash = SHA-256:017569548247..., domainId = mydomain::122060f2dea2...),
+  signatures = Signature(signature = 63c153b8d7c7, signedBy = 1220120ea179...)
+)
+2025-08-25 12:51:04,167 [input-mapping-pool-0] INFO  c.d.c.p.i.p.ParallelIndexerSubscription:participant=participant1 tid:62469001f1edcea4748efc5a921f9374 - Phase 7: Storing at offset=00000000000000002c TransactionAccepted(
+  recordTime = 2025-08-25T12:51:03.971033Z,
+  transactionId = 12200175695482471fb4af17b9a57b406ec979e8172a27a65e376b11870e805fa88c,
+  transactionMeta = TransactionMeta(ledgerEffectiveTime = 2025-08-25T12:51:03.895308Z, submissionTime = 2025-08-25T12:51:03.895308Z, domainId = mydomain::122060f2dea2..., ...),
+  completion = CompletionInfo(
+    actAs = NewBank::1220b845dcf0...,
+    commandId = 93c46fba-3b95-49a0-bec3-273d362e0442,
+    applicationId = bank_admin,
+    deduplication period = (offset=Offset(Bytes(000000000000000001))),
+    submissionId = Some(79a0851b-9665-44bb-a4e4-5c550054aa43),
+    ...
+  ),
+  nodes = 5,
+  roots = 1,
+  ...
+)
+2025-08-25 12:51:04,183 [canton-env-ec-106] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 - Received request for transaction by ID, ledgerId -> 'participant1', transactionId -> '12200175695482471fb4af17b9a57b406ec979e8172a27a65e376b11870e805fa88c', parties -> ['NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d'].
+2025-08-25 12:51:30,286 [canton-env-ec-37] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:9a9b4df6dab1ae08898d16ea3acd21ee - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 12:51:30,297 [canton-env-ec-37] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:b801a408337b69f0de82428c42150eca - Phase 1 started: Submitting commands for interpretation: Commands(
+  commandId = 71fad116-a687-417a-a19f-ff8f09b8c3eb,
+  submissionId = e14c9976-6390-4509-8e63-0ac87a466c39,
+  applicationId = bank_admin,
+  actAs = NewBank::1220b845dcf0...,
+  submittedAt = 2025-08-25T12:51:30.296326Z,
+  ledgerEffectiveTime = 2025-08-25T12:51:30.296324Z,
+  deduplicationPeriod = (duration=PT168H),
+  ...
+).
+2025-08-25 12:51:30,367 [canton-env-ec-106] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:b801a408337b69f0de82428c42150eca - Phase 1 completed: Submitting 3 envelopes for Transaction request, submitters NewBank::1220b845dcf0..., command-id 71fad116-a687-417a-a19f-ff8f09b8c3eb
+2025-08-25 12:51:30,372 [canton-env-ec-173] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:b801a408337b69f0de82428c42150eca - 'PAR::participant1::1220b845dcf0...' sends request with id '41aea3d4-4554-496a-ac98-e3786881dd03' of size 2838 bytes with 3 envelopes.
+2025-08-25 12:51:30,400 [canton-env-ec-64] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:b801a408337b69f0de82428c42150eca - Processing event at sc=144, ts=2025-08-25T12:51:30.377794Z, messageId=41aea3d4-4554-496a-ac98-e3786881dd03, with contents=Seq(RootHashMessage(root hash = SHA-256:5027129c2652..., payload size = 0), EncryptedViewMessageV2(view hash = ViewHash(SHA-256:7e8c2ce51d07...), view type = TransactionViewType, size = 1431))
+2025-08-25 12:51:30,403 [canton-env-ec-37] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:b801a408337b69f0de82428c42150eca - Phase 3: Validating Transaction request=2025-08-25T12:51:30.377794Z with 1 envelope(s)
+2025-08-25 12:51:30,406 [canton-env-ec-162] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:b801a408337b69f0de82428c42150eca - Phase 2: Registered request=2025-08-25T12:51:30.377794Z with 1 view(s). Initial state: ViewPosition("") -> ViewState(
+  quorumsState = Seq(Quorum(confirmers = NewBank::1220b845dcf0... -> 1, threshold = 1), Quorum(confirmers = participant1::1220b845dcf0... -> 1, threshold = 1)),
+  consortiumVoting = Map(NewBank::1220b845dcf0... -> ConsortiumVotingState(), participant1::1220b845dcf0... -> ConsortiumVotingState()),
+  rejections = Seq()
+)
+2025-08-25 12:51:30,438 [canton-env-ec-106] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:b801a408337b69f0de82428c42150eca - Phase 4: Sending for request=2025-08-25T12:51:30.377794Z with msgId=439b2003-03ad-4a4c-b380-24e90f334872 approved=1, rejected=0
+2025-08-25 12:51:30,443 [canton-env-ec-163] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:b801a408337b69f0de82428c42150eca - 'PAR::participant1::1220b845dcf0...' sends request with id '439b2003-03ad-4a4c-b380-24e90f334872' of size 746 bytes with 1 envelopes.
+2025-08-25 12:51:30,463 [canton-env-ec-102] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:b801a408337b69f0de82428c42150eca - Processing event at sc=145, ts=2025-08-25T12:51:30.447037Z, messageId=439b2003-03ad-4a4c-b380-24e90f334872, with contents=Seq()
+2025-08-25 12:51:30,464 [canton-env-ec-106] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:b801a408337b69f0de82428c42150eca - Phase 5: Received responses for request=RequestId(2025-08-25T12:51:30.377794Z): ParticipantResponse(sender = PAR::participant1::1220b845dcf0..., ts = 2025-08-25T12:51:30.447037Z, approved = 1)
+2025-08-25 12:51:30,470 [canton-env-ec-163] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:b801a408337b69f0de82428c42150eca - Phase 6: Finalized request=RequestId(2025-08-25T12:51:30.377794Z) with verdict Approve
+2025-08-25 12:51:30,476 [canton-env-ec-37] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:b801a408337b69f0de82428c42150eca - 'MED::mydomain::122060f2dea2...' sends request with id 'mmid:verdict:1756126290377794' of size 723 bytes with 1 envelopes.
+2025-08-25 12:51:30,495 [canton-env-ec-37] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:b801a408337b69f0de82428c42150eca - Processing event at sc=146, ts=2025-08-25T12:51:30.480128Z, with contents=SignedProtocolMessage(
+  TransactionResultMessage(requestId = 2025-08-25T12:51:30.377794Z, verdict = Approve, rootHash = SHA-256:5027129c2652..., domainId = mydomain::122060f2dea2...),
+  signatures = Signature(signature = 459761f91edc, signedBy = 1220120ea179...)
+)
+2025-08-25 12:51:30,526 [input-mapping-pool-1] INFO  c.d.c.p.i.p.ParallelIndexerSubscription:participant=participant1 tid:b801a408337b69f0de82428c42150eca - Phase 7: Storing at offset=00000000000000002d TransactionAccepted(
+  recordTime = 2025-08-25T12:51:30.377794Z,
+  transactionId = 12205027129c265270bad890ea80b6d10605084714284d1063d8438f37cc476576e4,
+  transactionMeta = TransactionMeta(ledgerEffectiveTime = 2025-08-25T12:51:30.296324Z, submissionTime = 2025-08-25T12:51:30.296324Z, domainId = mydomain::122060f2dea2..., ...),
+  completion = CompletionInfo(
+    actAs = NewBank::1220b845dcf0...,
+    commandId = 71fad116-a687-417a-a19f-ff8f09b8c3eb,
+    applicationId = bank_admin,
+    deduplication period = (offset=Offset(Bytes(000000000000000001))),
+    submissionId = Some(e14c9976-6390-4509-8e63-0ac87a466c39),
+    ...
+  ),
+  nodes = 5,
+  roots = 1,
+  ...
+)
+2025-08-25 12:51:30,543 [canton-env-ec-159] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 - Received request for transaction by ID, ledgerId -> 'participant1', transactionId -> '12205027129c265270bad890ea80b6d10605084714284d1063d8438f37cc476576e4', parties -> ['NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d'].
+2025-08-25 12:51:34,227 [canton-env-ec-37] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:62469001f1edcea4748efc5a921f9374 - 'MED::mydomain::122060f2dea2...' sends request with id 'tick-90e1b890-969d-4e1c-b40d-9a1bf1d67382' of size 339 bytes with 0 envelopes.
+2025-08-25 12:51:47,699 [canton-env-ec-64] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:239bb24feb8d668b62de624d972476a5 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 12:51:47,725 [canton-env-ec-64] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:9b159eec46a5d53742a52fba33b853a5 - Received request for transactions, startExclusive -> '000000000000000025', endInclusive -> '00000000000000002d', filters -> {NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:RedeemRequest']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 12:52:00,633 [canton-env-ec-102] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:62469001f1edcea4748efc5a921f9374 - 'MED::mydomain::122060f2dea2...' sends request with id 'tick-50384437-f359-4aae-bf06-76f62c1c800e' of size 338 bytes with 0 envelopes.
+2025-08-25 12:52:04,150 [canton-env-ec-102] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:62469001f1edcea4748efc5a921f9374 - 'PAR::participant1::1220b845dcf0...' sends request with id 'tick-d875857b-0f2a-4ef9-ab06-c0cce8428420' of size 343 bytes with 0 envelopes.
+2025-08-25 12:52:23,319 [canton-env-ec-159] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:5732602012712e8c6d1434e4e39a3ff9 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 12:52:23,339 [canton-env-ec-159] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:8fa4333d7ec08ca6bcfd0cef1be4bf5b - Received request for transactions, startExclusive -> '00000000000000002a', endInclusive -> '00000000000000002d', filters -> {NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:Token']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 12:52:30,552 [canton-env-ec-64] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:62469001f1edcea4748efc5a921f9374 - 'PAR::participant1::1220b845dcf0...' sends request with id 'tick-ad5d832f-0171-4b0d-b841-5d7b4737d5c4' of size 342 bytes with 0 envelopes.
+2025-08-25 12:53:25,233 [canton-env-ec-106] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:8b31f0688d484031dcfad50062bcddc8 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 12:53:25,255 [canton-env-ec-106] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:fbe063084d102020c9db30f872d31240 - Received request for transactions, startExclusive -> '00000000000000002a', endInclusive -> '00000000000000002d', filters -> {NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:AssetRegistry']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 12:53:47,645 [canton-env-ec-163] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:0c3fb7e551c8d743e20d6b506cc9158c - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 12:57:00,158 [canton-env-ec-167] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:92f54b9518b1f9461b4e15cc316e3b18 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 13:01:41,298 [daml.index.db.threadpool.connection.indexer-2] INFO  c.d.c.p.i.MeteringAggregator:participant=participant1 - Aggregating transaction metering for LedgerMeteringEnd(Offset(Bytes(00000000000000002d)),2025-08-25T13:00:00Z)
+2025-08-25 13:01:41,305 [daml.index.db.threadpool.connection.indexer-2] INFO  c.d.c.p.i.MeteringAggregator:participant=participant1 - Aggregating transaction metering completed up to LedgerMeteringEnd(Offset(Bytes(00000000000000002d)),2025-08-25T13:00:00Z)
+2025-08-25 13:08:54,739 [canton-env-ec-64] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:349dea90a788d743ec1e188a20ba72e9 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 13:12:58,800 [canton-env-ec-64] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:9457273cbcaf31b981512f53f3bd1c12 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 13:13:15,869 [canton-env-ec-64] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:16d64db69440c11eeb9270ac9dc4db4f - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 13:13:15,879 [canton-env-ec-38] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:87cfb3287fdebeb4be9b1cd5b7213d5f - Phase 1 started: Submitting commands for interpretation: Commands(
+  commandId = af0249c5-dd6d-4a9c-b7bb-f920e1dffa2b,
+  submissionId = b1d98195-220d-4328-bd6f-23b0a3fbe8e2,
+  applicationId = alice_bank_token,
+  actAs = Set(NewAlice::1220b845dcf0..., NewBank::1220b845dcf0...),
+  submittedAt = 2025-08-25T13:13:15.878600Z,
+  ledgerEffectiveTime = 2025-08-25T13:13:15.878599Z,
+  deduplicationPeriod = (duration=PT168H),
+  ...
+).
+2025-08-25 13:13:16,056 [canton-env-ec-159] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:87cfb3287fdebeb4be9b1cd5b7213d5f - Phase 1 completed: Submitting 3 envelopes for Transaction request, submitters Seq(NewAlice::1220b845dcf0..., NewBank::1220b845dcf0...), command-id af0249c5-dd6d-4a9c-b7bb-f920e1dffa2b
+2025-08-25 13:13:16,068 [canton-env-ec-64] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:87cfb3287fdebeb4be9b1cd5b7213d5f - 'PAR::participant1::1220b845dcf0...' sends request with id 'b10f2295-5d03-4d08-bfc1-db31860210ed' of size 3267 bytes with 3 envelopes.
+2025-08-25 13:13:16,117 [canton-env-ec-162] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:87cfb3287fdebeb4be9b1cd5b7213d5f - Processing event at sc=149, ts=2025-08-25T13:13:16.077321Z, messageId=b10f2295-5d03-4d08-bfc1-db31860210ed, with contents=Seq(RootHashMessage(root hash = SHA-256:bcdcb4e3fb11..., payload size = 0), EncryptedViewMessageV2(view hash = ViewHash(SHA-256:ca8784131c87...), view type = TransactionViewType, size = 1831))
+2025-08-25 13:13:16,120 [canton-env-ec-37] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:87cfb3287fdebeb4be9b1cd5b7213d5f - Phase 3: Validating Transaction request=2025-08-25T13:13:16.077321Z with 1 envelope(s)
+2025-08-25 13:13:16,125 [canton-env-ec-102] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:87cfb3287fdebeb4be9b1cd5b7213d5f - Phase 2: Registered request=2025-08-25T13:13:16.077321Z with 1 view(s). Initial state: ViewPosition("") -> ViewState(
+  quorumsState = Seq(
+    Quorum(confirmers = Map(NewAlice::1220b845dcf0... -> 1, NewBank::1220b845dcf0... -> 1), threshold = 2),
+    Quorum(confirmers = NewBank::1220b845dcf0... -> 1, threshold = 1),
+    Quorum(confirmers = participant1::1220b845dcf0... -> 1, threshold = 1)
+  ),
+  consortiumVoting = Map(NewAlice::1220b845dcf0... -> ConsortiumVotingState(), NewBank::1220b845dcf0... -> ConsortiumVotingState(), participant1::1220b845dcf0... -> ConsortiumVotingState()),
+  rejections = Seq()
+)
+2025-08-25 13:13:16,305 [canton-env-ec-163] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:87cfb3287fdebeb4be9b1cd5b7213d5f - Phase 4: Sending for request=2025-08-25T13:13:16.077321Z with msgId=959699ce-3c3c-4920-8ad9-2bf23805fefa approved=1, rejected=0
+2025-08-25 13:13:16,311 [canton-env-ec-64] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:87cfb3287fdebeb4be9b1cd5b7213d5f - 'PAR::participant1::1220b845dcf0...' sends request with id '959699ce-3c3c-4920-8ad9-2bf23805fefa' of size 754 bytes with 1 envelopes.
+2025-08-25 13:13:16,333 [canton-env-ec-169] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:87cfb3287fdebeb4be9b1cd5b7213d5f - Phase 5: Received responses for request=RequestId(2025-08-25T13:13:16.077321Z): ParticipantResponse(sender = PAR::participant1::1220b845dcf0..., ts = 2025-08-25T13:13:16.316361Z, approved = 1)
+2025-08-25 13:13:16,333 [canton-env-ec-162] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:87cfb3287fdebeb4be9b1cd5b7213d5f - Processing event at sc=150, ts=2025-08-25T13:13:16.316361Z, messageId=959699ce-3c3c-4920-8ad9-2bf23805fefa, with contents=Seq()
+2025-08-25 13:13:16,340 [canton-env-ec-159] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:87cfb3287fdebeb4be9b1cd5b7213d5f - Phase 6: Finalized request=RequestId(2025-08-25T13:13:16.077321Z) with verdict Approve
+2025-08-25 13:13:16,348 [canton-env-ec-162] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:87cfb3287fdebeb4be9b1cd5b7213d5f - 'MED::mydomain::122060f2dea2...' sends request with id 'mmid:verdict:1756127596077321' of size 721 bytes with 1 envelopes.
+2025-08-25 13:13:16,369 [canton-env-ec-159] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:87cfb3287fdebeb4be9b1cd5b7213d5f - Processing event at sc=151, ts=2025-08-25T13:13:16.354195Z, with contents=SignedProtocolMessage(
+  TransactionResultMessage(requestId = 2025-08-25T13:13:16.077321Z, verdict = Approve, rootHash = SHA-256:bcdcb4e3fb11..., domainId = mydomain::122060f2dea2...),
+  signatures = Signature(signature = 3d49d109734a, signedBy = 1220120ea179...)
+)
+2025-08-25 13:13:16,405 [input-mapping-pool-2] INFO  c.d.c.p.i.p.ParallelIndexerSubscription:participant=participant1 tid:87cfb3287fdebeb4be9b1cd5b7213d5f - Phase 7: Storing at offset=00000000000000002e TransactionAccepted(
+  recordTime = 2025-08-25T13:13:16.077321Z,
+  transactionId = 1220bcdcb4e3fb1117baa4b55cf55360186a9f15045c67dbde46590b59640cddbd2b,
+  transactionMeta = TransactionMeta(ledgerEffectiveTime = 2025-08-25T13:13:15.878599Z, submissionTime = 2025-08-25T13:13:15.878599Z, domainId = mydomain::122060f2dea2..., ...),
+  completion = CompletionInfo(
+    actAs = NewAlice::1220b845dcf0..., NewBank::1220b845dcf0...,
+    commandId = af0249c5-dd6d-4a9c-b7bb-f920e1dffa2b,
+    applicationId = alice_bank_token,
+    deduplication period = (offset=Offset(Bytes(000000000000000001))),
+    submissionId = Some(b1d98195-220d-4328-bd6f-23b0a3fbe8e2),
+    ...
+  ),
+  nodes = 8,
+  roots = 1,
+  ...
+)
+2025-08-25 13:13:16,432 [canton-env-ec-37] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 - Received request for transaction by ID, ledgerId -> 'participant1', transactionId -> '1220bcdcb4e3fb1117baa4b55cf55360186a9f15045c67dbde46590b59640cddbd2b', parties -> ['NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d', 'NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d'].
+2025-08-25 13:13:42,283 [canton-env-ec-162] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:26ea8b508e22188440923985350ee562 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 13:13:46,334 [canton-env-ec-106] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:87cfb3287fdebeb4be9b1cd5b7213d5f - 'MED::mydomain::122060f2dea2...' sends request with id 'tick-b2211149-5532-44a8-a618-4da8ff34d62b' of size 339 bytes with 0 envelopes.
+2025-08-25 13:14:16,135 [canton-env-ec-173] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:87cfb3287fdebeb4be9b1cd5b7213d5f - 'PAR::participant1::1220b845dcf0...' sends request with id 'tick-b2640316-bf46-44e6-aeb4-b1589d9d1f5f' of size 343 bytes with 0 envelopes.
+2025-08-25 13:14:25,950 [canton-env-ec-163] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:232ee6334ca27b84bd627dab6c557519 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 13:19:32,236 [canton-env-ec-38] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:29674c14d399ba0fa55d983c54dd7072 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 13:19:32,247 [canton-env-ec-38] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:a2afc6148b9714e749e16dbdc4456199 - Phase 1 started: Submitting commands for interpretation: Commands(
+  commandId = 5d3d39ed-5650-4c14-bb30-a2898357cbcf,
+  submissionId = 1a128fa8-1748-4e35-9acc-35cd4467119b,
+  applicationId = alice_bank_token,
+  actAs = Set(NewAlice::1220b845dcf0..., NewBank::1220b845dcf0...),
+  submittedAt = 2025-08-25T13:19:32.246392Z,
+  ledgerEffectiveTime = 2025-08-25T13:19:32.246390Z,
+  deduplicationPeriod = (duration=PT168H),
+  ...
+).
+2025-08-25 13:19:32,322 [canton-env-ec-162] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:a2afc6148b9714e749e16dbdc4456199 - Phase 1 completed: Submitting 3 envelopes for Transaction request, submitters Seq(NewAlice::1220b845dcf0..., NewBank::1220b845dcf0...), command-id 5d3d39ed-5650-4c14-bb30-a2898357cbcf
+2025-08-25 13:19:32,332 [canton-env-ec-162] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:a2afc6148b9714e749e16dbdc4456199 - 'PAR::participant1::1220b845dcf0...' sends request with id '4adfbf1c-3997-487a-b6f7-d8e66355e712' of size 3260 bytes with 3 envelopes.
+2025-08-25 13:19:32,374 [canton-env-ec-162] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:a2afc6148b9714e749e16dbdc4456199 - Processing event at sc=153, ts=2025-08-25T13:19:32.341467Z, messageId=4adfbf1c-3997-487a-b6f7-d8e66355e712, with contents=Seq(RootHashMessage(root hash = SHA-256:abb37cb6ad17..., payload size = 0), EncryptedViewMessageV2(view hash = ViewHash(SHA-256:8005e87f97a7...), view type = TransactionViewType, size = 1825))
+2025-08-25 13:19:32,376 [canton-env-ec-159] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:a2afc6148b9714e749e16dbdc4456199 - Phase 3: Validating Transaction request=2025-08-25T13:19:32.341467Z with 1 envelope(s)
+2025-08-25 13:19:32,387 [canton-env-ec-37] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:a2afc6148b9714e749e16dbdc4456199 - Phase 2: Registered request=2025-08-25T13:19:32.341467Z with 1 view(s). Initial state: ViewPosition("") -> ViewState(
+  quorumsState = Seq(
+    Quorum(confirmers = Map(NewAlice::1220b845dcf0... -> 1, NewBank::1220b845dcf0... -> 1), threshold = 2),
+    Quorum(confirmers = NewBank::1220b845dcf0... -> 1, threshold = 1),
+    Quorum(confirmers = participant1::1220b845dcf0... -> 1, threshold = 1)
+  ),
+  consortiumVoting = Map(NewAlice::1220b845dcf0... -> ConsortiumVotingState(), NewBank::1220b845dcf0... -> ConsortiumVotingState(), participant1::1220b845dcf0... -> ConsortiumVotingState()),
+  rejections = Seq()
+)
+2025-08-25 13:19:32,431 [canton-env-ec-163] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:a2afc6148b9714e749e16dbdc4456199 - Phase 4: Sending for request=2025-08-25T13:19:32.341467Z with msgId=ecd78a5c-4da6-47f9-8f38-bd1aa28d2776 approved=1, rejected=0
+2025-08-25 13:19:32,437 [canton-env-ec-163] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:a2afc6148b9714e749e16dbdc4456199 - 'PAR::participant1::1220b845dcf0...' sends request with id 'ecd78a5c-4da6-47f9-8f38-bd1aa28d2776' of size 756 bytes with 1 envelopes.
+2025-08-25 13:19:32,460 [canton-env-ec-163] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:a2afc6148b9714e749e16dbdc4456199 - Processing event at sc=154, ts=2025-08-25T13:19:32.441172Z, messageId=ecd78a5c-4da6-47f9-8f38-bd1aa28d2776, with contents=Seq()
+2025-08-25 13:19:32,462 [canton-env-ec-173] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:a2afc6148b9714e749e16dbdc4456199 - Phase 5: Received responses for request=RequestId(2025-08-25T13:19:32.341467Z): ParticipantResponse(sender = PAR::participant1::1220b845dcf0..., ts = 2025-08-25T13:19:32.441172Z, approved = 1)
+2025-08-25 13:19:32,469 [canton-env-ec-38] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:a2afc6148b9714e749e16dbdc4456199 - Phase 6: Finalized request=RequestId(2025-08-25T13:19:32.341467Z) with verdict Approve
+2025-08-25 13:19:32,478 [canton-env-ec-162] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:a2afc6148b9714e749e16dbdc4456199 - 'MED::mydomain::122060f2dea2...' sends request with id 'mmid:verdict:1756127972341467' of size 719 bytes with 1 envelopes.
+2025-08-25 13:19:32,504 [canton-env-ec-64] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:a2afc6148b9714e749e16dbdc4456199 - Processing event at sc=155, ts=2025-08-25T13:19:32.484455Z, with contents=SignedProtocolMessage(
+  TransactionResultMessage(requestId = 2025-08-25T13:19:32.341467Z, verdict = Approve, rootHash = SHA-256:abb37cb6ad17..., domainId = mydomain::122060f2dea2...),
+  signatures = Signature(signature = 3a4ea0bfb4e0, signedBy = 1220120ea179...)
+)
+2025-08-25 13:19:32,549 [input-mapping-pool-3] INFO  c.d.c.p.i.p.ParallelIndexerSubscription:participant=participant1 tid:a2afc6148b9714e749e16dbdc4456199 - Phase 7: Storing at offset=00000000000000002f TransactionAccepted(
+  recordTime = 2025-08-25T13:19:32.341467Z,
+  transactionId = 1220abb37cb6ad17cdfa388f2a9880d47dc6d42495195c66075e6d62f8a7381d035a,
+  transactionMeta = TransactionMeta(ledgerEffectiveTime = 2025-08-25T13:19:32.246390Z, submissionTime = 2025-08-25T13:19:32.246390Z, domainId = mydomain::122060f2dea2..., ...),
+  completion = CompletionInfo(
+    actAs = NewAlice::1220b845dcf0..., NewBank::1220b845dcf0...,
+    commandId = 5d3d39ed-5650-4c14-bb30-a2898357cbcf,
+    applicationId = alice_bank_token,
+    deduplication period = (offset=Offset(Bytes(000000000000000001))),
+    submissionId = Some(1a128fa8-1748-4e35-9acc-35cd4467119b),
+    ...
+  ),
+  nodes = 8,
+  roots = 1,
+  ...
+)
+2025-08-25 13:19:32,570 [canton-env-ec-159] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 - Received request for transaction by ID, ledgerId -> 'participant1', transactionId -> '1220abb37cb6ad17cdfa388f2a9880d47dc6d42495195c66075e6d62f8a7381d035a', parties -> ['NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d', 'NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d'].
+2025-08-25 13:20:02,596 [canton-env-ec-102] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:a2afc6148b9714e749e16dbdc4456199 - 'MED::mydomain::122060f2dea2...' sends request with id 'tick-5e3f8a10-bbe2-4100-88fd-08d850927fc4' of size 339 bytes with 0 envelopes.
+2025-08-25 13:20:20,654 [canton-env-ec-159] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:29ed35acea20937c9721663d979bcae5 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 13:20:32,503 [canton-env-ec-159] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:a2afc6148b9714e749e16dbdc4456199 - 'PAR::participant1::1220b845dcf0...' sends request with id 'tick-5857963e-bd1c-4b59-b2e9-115e414c76f7' of size 343 bytes with 0 envelopes.
+2025-08-25 13:23:21,582 [canton-env-ec-162] INFO  c.d.c.p.a.s.a.ApiPartyManagementService:participant=participant1 tid:bead8ebd74484dd1f26bde19128e805e - Allocating party, parties -> ['bob_user'], submissionId -> 'bob_user-9baded6b-278d-4f12-b634-f463c755b4f2'.
+2025-08-25 13:23:21,593 [canton-env-ec-38] INFO  c.d.c.p.t.ParticipantTopologyManager:participant=participant1 tid:bead8ebd74484dd1f26bde19128e805e - Applied topology transaction Add PartyToParticipant(Both, bob_user::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission) at 2025-08-25T13:23:21.592943Z
+2025-08-25 13:23:21,612 [canton-env-ec-162] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:71c50abb67006d2c14a6558ba7f6eea2 - 'PAR::participant1::1220b845dcf0...' sends request with id 'dab925e2-cd5a-412e-915e-4771bf8434d1' of size 840 bytes with 1 envelopes.
+2025-08-25 13:23:21,649 [canton-env-ec-173] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:71c50abb67006d2c14a6558ba7f6eea2 - Processing event at sc=157, ts=2025-08-25T13:23:21.618550Z, messageId=dab925e2-cd5a-412e-915e-4771bf8434d1, with contents=Seq()
+2025-08-25 13:23:21,658 [canton-env-ec-162] INFO  c.d.c.d.t.DomainTopologyManager:domain=mydomain tid:71c50abb67006d2c14a6558ba7f6eea2 - Applied topology transaction Add PartyToParticipant(Both, bob_user::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission) at 2025-08-25T13:23:21.657925Z
+2025-08-25 13:23:21,662 [canton-env-ec-102] INFO  c.d.c.d.t.DomainTopologyManagerRequestService:domain=mydomain tid:71c50abb67006d2c14a6558ba7f6eea2 - Register topology request by PAR::participant1::1220b845dcf0... for PAR::participant1::1220b845dcf0... yielded
+  Accepted -> Add PartyToParticipant(Both, bob_user::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission)
+2025-08-25 13:23:21,671 [canton-env-ec-167] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:71c50abb67006d2c14a6558ba7f6eea2 - 'DOM::mydomain::122060f2dea2...' sends request with id 'a4f54c63-a393-4908-99ea-9b9818218fa2' of size 535 bytes with 1 envelopes.
+2025-08-25 13:23:21,672 [canton-env-ec-37] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:71c50abb67006d2c14a6558ba7f6eea2 - 'DOM::mydomain::122060f2dea2...' sends request with id 'b1fce878-79e2-454a-91b9-4f614f3afff1' of size 958 bytes with 1 envelopes.
+2025-08-25 13:23:21,694 [canton-env-ec-38] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:71c50abb67006d2c14a6558ba7f6eea2 - Processing event at sc=158, ts=2025-08-25T13:23:21.676838Z, with contents=RegisterTopologyTransactionResponse
+2025-08-25 13:23:21,701 [canton-env-ec-106] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:71c50abb67006d2c14a6558ba7f6eea2 - Processing event at sc=159, ts=2025-08-25T13:23:21.678795Z, with contents=DomainTopologyTransactionMessage
+2025-08-25 13:23:21,706 [canton-env-ec-173] INFO  c.d.c.t.p.TopologyTransactionProcessor:domain=mydomain/node=mediator/client=mediator tid:71c50abb67006d2c14a6558ba7f6eea2 - Storing topology transaction 1/1 Add PartyToParticipant(Both, bob_user::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission) with ts=EffectiveTime(2025-08-25T13:23:21.928795Z) (epsilon=250 ms)
+2025-08-25 13:23:21,706 [canton-env-ec-102] INFO  c.d.c.t.p.TopologyTransactionProcessor:participant=participant1 tid:71c50abb67006d2c14a6558ba7f6eea2 - Storing topology transaction 1/1 Add PartyToParticipant(Both, bob_user::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission) with ts=EffectiveTime(2025-08-25T13:23:21.928795Z) (epsilon=250 ms)
+2025-08-25 13:23:21,707 [canton-env-ec-169] INFO  c.d.c.t.p.TopologyTransactionProcessor:domain=mydomain/client=topology-manager tid:71c50abb67006d2c14a6558ba7f6eea2 - Storing topology transaction 1/1 Add PartyToParticipant(Both, bob_user::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission) with ts=EffectiveTime(2025-08-25T13:23:21.928795Z) (epsilon=250 ms)
+2025-08-25 13:23:21,981 [input-mapping-pool-4] INFO  c.d.c.p.i.p.ParallelIndexerSubscription:participant=participant1 tid:71c50abb67006d2c14a6558ba7f6eea2 - Storing at offset=000000000000000030 PartyAddedToParticipant(recordTime = 2025-08-25T13:23:21.963195Z, party = bob_user::1220b845dcf0..., displayName = 'Anurag', participantId = participant1::1220b845dcf0..., ...)
+2025-08-25 13:23:22,018 [daml.index.db.threadpool.connection.api-server-3] INFO  c.d.c.p.l.PersistentPartyRecordStore:participant=participant1 tid:bead8ebd74484dd1f26bde19128e805e - Created new party record in participant local store: PartyRecord(party=bob_user::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d, metadata=ObjectMeta(None,Map()), identityProviderId=Default)
+2025-08-25 13:23:31,736 [canton-env-ec-37] INFO  c.d.c.p.a.s.a.ApiPartyManagementService:participant=participant1 tid:a8b2631479e99468bf83a3d4766def62 - Allocating party, parties -> ['bob'], submissionId -> 'bob-85a608a6-70e5-41ba-a30a-80cf8733043e'.
+2025-08-25 13:23:31,745 [canton-env-ec-163] INFO  c.d.c.p.t.ParticipantTopologyManager:participant=participant1 tid:a8b2631479e99468bf83a3d4766def62 - Applied topology transaction Add PartyToParticipant(Both, bob::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission) at 2025-08-25T13:23:31.745078Z
+2025-08-25 13:23:31,763 [canton-env-ec-173] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:db3c763cd9141b8a3dabecb9d011949a - 'PAR::participant1::1220b845dcf0...' sends request with id '648b0b58-b159-4338-9652-bde23115ae1f' of size 834 bytes with 1 envelopes.
+2025-08-25 13:23:31,792 [canton-env-ec-173] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:db3c763cd9141b8a3dabecb9d011949a - Processing event at sc=160, ts=2025-08-25T13:23:31.770772Z, messageId=648b0b58-b159-4338-9652-bde23115ae1f, with contents=Seq()
+2025-08-25 13:23:31,802 [canton-env-ec-106] INFO  c.d.c.d.t.DomainTopologyManager:domain=mydomain tid:db3c763cd9141b8a3dabecb9d011949a - Applied topology transaction Add PartyToParticipant(Both, bob::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission) at 2025-08-25T13:23:31.802286Z
+2025-08-25 13:23:31,805 [canton-env-ec-173] INFO  c.d.c.d.t.DomainTopologyManagerRequestService:domain=mydomain tid:db3c763cd9141b8a3dabecb9d011949a - Register topology request by PAR::participant1::1220b845dcf0... for PAR::participant1::1220b845dcf0... yielded
+  Accepted -> Add PartyToParticipant(Both, bob::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission)
+2025-08-25 13:23:31,815 [canton-env-ec-173] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:db3c763cd9141b8a3dabecb9d011949a - 'DOM::mydomain::122060f2dea2...' sends request with id 'd48a7a73-8cb1-497e-8695-55a670f6ec51' of size 536 bytes with 1 envelopes.
+2025-08-25 13:23:31,817 [canton-env-ec-163] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:db3c763cd9141b8a3dabecb9d011949a - 'DOM::mydomain::122060f2dea2...' sends request with id 'e22a6df1-def1-48f1-81bf-39943adfa363' of size 948 bytes with 1 envelopes.
+2025-08-25 13:23:31,836 [canton-env-ec-64] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:db3c763cd9141b8a3dabecb9d011949a - Processing event at sc=161, ts=2025-08-25T13:23:31.820313Z, with contents=RegisterTopologyTransactionResponse
+2025-08-25 13:23:31,842 [canton-env-ec-36] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:db3c763cd9141b8a3dabecb9d011949a - Processing event at sc=162, ts=2025-08-25T13:23:31.822240Z, with contents=DomainTopologyTransactionMessage
+2025-08-25 13:23:31,848 [canton-env-ec-173] INFO  c.d.c.t.p.TopologyTransactionProcessor:domain=mydomain/client=topology-manager tid:db3c763cd9141b8a3dabecb9d011949a - Storing topology transaction 1/1 Add PartyToParticipant(Both, bob::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission) with ts=EffectiveTime(2025-08-25T13:23:32.072240Z) (epsilon=250 ms)
+2025-08-25 13:23:31,849 [canton-env-ec-169] INFO  c.d.c.t.p.TopologyTransactionProcessor:participant=participant1 tid:db3c763cd9141b8a3dabecb9d011949a - Storing topology transaction 1/1 Add PartyToParticipant(Both, bob::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission) with ts=EffectiveTime(2025-08-25T13:23:32.072240Z) (epsilon=250 ms)
+2025-08-25 13:23:31,853 [canton-env-ec-162] INFO  c.d.c.t.p.TopologyTransactionProcessor:domain=mydomain/node=mediator/client=mediator tid:db3c763cd9141b8a3dabecb9d011949a - Storing topology transaction 1/1 Add PartyToParticipant(Both, bob::1220b845dcf0..., PAR::participant1::1220b845dcf0..., Submission) with ts=EffectiveTime(2025-08-25T13:23:32.072240Z) (epsilon=250 ms)
+2025-08-25 13:23:32,141 [input-mapping-pool-5] INFO  c.d.c.p.i.p.ParallelIndexerSubscription:participant=participant1 tid:db3c763cd9141b8a3dabecb9d011949a - Storing at offset=000000000000000031 PartyAddedToParticipant(recordTime = 2025-08-25T13:23:32.107198Z, party = bob::1220b845dcf0..., displayName = 'Anurag', participantId = participant1::1220b845dcf0..., ...)
+2025-08-25 13:23:32,156 [daml.index.db.threadpool.connection.api-server-2] INFO  c.d.c.p.l.PersistentPartyRecordStore:participant=participant1 tid:a8b2631479e99468bf83a3d4766def62 - Created new party record in participant local store: PartyRecord(party=bob::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d, metadata=ObjectMeta(None,Map()), identityProviderId=Default)
+2025-08-25 13:28:21,537 [canton-env-ec-163] INFO  c.d.c.d.s.a.MemberAuthenticationServiceOld:domain=mydomain - DOM::mydomain::122060f2dea2... authenticated new token with expiry 2025-08-25T14:28:21.535224Z
+2025-08-25 13:28:21,650 [canton-env-ec-167] INFO  c.d.c.d.s.a.MemberAuthenticationServiceOld:domain=mydomain - MED::mydomain::122060f2dea2... authenticated new token with expiry 2025-08-25T14:28:21.648752Z
+2025-08-25 13:28:24,923 [canton-env-ec-36] INFO  c.d.c.d.s.a.MemberAuthenticationServiceOld:domain=mydomain - PAR::participant1::1220b845dcf0... authenticated new token with expiry 2025-08-25T14:28:24.921626Z
+2025-08-25 13:28:41,503 [canton-env-ec-167] INFO  c.d.c.s.c.t.GrpcSequencerSubscription:domain=mydomain/client=topology-manager - The sequencer subscription has been terminated by the server.
+2025-08-25 13:28:41,504 [canton-env-ec-163] INFO  c.d.c.s.c.t.GrpcSubscriptionErrorRetryPolicy:domain=mydomain/client=topology-manager - Trying to reconnect to give the sequencer the opportunity to become available again (after Connection terminated by the server.)
+2025-08-25 13:28:41,558 [canton-env-ec-169] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain - DOM::mydomain::122060f2dea2... subscribes from counter=43
+2025-08-25 13:28:41,618 [canton-env-ec-167] INFO  c.d.c.s.c.t.GrpcSequencerSubscription:domain=mydomain/client=mediator - The sequencer subscription has been terminated by the server.
+2025-08-25 13:28:41,618 [canton-env-ec-36] INFO  c.d.c.s.c.t.GrpcSubscriptionErrorRetryPolicy:domain=mydomain/client=mediator - Trying to reconnect to give the sequencer the opportunity to become available again (after Connection terminated by the server.)
+2025-08-25 13:28:41,673 [canton-env-ec-163] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain - MED::mydomain::122060f2dea2... subscribes from counter=138
+2025-08-25 13:28:44,893 [canton-env-ec-64] INFO  c.d.c.s.c.t.GrpcSequencerSubscription:participant=participant1/domainId=mydomain::122060f2dea2 - The sequencer subscription has been terminated by the server.
+2025-08-25 13:28:44,894 [canton-env-ec-106] INFO  c.d.c.s.c.t.GrpcSubscriptionErrorRetryPolicy:participant=participant1/domainId=mydomain::122060f2dea2 tid:a309fd82476cae3d9035408e7291eec8 - Trying to reconnect to give the sequencer the opportunity to become available again (after Connection terminated by the server.)
+2025-08-25 13:28:44,948 [canton-env-ec-38] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:a309fd82476cae3d9035408e7291eec8 - PAR::participant1::1220b845dcf0... subscribes from counter=162
+2025-08-25 13:37:38,731 [canton-env-ec-36] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:c06f970e7ca102e66b71152acf65c79a - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 13:40:59,717 [canton-env-ec-38] WARN  c.d.c.a.Authorizer:participant=participant1 tid:bb7963642461fd9a735b6e4a90d63479 - PERMISSION_DENIED(7,bb796364): Claims do not authorize the use of administrative services. err-context:{location=Authorizer.scala:305} 
+2025-08-25 13:40:59,718 [canton-env-ec-38] INFO  c.d.c.n.g.ApiRequestLogger:participant=participant1 tid:bb7963642461fd9a735b6e4a90d63479 - Request c.d.l.a.v.a.PartyManagementService/ListKnownParties by /127.0.0.1:46464: failed with PERMISSION_DENIED/An error occurred. Please contact the operator and inquire about the request bb7963642461fd9a735b6e4a90d63479 with tid bb7963642461fd9a735b6e4a90d63479
+2025-08-25 13:41:33,455 [canton-env-ec-36] INFO  c.d.c.p.a.s.a.ApiPartyManagementService:participant=participant1 tid:862104a6f4c4e103dddff4aade520787 - Listing known parties.
+2025-08-25 13:53:29,711 [canton-env-ec-163] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:2db323e523237eb24ad7e80efab691c1 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 13:53:29,721 [canton-env-ec-162] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:8dc4695c043d4f73f5fbfccede0ef327 - Phase 1 started: Submitting commands for interpretation: Commands(
+  commandId = 57b4cc51-dce2-490e-96fb-b176e1997864,
+  submissionId = 6929860d-06e1-413c-ba04-ec4d13a1ce38,
+  applicationId = bank_admin,
+  actAs = NewBank::1220b845dcf0...,
+  submittedAt = 2025-08-25T13:53:29.720902Z,
+  ledgerEffectiveTime = 2025-08-25T13:53:29.720900Z,
+  deduplicationPeriod = (duration=PT168H),
+  ...
+).
+2025-08-25 13:53:29,915 [canton-env-ec-163] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:8dc4695c043d4f73f5fbfccede0ef327 - Phase 1 completed: Submitting 3 envelopes for Transaction request, submitters NewBank::1220b845dcf0..., command-id 57b4cc51-dce2-490e-96fb-b176e1997864
+2025-08-25 13:53:29,928 [canton-env-ec-163] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:8dc4695c043d4f73f5fbfccede0ef327 - 'PAR::participant1::1220b845dcf0...' sends request with id 'c6682b13-5e27-4e6d-aad7-9f4e4a4f8980' of size 2827 bytes with 3 envelopes.
+2025-08-25 13:53:29,977 [canton-env-ec-36] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:8dc4695c043d4f73f5fbfccede0ef327 - Processing event at sc=163, ts=2025-08-25T13:53:29.937900Z, messageId=c6682b13-5e27-4e6d-aad7-9f4e4a4f8980, with contents=Seq(RootHashMessage(root hash = SHA-256:8d146d3d471a..., payload size = 0), EncryptedViewMessageV2(view hash = ViewHash(SHA-256:cf068cd2db4b...), view type = TransactionViewType, size = 1421))
+2025-08-25 13:53:29,980 [canton-env-ec-38] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:8dc4695c043d4f73f5fbfccede0ef327 - Phase 3: Validating Transaction request=2025-08-25T13:53:29.937900Z with 1 envelope(s)
+2025-08-25 13:53:29,990 [canton-env-ec-162] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:8dc4695c043d4f73f5fbfccede0ef327 - Phase 2: Registered request=2025-08-25T13:53:29.937900Z with 1 view(s). Initial state: ViewPosition("") -> ViewState(
+  quorumsState = Seq(Quorum(confirmers = NewBank::1220b845dcf0... -> 1, threshold = 1), Quorum(confirmers = participant1::1220b845dcf0... -> 1, threshold = 1)),
+  consortiumVoting = Map(NewBank::1220b845dcf0... -> ConsortiumVotingState(), participant1::1220b845dcf0... -> ConsortiumVotingState()),
+  rejections = Seq()
+)
+2025-08-25 13:53:30,185 [canton-env-ec-36] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:8dc4695c043d4f73f5fbfccede0ef327 - Phase 4: Sending for request=2025-08-25T13:53:29.937900Z with msgId=8afb84ef-dbfe-4b97-b4b5-3bd0f2a76dcd approved=1, rejected=0
+2025-08-25 13:53:30,196 [canton-env-ec-36] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:8dc4695c043d4f73f5fbfccede0ef327 - 'PAR::participant1::1220b845dcf0...' sends request with id '8afb84ef-dbfe-4b97-b4b5-3bd0f2a76dcd' of size 748 bytes with 1 envelopes.
+2025-08-25 13:53:30,241 [canton-env-ec-162] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:8dc4695c043d4f73f5fbfccede0ef327 - Processing event at sc=164, ts=2025-08-25T13:53:30.202240Z, messageId=8afb84ef-dbfe-4b97-b4b5-3bd0f2a76dcd, with contents=Seq()
+2025-08-25 13:53:30,243 [canton-env-ec-169] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:8dc4695c043d4f73f5fbfccede0ef327 - Phase 5: Received responses for request=RequestId(2025-08-25T13:53:29.937900Z): ParticipantResponse(sender = PAR::participant1::1220b845dcf0..., ts = 2025-08-25T13:53:30.202240Z, approved = 1)
+2025-08-25 13:53:30,252 [canton-env-ec-163] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:8dc4695c043d4f73f5fbfccede0ef327 - Phase 6: Finalized request=RequestId(2025-08-25T13:53:29.937900Z) with verdict Approve
+2025-08-25 13:53:30,266 [canton-env-ec-167] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:8dc4695c043d4f73f5fbfccede0ef327 - 'MED::mydomain::122060f2dea2...' sends request with id 'mmid:verdict:1756130009937900' of size 725 bytes with 1 envelopes.
+2025-08-25 13:53:30,288 [canton-env-ec-36] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:8dc4695c043d4f73f5fbfccede0ef327 - Processing event at sc=165, ts=2025-08-25T13:53:30.272220Z, with contents=SignedProtocolMessage(
+  TransactionResultMessage(requestId = 2025-08-25T13:53:29.937900Z, verdict = Approve, rootHash = SHA-256:8d146d3d471a..., domainId = mydomain::122060f2dea2...),
+  signatures = Signature(signature = 46335880dedf, signedBy = 1220120ea179...)
+)
+2025-08-25 13:53:30,326 [input-mapping-pool-6] INFO  c.d.c.p.i.p.ParallelIndexerSubscription:participant=participant1 tid:8dc4695c043d4f73f5fbfccede0ef327 - Phase 7: Storing at offset=000000000000000032 TransactionAccepted(
+  recordTime = 2025-08-25T13:53:29.937900Z,
+  transactionId = 12208d146d3d471a52ced6f4a8f743c6cea2d270eb3174eec0272accfb2cc27ce3d6,
+  transactionMeta = TransactionMeta(ledgerEffectiveTime = 2025-08-25T13:53:29.720900Z, submissionTime = 2025-08-25T13:53:29.720900Z, domainId = mydomain::122060f2dea2..., ...),
+  completion = CompletionInfo(
+    actAs = NewBank::1220b845dcf0...,
+    commandId = 57b4cc51-dce2-490e-96fb-b176e1997864,
+    applicationId = bank_admin,
+    deduplication period = (offset=Offset(Bytes(000000000000000001))),
+    submissionId = Some(6929860d-06e1-413c-ba04-ec4d13a1ce38),
+    ...
+  ),
+  nodes = 5,
+  roots = 1,
+  ...
+)
+2025-08-25 13:53:30,348 [canton-env-ec-173] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 - Received request for transaction by ID, ledgerId -> 'participant1', transactionId -> '12208d146d3d471a52ced6f4a8f743c6cea2d270eb3174eec0272accfb2cc27ce3d6', parties -> ['NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d'].
+2025-08-25 13:54:00,194 [canton-env-ec-36] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:8dc4695c043d4f73f5fbfccede0ef327 - 'MED::mydomain::122060f2dea2...' sends request with id 'tick-b03812e3-3385-47dc-bbfc-5e84faa5930a' of size 339 bytes with 0 envelopes.
+2025-08-25 13:54:11,837 [canton-env-ec-37] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:3c244f699fb0bb1ee03c5df6de359c03 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 13:54:11,863 [canton-env-ec-37] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:7bc281c1180ae2bad6d350fc5de2711a - Received request for transactions, startExclusive -> '00000000000000002d', endInclusive -> '000000000000000032', filters -> {NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:RedeemRequest']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 13:54:29,977 [canton-env-ec-64] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:8dc4695c043d4f73f5fbfccede0ef327 - 'PAR::participant1::1220b845dcf0...' sends request with id 'tick-c3d2dced-cd27-4dca-a602-378463d78381' of size 343 bytes with 0 envelopes.
+2025-08-25 13:55:25,339 [canton-env-ec-163] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:70d24d461db932714cd923ac7ab9e5bd - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 13:55:25,361 [canton-env-ec-106] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:a8ee98f0c6c4e8b340ada101348e3f4c - Received request for transactions, startExclusive -> '00000000000000002d', endInclusive -> '000000000000000032', filters -> {NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:Token']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 13:55:47,823 [canton-env-ec-36] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:8457f1698ef6cbc154a44dc779a9fa58 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 13:55:47,832 [canton-env-ec-167] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:61a6316d05863fbfcaa16102cf068849 - Phase 1 started: Submitting commands for interpretation: Commands(
+  commandId = fb1bf612-47dd-4a1f-b4c8-ec32c4ee9139,
+  submissionId = 15f9d0c2-d404-4278-85d9-918665d5947c,
+  applicationId = alice_bank_token,
+  actAs = Set(NewAlice::1220b845dcf0..., NewBank::1220b845dcf0...),
+  submittedAt = 2025-08-25T13:55:47.831698Z,
+  ledgerEffectiveTime = 2025-08-25T13:55:47.831696Z,
+  deduplicationPeriod = (duration=PT168H),
+  ...
+).
+2025-08-25 13:55:47,906 [canton-env-ec-167] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:61a6316d05863fbfcaa16102cf068849 - Phase 1 completed: Submitting 3 envelopes for Transaction request, submitters Seq(NewAlice::1220b845dcf0..., NewBank::1220b845dcf0...), command-id fb1bf612-47dd-4a1f-b4c8-ec32c4ee9139
+2025-08-25 13:55:47,917 [canton-env-ec-167] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:61a6316d05863fbfcaa16102cf068849 - 'PAR::participant1::1220b845dcf0...' sends request with id '5505d9fb-3815-4620-8ad6-dd8379551c32' of size 3264 bytes with 3 envelopes.
+2025-08-25 13:55:47,952 [canton-env-ec-36] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:61a6316d05863fbfcaa16102cf068849 - Processing event at sc=167, ts=2025-08-25T13:55:47.925177Z, messageId=5505d9fb-3815-4620-8ad6-dd8379551c32, with contents=Seq(RootHashMessage(root hash = SHA-256:cfc783d3448c..., payload size = 0), EncryptedViewMessageV2(view hash = ViewHash(SHA-256:fac7bf08a1bd...), view type = TransactionViewType, size = 1832))
+2025-08-25 13:55:47,954 [canton-env-ec-37] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:61a6316d05863fbfcaa16102cf068849 - Phase 3: Validating Transaction request=2025-08-25T13:55:47.925177Z with 1 envelope(s)
+2025-08-25 13:55:47,966 [canton-env-ec-162] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:61a6316d05863fbfcaa16102cf068849 - Phase 2: Registered request=2025-08-25T13:55:47.925177Z with 1 view(s). Initial state: ViewPosition("") -> ViewState(
+  quorumsState = Seq(
+    Quorum(confirmers = Map(NewAlice::1220b845dcf0... -> 1, NewBank::1220b845dcf0... -> 1), threshold = 2),
+    Quorum(confirmers = NewBank::1220b845dcf0... -> 1, threshold = 1),
+    Quorum(confirmers = participant1::1220b845dcf0... -> 1, threshold = 1)
+  ),
+  consortiumVoting = Map(NewAlice::1220b845dcf0... -> ConsortiumVotingState(), NewBank::1220b845dcf0... -> ConsortiumVotingState(), participant1::1220b845dcf0... -> ConsortiumVotingState()),
+  rejections = Seq()
+)
+2025-08-25 13:55:48,006 [canton-env-ec-38] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:61a6316d05863fbfcaa16102cf068849 - Phase 4: Sending for request=2025-08-25T13:55:47.925177Z with msgId=659faa81-50f8-4031-9746-75923eccbfc9 approved=1, rejected=0
+2025-08-25 13:55:48,011 [canton-env-ec-64] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:61a6316d05863fbfcaa16102cf068849 - 'PAR::participant1::1220b845dcf0...' sends request with id '659faa81-50f8-4031-9746-75923eccbfc9' of size 759 bytes with 1 envelopes.
+2025-08-25 13:55:48,028 [canton-env-ec-38] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:61a6316d05863fbfcaa16102cf068849 - Processing event at sc=168, ts=2025-08-25T13:55:48.015899Z, messageId=659faa81-50f8-4031-9746-75923eccbfc9, with contents=Seq()
+2025-08-25 13:55:48,029 [canton-env-ec-36] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:61a6316d05863fbfcaa16102cf068849 - Phase 5: Received responses for request=RequestId(2025-08-25T13:55:47.925177Z): ParticipantResponse(sender = PAR::participant1::1220b845dcf0..., ts = 2025-08-25T13:55:48.015899Z, approved = 1)
+2025-08-25 13:55:48,035 [canton-env-ec-159] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:61a6316d05863fbfcaa16102cf068849 - Phase 6: Finalized request=RequestId(2025-08-25T13:55:47.925177Z) with verdict Approve
+2025-08-25 13:55:48,042 [canton-env-ec-169] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:61a6316d05863fbfcaa16102cf068849 - 'MED::mydomain::122060f2dea2...' sends request with id 'mmid:verdict:1756130147925177' of size 721 bytes with 1 envelopes.
+2025-08-25 13:55:48,065 [canton-env-ec-64] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:61a6316d05863fbfcaa16102cf068849 - Processing event at sc=169, ts=2025-08-25T13:55:48.046986Z, with contents=SignedProtocolMessage(
+  TransactionResultMessage(requestId = 2025-08-25T13:55:47.925177Z, verdict = Approve, rootHash = SHA-256:cfc783d3448c..., domainId = mydomain::122060f2dea2...),
+  signatures = Signature(signature = fc573edcb61a, signedBy = 1220120ea179...)
+)
+2025-08-25 13:55:48,114 [input-mapping-pool-7] INFO  c.d.c.p.i.p.ParallelIndexerSubscription:participant=participant1 tid:61a6316d05863fbfcaa16102cf068849 - Phase 7: Storing at offset=000000000000000033 TransactionAccepted(
+  recordTime = 2025-08-25T13:55:47.925177Z,
+  transactionId = 1220cfc783d3448c7ffd035b24a755aa4b8680e0b75958a616eb3820c336e638ae60,
+  transactionMeta = TransactionMeta(ledgerEffectiveTime = 2025-08-25T13:55:47.831696Z, submissionTime = 2025-08-25T13:55:47.831696Z, domainId = mydomain::122060f2dea2..., ...),
+  completion = CompletionInfo(
+    actAs = NewAlice::1220b845dcf0..., NewBank::1220b845dcf0...,
+    commandId = fb1bf612-47dd-4a1f-b4c8-ec32c4ee9139,
+    applicationId = alice_bank_token,
+    deduplication period = (offset=Offset(Bytes(000000000000000001))),
+    submissionId = Some(15f9d0c2-d404-4278-85d9-918665d5947c),
+    ...
+  ),
+  nodes = 8,
+  roots = 1,
+  ...
+)
+2025-08-25 13:55:48,134 [canton-env-ec-159] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 - Received request for transaction by ID, ledgerId -> 'participant1', transactionId -> '1220cfc783d3448c7ffd035b24a755aa4b8680e0b75958a616eb3820c336e638ae60', parties -> ['NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d', 'NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d'].
+2025-08-25 13:56:01,055 [canton-env-ec-64] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:6a70a27b2ddef56760e64b5cdc402aac - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 13:56:01,076 [canton-env-ec-37] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:0647682121be06cd8004fc441f0b2915 - Received request for transactions, startExclusive -> '000000000000000032', endInclusive -> '000000000000000033', filters -> {NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:Token']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 13:56:15,396 [canton-env-ec-37] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:35562f727c0acda6e6e86aceba9043fa - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 13:56:15,415 [canton-env-ec-169] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:48566137c6992b2c202adfd278025be2 - Received request for transactions, startExclusive -> '00000000000000001b', endInclusive -> '000000000000000033', filters -> {NewBob::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:Token']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 13:56:18,181 [canton-env-ec-37] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:61a6316d05863fbfcaa16102cf068849 - 'MED::mydomain::122060f2dea2...' sends request with id 'tick-4a98955f-0953-43c5-b595-d1e003554d69' of size 338 bytes with 0 envelopes.
+2025-08-25 13:56:35,288 [canton-env-ec-102] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:ba507004c74bac2d90bf28cf2929e566 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 13:56:35,295 [canton-env-ec-169] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:e9636aaa44d24e077a68cad81b81407e - Phase 1 started: Submitting commands for interpretation: Commands(
+  commandId = 39186d8b-8fa3-4578-b667-3fab1ba6851c,
+  submissionId = 39d26b1e-aac1-4d68-b3f3-3a8c5758fa1d,
+  applicationId = alice_bank_token,
+  actAs = Set(NewAlice::1220b845dcf0..., NewBank::1220b845dcf0...),
+  submittedAt = 2025-08-25T13:56:35.295239Z,
+  ledgerEffectiveTime = 2025-08-25T13:56:35.295237Z,
+  deduplicationPeriod = (duration=PT168H),
+  ...
+).
+2025-08-25 13:56:35,339 [canton-env-ec-37] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:e9636aaa44d24e077a68cad81b81407e - Phase 1 completed: Submitting 3 envelopes for Transaction request, submitters Seq(NewAlice::1220b845dcf0..., NewBank::1220b845dcf0...), command-id 39186d8b-8fa3-4578-b667-3fab1ba6851c
+2025-08-25 13:56:35,345 [canton-env-ec-159] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:e9636aaa44d24e077a68cad81b81407e - 'PAR::participant1::1220b845dcf0...' sends request with id '5e6b025a-ae2a-4621-afe8-8041a552ac8b' of size 3077 bytes with 3 envelopes.
+2025-08-25 13:56:35,372 [canton-env-ec-169] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:e9636aaa44d24e077a68cad81b81407e - Processing event at sc=170, ts=2025-08-25T13:56:35.351495Z, messageId=5e6b025a-ae2a-4621-afe8-8041a552ac8b, with contents=Seq(RootHashMessage(root hash = SHA-256:3370a34e7cf2..., payload size = 0), EncryptedViewMessageV2(view hash = ViewHash(SHA-256:702c08304322...), view type = TransactionViewType, size = 1650))
+2025-08-25 13:56:35,373 [canton-env-ec-37] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:e9636aaa44d24e077a68cad81b81407e - Phase 3: Validating Transaction request=2025-08-25T13:56:35.351495Z with 1 envelope(s)
+2025-08-25 13:56:35,375 [canton-env-ec-38] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:e9636aaa44d24e077a68cad81b81407e - Phase 2: Registered request=2025-08-25T13:56:35.351495Z with 1 view(s). Initial state: ViewPosition("") -> ViewState(
+  quorumsState = Seq(
+    Quorum(confirmers = Map(NewAlice::1220b845dcf0... -> 1, NewBank::1220b845dcf0... -> 1), threshold = 2),
+    Quorum(confirmers = NewBank::1220b845dcf0... -> 1, threshold = 1),
+    Quorum(confirmers = participant1::1220b845dcf0... -> 1, threshold = 1)
+  ),
+  consortiumVoting = Map(NewAlice::1220b845dcf0... -> ConsortiumVotingState(), NewBank::1220b845dcf0... -> ConsortiumVotingState(), participant1::1220b845dcf0... -> ConsortiumVotingState()),
+  rejections = Seq()
+)
+2025-08-25 13:56:35,415 [canton-env-ec-64] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:e9636aaa44d24e077a68cad81b81407e - Phase 4: Sending for request=2025-08-25T13:56:35.351495Z with msgId=5f3c0cc4-f904-4717-b969-57b6c35ba22d approved=1, rejected=0
+2025-08-25 13:56:35,421 [canton-env-ec-173] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:e9636aaa44d24e077a68cad81b81407e - 'PAR::participant1::1220b845dcf0...' sends request with id '5f3c0cc4-f904-4717-b969-57b6c35ba22d' of size 755 bytes with 1 envelopes.
+2025-08-25 13:56:35,446 [canton-env-ec-106] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:e9636aaa44d24e077a68cad81b81407e - Processing event at sc=171, ts=2025-08-25T13:56:35.425959Z, messageId=5f3c0cc4-f904-4717-b969-57b6c35ba22d, with contents=Seq()
+2025-08-25 13:56:35,446 [canton-env-ec-64] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:e9636aaa44d24e077a68cad81b81407e - Phase 5: Received responses for request=RequestId(2025-08-25T13:56:35.351495Z): ParticipantResponse(sender = PAR::participant1::1220b845dcf0..., ts = 2025-08-25T13:56:35.425959Z, approved = 1)
+2025-08-25 13:56:35,453 [canton-env-ec-38] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:e9636aaa44d24e077a68cad81b81407e - Phase 6: Finalized request=RequestId(2025-08-25T13:56:35.351495Z) with verdict Approve
+2025-08-25 13:56:35,461 [canton-env-ec-169] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:e9636aaa44d24e077a68cad81b81407e - 'MED::mydomain::122060f2dea2...' sends request with id 'mmid:verdict:1756130195351495' of size 716 bytes with 1 envelopes.
+2025-08-25 13:56:35,483 [canton-env-ec-102] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:e9636aaa44d24e077a68cad81b81407e - Processing event at sc=172, ts=2025-08-25T13:56:35.465804Z, with contents=SignedProtocolMessage(
+  TransactionResultMessage(requestId = 2025-08-25T13:56:35.351495Z, verdict = Approve, rootHash = SHA-256:3370a34e7cf2..., domainId = mydomain::122060f2dea2...),
+  signatures = Signature(signature = 3772718a0238, signedBy = 1220120ea179...)
+)
+2025-08-25 13:56:35,534 [input-mapping-pool-8] INFO  c.d.c.p.i.p.ParallelIndexerSubscription:participant=participant1 tid:e9636aaa44d24e077a68cad81b81407e - Phase 7: Storing at offset=000000000000000034 TransactionAccepted(
+  recordTime = 2025-08-25T13:56:35.351495Z,
+  transactionId = 12203370a34e7cf2b43edc6f275a6f6d2fb66ce5c0ceb839f0f23609dc4617654492,
+  transactionMeta = TransactionMeta(ledgerEffectiveTime = 2025-08-25T13:56:35.295237Z, submissionTime = 2025-08-25T13:56:35.295237Z, domainId = mydomain::122060f2dea2..., ...),
+  completion = CompletionInfo(
+    actAs = NewAlice::1220b845dcf0..., NewBank::1220b845dcf0...,
+    commandId = 39186d8b-8fa3-4578-b667-3fab1ba6851c,
+    applicationId = alice_bank_token,
+    deduplication period = (offset=Offset(Bytes(000000000000000001))),
+    submissionId = Some(39d26b1e-aac1-4d68-b3f3-3a8c5758fa1d),
+    ...
+  ),
+  nodes = 6,
+  roots = 1,
+  ...
+)
+2025-08-25 13:56:35,551 [canton-env-ec-102] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 - Received request for transaction by ID, ledgerId -> 'participant1', transactionId -> '12203370a34e7cf2b43edc6f275a6f6d2fb66ce5c0ceb839f0f23609dc4617654492', parties -> ['NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d', 'NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d'].
+2025-08-25 13:56:48,089 [canton-env-ec-102] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:61a6316d05863fbfcaa16102cf068849 - 'PAR::participant1::1220b845dcf0...' sends request with id 'tick-8fce9692-d46d-4e0e-8e32-8d638d3846d1' of size 343 bytes with 0 envelopes.
+2025-08-25 13:57:05,607 [canton-env-ec-167] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:e9636aaa44d24e077a68cad81b81407e - 'MED::mydomain::122060f2dea2...' sends request with id 'tick-7c7f6ef2-0a90-4401-b348-070d704afeb1' of size 339 bytes with 0 envelopes.
+2025-08-25 13:57:09,894 [canton-env-ec-162] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:9182ebe2a16c3623aaf6e7ff0472a0ae - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 13:57:09,916 [canton-env-ec-64] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:f2333df4f0f734e7da21f8e16e46bd2b - Received request for transactions, startExclusive -> '000000000000000032', endInclusive -> '000000000000000034', filters -> {NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:RedeemRequest']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 13:57:20,467 [canton-env-ec-64] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:ef366b4d4094288ce0defb0c8b500794 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 13:57:20,476 [canton-env-ec-64] INFO  c.d.c.p.a.s.c.CommandSubmissionServiceImpl:participant=participant1 tid:729839e2205be6cfe5d081de675def3a - Phase 1 started: Submitting commands for interpretation: Commands(
+  commandId = 8c5848f8-46b0-4731-bf71-811ca73f07c2,
+  submissionId = c82dd91d-226e-49ef-b083-a4605294e4bf,
+  applicationId = bank_admin,
+  actAs = NewBank::1220b845dcf0...,
+  submittedAt = 2025-08-25T13:57:20.475495Z,
+  ledgerEffectiveTime = 2025-08-25T13:57:20.475493Z,
+  deduplicationPeriod = (duration=PT168H),
+  ...
+).
+2025-08-25 13:57:20,515 [canton-env-ec-162] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:729839e2205be6cfe5d081de675def3a - Phase 1 completed: Submitting 3 envelopes for Transaction request, submitters NewBank::1220b845dcf0..., command-id 8c5848f8-46b0-4731-bf71-811ca73f07c2
+2025-08-25 13:57:20,521 [canton-env-ec-173] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:729839e2205be6cfe5d081de675def3a - 'PAR::participant1::1220b845dcf0...' sends request with id '06afb30b-ad2a-44bb-af34-c67696c8d387' of size 2508 bytes with 3 envelopes.
+2025-08-25 13:57:20,549 [canton-env-ec-169] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:729839e2205be6cfe5d081de675def3a - Processing event at sc=174, ts=2025-08-25T13:57:20.527035Z, messageId=06afb30b-ad2a-44bb-af34-c67696c8d387, with contents=Seq(RootHashMessage(root hash = SHA-256:45e7cdc5c836..., payload size = 0), EncryptedViewMessageV2(view hash = ViewHash(SHA-256:07fbe8bbd024...), view type = TransactionViewType, size = 1097))
+2025-08-25 13:57:20,551 [canton-env-ec-167] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:729839e2205be6cfe5d081de675def3a - Phase 3: Validating Transaction request=2025-08-25T13:57:20.527035Z with 1 envelope(s)
+2025-08-25 13:57:20,554 [canton-env-ec-162] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:729839e2205be6cfe5d081de675def3a - Phase 2: Registered request=2025-08-25T13:57:20.527035Z with 1 view(s). Initial state: ViewPosition("") -> ViewState(
+  quorumsState = Seq(Quorum(confirmers = NewBank::1220b845dcf0... -> 1, threshold = 1), Quorum(confirmers = participant1::1220b845dcf0... -> 1, threshold = 1)),
+  consortiumVoting = Map(NewBank::1220b845dcf0... -> ConsortiumVotingState(), participant1::1220b845dcf0... -> ConsortiumVotingState()),
+  rejections = Seq()
+)
+2025-08-25 13:57:20,585 [canton-env-ec-173] INFO  c.d.c.p.p.TransactionProcessor:participant=participant1/domainId=mydomain::122060f2dea2 tid:729839e2205be6cfe5d081de675def3a - Phase 4: Sending for request=2025-08-25T13:57:20.527035Z with msgId=793129b0-be1a-4a7a-9bda-e56e892a698f approved=1, rejected=0
+2025-08-25 13:57:20,590 [canton-env-ec-169] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:729839e2205be6cfe5d081de675def3a - 'PAR::participant1::1220b845dcf0...' sends request with id '793129b0-be1a-4a7a-9bda-e56e892a698f' of size 748 bytes with 1 envelopes.
+2025-08-25 13:57:20,609 [canton-env-ec-36] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:729839e2205be6cfe5d081de675def3a - Processing event at sc=175, ts=2025-08-25T13:57:20.594082Z, messageId=793129b0-be1a-4a7a-9bda-e56e892a698f, with contents=Seq()
+2025-08-25 13:57:20,610 [canton-env-ec-102] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:729839e2205be6cfe5d081de675def3a - Phase 5: Received responses for request=RequestId(2025-08-25T13:57:20.527035Z): ParticipantResponse(sender = PAR::participant1::1220b845dcf0..., ts = 2025-08-25T13:57:20.594082Z, approved = 1)
+2025-08-25 13:57:20,615 [canton-env-ec-167] INFO  c.d.c.d.m.ConfirmationResponseProcessor:domain=mydomain/node=mediator tid:729839e2205be6cfe5d081de675def3a - Phase 6: Finalized request=RequestId(2025-08-25T13:57:20.527035Z) with verdict Approve
+2025-08-25 13:57:20,623 [canton-env-ec-162] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:729839e2205be6cfe5d081de675def3a - 'MED::mydomain::122060f2dea2...' sends request with id 'mmid:verdict:1756130240527035' of size 725 bytes with 1 envelopes.
+2025-08-25 13:57:20,642 [canton-env-ec-167] INFO  c.d.c.p.p.DefaultMessageDispatcher:participant=participant1/domainId=mydomain::122060f2dea2 tid:729839e2205be6cfe5d081de675def3a - Processing event at sc=176, ts=2025-08-25T13:57:20.627511Z, with contents=SignedProtocolMessage(
+  TransactionResultMessage(requestId = 2025-08-25T13:57:20.527035Z, verdict = Approve, rootHash = SHA-256:45e7cdc5c836..., domainId = mydomain::122060f2dea2...),
+  signatures = Signature(signature = 3ebd82857fe1, signedBy = 1220120ea179...)
+)
+2025-08-25 13:57:20,682 [input-mapping-pool-9] INFO  c.d.c.p.i.p.ParallelIndexerSubscription:participant=participant1 tid:729839e2205be6cfe5d081de675def3a - Phase 7: Storing at offset=000000000000000035 TransactionAccepted(
+  recordTime = 2025-08-25T13:57:20.527035Z,
+  transactionId = 122045e7cdc5c836a012273c9b2d66745c6323da681d87605c099dec145b94859a2a,
+  transactionMeta = TransactionMeta(ledgerEffectiveTime = 2025-08-25T13:57:20.475493Z, submissionTime = 2025-08-25T13:57:20.475493Z, domainId = mydomain::122060f2dea2..., ...),
+  completion = CompletionInfo(
+    actAs = NewBank::1220b845dcf0...,
+    commandId = 8c5848f8-46b0-4731-bf71-811ca73f07c2,
+    applicationId = bank_admin,
+    deduplication period = (offset=Offset(Bytes(000000000000000001))),
+    submissionId = Some(c82dd91d-226e-49ef-b083-a4605294e4bf),
+    ...
+  ),
+  nodes = 1,
+  roots = 1,
+  ...
+)
+2025-08-25 13:57:20,691 [canton-env-ec-102] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 - Received request for transaction by ID, ledgerId -> 'participant1', transactionId -> '122045e7cdc5c836a012273c9b2d66745c6323da681d87605c099dec145b94859a2a', parties -> ['NewBank::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d'].
+2025-08-25 13:57:33,567 [canton-env-ec-37] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:fb09e5e3fdcdee362c964503a11758a5 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 13:57:33,590 [canton-env-ec-106] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:3bfac1d3ffc92f085af7f444d6702d63 - Received request for transactions, startExclusive -> '000000000000000033', endInclusive -> '000000000000000035', filters -> {NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:Token']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 13:57:35,550 [canton-env-ec-162] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:61a6316d05863fbfcaa16102cf068849 - 'PAR::participant1::1220b845dcf0...' sends request with id 'tick-7f104441-85f8-4977-82a2-04884ea80306' of size 343 bytes with 0 envelopes.
+2025-08-25 13:57:50,783 [canton-env-ec-37] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:729839e2205be6cfe5d081de675def3a - 'MED::mydomain::122060f2dea2...' sends request with id 'tick-2f59d15a-f787-4f2b-8478-cf85115071be' of size 339 bytes with 0 envelopes.
+2025-08-25 13:57:51,816 [canton-env-ec-162] INFO  c.d.c.p.a.s.ApiLedgerIdentityService:participant=participant1 tid:47952b367dac9c3cd2d348d6bb4f1477 - Received request for ledger identity: GetLedgerIdentityRequest().
+2025-08-25 13:57:51,834 [canton-env-ec-173] INFO  c.d.c.p.a.s.t.TransactionServiceImpl:participant=participant1 tid:a74f19ae8975f49faa23a418532cbc19 - Received request for transactions, startExclusive -> '000000000000000033', endInclusive -> '000000000000000035', filters -> {NewBob::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d: ['323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:Token']}, verbose -> true, ledgerId -> 'participant1'.
+2025-08-25 13:58:20,732 [canton-env-ec-162] INFO  c.d.c.d.s.s.GrpcSequencerService:domain=mydomain tid:61a6316d05863fbfcaa16102cf068849 - 'PAR::participant1::1220b845dcf0...' sends request with id 'tick-f7f8d637-b393-4cd4-89cd-e30b6eb025c4' of size 343 bytes with 0 envelopes.

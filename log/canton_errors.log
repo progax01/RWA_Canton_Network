@@ -4330,3 +4330,6 @@ org.apache.pekko.stream.AbruptTerminationException: Processor actor [Actor[pekko
 2025-08-25 08:33:14,784 [canton-env-ec-169] DEBUG c.d.c.n.g.ApiRequestLogger:participant=participant1 tid:cbb01099df0e2e7e86497428205fa49b - Request c.d.l.a.v.a.UserManagementService/CreateUser by /127.0.0.1:34978: received a message 
   Request tid:cbb01099df0e2e7e86497428205fa49b
 2025-08-25 08:33:14,785 [canton-env-ec-169] WARN  c.d.c.a.Authorizer:participant=participant1 tid:cbb01099df0e2e7e86497428205fa49b - PERMISSION_DENIED(7,cbb01099): Claims do not authorize the use of administrative services. err-context:{location=Authorizer.scala:305} 
+2025-08-25 13:40:59,717 [canton-env-ec-38] DEBUG c.d.c.n.g.ApiRequestLogger:participant=participant1 tid:bb7963642461fd9a735b6e4a90d63479 - Request c.d.l.a.v.a.PartyManagementService/ListKnownParties by /127.0.0.1:46464: received a message 
+  Request tid:bb7963642461fd9a735b6e4a90d63479
+2025-08-25 13:40:59,717 [canton-env-ec-38] WARN  c.d.c.a.Authorizer:participant=participant1 tid:bb7963642461fd9a735b6e4a90d63479 - PERMISSION_DENIED(7,bb796364): Claims do not authorize the use of administrative services. err-context:{location=Authorizer.scala:305} 
