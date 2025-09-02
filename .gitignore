@@ -1,2 +1,4 @@
 *.jar
 node_modules
+log
+config.bat

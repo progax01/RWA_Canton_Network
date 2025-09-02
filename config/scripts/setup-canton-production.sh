@@ -18,7 +18,7 @@ NC='\033[0m' # No Color
 # Configuration
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CANTON_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
-CONFIG_FILE="${CONFIG_FILE:-config/canton-single-participant.conf}"
+CONFIG_FILE="${CONFIG_FILE:-config/canton-production-temp.conf}"
 
 log_info() {
     echo -e "${BLUE}[INFO]${NC} $1"

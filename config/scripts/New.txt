@@ -911,3 +911,10 @@ curl -X POST http://localhost:7575/v1/exercise \
     -d '{"templateIds": ["323be96aa0b9cd4a6f9cf17a5096b7a69c0cc2da28d31baa5e53c72f2c8ce9c1:TokenExample:Token"], 
   "query": {"owner": "NewAlice::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d"}}' \
     | jq 
+
+
+
+ curl -X POST http://localhost:7575/v1/user/create \
+    -H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6ImRhbWxfbGVkZ2VyX2FwaSIsImF1ZCI6Imh0dHBzOi8vZGFtbC5jb20vand0L2F1ZC9wYXJ0aWNpcGFudC9wYXJ0aWNpcGFudDEiLCJzdWIiOiJwYXJ0aWNpcGFudF9hZG1pbiIsImlzcyI6ImNhbnRvbi1qd3QtaXNzdWVyIiwiZXhwIjoxNzg3NjQxMjM0LCJpYXQiOjE3NTYxMDUyMzR9.Dgx9IrQUCzbVCe3kS5qbTND20eR1t-W-E2wWFDRkPFA289xFCWldSO5G7oN3ujqs0y1pG6yY5LnikMcCam0ZfF2_wiCCvV0mVUMy2-Q8KB1XhsE8SA11G64E8eUR_X3xLpMHMX1fCsTG9pySXV_WULfMad6_ixFqpGSrDV-yPr1UumpAAGLOZA4LwKb2nb5b1yJyI9K3LaRArAUXiZAyLE5KqdkeJGz-pBbgWarcqhGFJCRAY13Dch0LmxTqYJjzZUQEN-UmzTPKyNqxJLXifggIfk0hx54j5zk3eWszSEXFyUAPqAmm6wSe9-mNZ3kiJ9bXXqxLaj6ObzgW12pHyQ" \
+    -H "Content-Type: application/json" \
+    -d '{"user_id": "vivek11_bank_token","primary_party": "vivek11::1220b845dcf0d9cf52ce1e7457a744a6f3de7eff4a9ee95261b69405d1e0de8a768d"}' | jq
